@@ -5,7 +5,7 @@ const fs = require('fs');
 const BOT_TOKEN = '8451392820:AAGYDwYGIgiVUK81BK2Q3A0WppaHdMFnS-s';
 const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
 // const OFFERS_CHANNEL = '@usdtB2026';      // قناة نشر العروض
-const OFFERS_CHANNEL = '@ABoASlam515';      // قناة نشر العروض
+const OFFERS_CHANNEL = '@ALkILANI P2P';      // قناة نشر العروض
 const STORAGE_FILE = './storage.json';
 
 // ================== INIT ==================
