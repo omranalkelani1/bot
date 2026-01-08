@@ -110,7 +110,8 @@ bot.on('message', (msg) => {
   const chatId = msg.chat.id;
   if (!userStates[chatId]) return;
 
-  const state = userStates[chatId].current;
+  const state = userStates[chatId]?.current;
+  if(!state) return
 
   if (state.step === 'askPhone' && msg.contact) {
     userStates[chatId].phone = msg.contact.phone_number;
@@ -201,7 +202,8 @@ bot.on('callback_query', async (query) => {
   }
 
   if (payload.type === callbackTypes.sellOrBuy) {
-    const state = userStates[chatId].current;
+    const state = userStates[chatId]?.current;
+    if (!state) return
     state.operation = payload.data === 'sell' ? 'بيع' : 'شراء';
     state.step = 'askPrice';
     saveStorage();
@@ -209,7 +211,8 @@ bot.on('callback_query', async (query) => {
   }
 
   if (payload.type === callbackTypes.transform_way) {
-    const state = userStates[chatId].current;
+    const state = userStates[chatId]?.current;
+    if(!state) return
     state.transform_way = payload.data;
     saveStorage();
 
@@ -360,7 +363,6 @@ bot.on('callback_query', async (query) => {
         return
     }
     saveStorage()
-    console.log('ehho');
 
     return bot.answerCallbackQuery(query.id, { text: 'تم التنفيذ' });
   }
@@ -584,21 +586,23 @@ async function sendOfferForReview(chatId, messageId,from) {
 }
 
 function formatOffer(user, offer, statusText = '', isCenterLine = false,from) {
+  
   const text = `
-  ${from}
-📩 العرض رقم: ${offer.id}
-
-🔁 العملية: ${offer.operation} USDT  ${offer.operation=="بيع"?"🔴":"🟢"}
-📦 الكمية: ${offer.minQuantity} الى ${offer.maxQuantity}
-💰 السعر: ${offer.price}
+  📩 العرض رقم: ${offer.id}
+  
+  🔁 العملية: ${offer.operation} USDT  ${offer.operation=="بيع"?"🔴":"🟢"}
+  📦 الكمية: ${offer.minQuantity} الى ${offer.maxQuantity}
+  💰 السعر: ${offer.price}
 💳 طريقة الدفع: ${transform_way[offer.transform_way]}
 👤 فئة العميل: ${user.category}
 
 عمولة الوسيط : 0.25$/300$
 أبد العرض مع : @ABoASlam515
 
- كما يمكنك انشاء عروضك عن طريق البوت المميز @Usdt2026_bot
+كما يمكنك انشاء عروضك عن طريق البوت المميز @Usdt2026_bot
 ${statusText}
+الاسم : ${from?.first_name + " " + from?.last_name} 
+الرقم : ${user.phone}
 `;
 
   // إذا تم تنفيذ العرض → شطب النص
@@ -638,6 +642,5 @@ ${title}
 📦 الكمية: ${o.minQuantity}  الى ${o.maxQuantity}
 💳 طريقة الدفع: ${transform_way[o.transform_way]}
 
-    ${from}
 `;
 }
