@@ -596,6 +596,8 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false) {
 💳 طريقة الدفع: ${transform_way[offer.transform_way]}
 👤 فئة العميل: ${user.category}
 
+عمولة الوسيط : 0.25$/300$
+أبد العرض مع : @ABoASlam515
 ${statusText}
 `;
 
