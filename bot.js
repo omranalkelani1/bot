@@ -169,7 +169,7 @@ bot.on('callback_query', async (query) => {
 
   // ===== CONFIRM SEND =====
   if (payload.type === callbackTypes.confirm_send) {
-    return sendOfferForReview(chatId, query.message.message_i , query.from);
+    return sendOfferForReview(chatId, query.message.message_id , query.from);
   }
 
   // ===== CANCEL OFFER =====
