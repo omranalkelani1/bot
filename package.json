@@ -1,5 +1,15 @@
 {
+  "name": "usdt-bot",
+  "version": "1.0.0",
+  "description": "Telegram USDT bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
     "node-telegram-bot-api": "^0.67.0"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
