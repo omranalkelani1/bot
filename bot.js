@@ -568,7 +568,7 @@ async function sendOfferForReview(chatId, messageId,from) {
   user.current = {};
 
   
-  const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer,"",false,from), {
+  const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer,"",false,from,true), {
     reply_markup: {
       inline_keyboard: [[
         { text: '✅ قبول', callback_data: JSON.stringify({ type: callbackTypes.approve, userId: chatId, offerId }) },
@@ -585,7 +585,7 @@ async function sendOfferForReview(chatId, messageId,from) {
   saveStorage();
 }
 
-function formatOffer(user, offer, statusText = '', isCenterLine = false,from) {
+function formatOffer(user, offer, statusText = '', isCenterLine = false,from,viewName=false) {
   
   const text = `
   📩 العرض رقم: ${offer.id}
@@ -601,8 +601,8 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false,from) {
 
 كما يمكنك انشاء عروضك عن طريق البوت المميز @Usdt2026_bot
 ${statusText}
-الاسم : ${from?.first_name + " " + from?.last_name} 
-الرقم : ${user.phone}
+${ viewName ?`الاسم : ${from?.first_name + " " + from?.last_name} 
+الرقم : ${user.phone}`:''}
 `;
 
   // إذا تم تنفيذ العرض → شطب النص
