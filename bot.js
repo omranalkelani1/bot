@@ -169,7 +169,7 @@ bot.on('callback_query', async (query) => {
 
   // ===== CONFIRM SEND =====
   if (payload.type === callbackTypes.confirm_send) {
-    return sendOfferForReview(chatId, query.message.message_id);
+    return sendOfferForReview(chatId, query.message.message_i , query.from);
   }
 
   // ===== CANCEL OFFER =====
@@ -545,7 +545,7 @@ function isValidNumber(value) {
   return !isNaN(value) && value !== '';
 }
 
-async function sendOfferForReview(chatId, messageId) {
+async function sendOfferForReview(chatId, messageId,from) {
   
   const user = userStates[chatId];
   if (!user) return;
@@ -566,7 +566,7 @@ async function sendOfferForReview(chatId, messageId) {
   user.current = {};
 
   
-  const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer), {
+  const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer,"",false,from), {
     reply_markup: {
       inline_keyboard: [[
         { text: '✅ قبول', callback_data: JSON.stringify({ type: callbackTypes.approve, userId: chatId, offerId }) },
@@ -583,8 +583,9 @@ async function sendOfferForReview(chatId, messageId) {
   saveStorage();
 }
 
-function formatOffer(user, offer, statusText = '', isCenterLine = false) {
+function formatOffer(user, offer, statusText = '', isCenterLine = false,from) {
   const text = `
+  ${from}
 📩 العرض رقم: ${offer.id}
 
 🔁 العملية: ${offer.operation} USDT  ${offer.operation=="بيع"?"🔴":"🟢"}
@@ -595,6 +596,8 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false) {
 
 عمولة الوسيط : 0.25$/300$
 أبد العرض مع : @ABoASlam515
+
+ كما يمكنك انشاء عروضك عن طريق البوت المميز @Usdt2026_bot
 ${statusText}
 `;
 
@@ -630,10 +633,11 @@ function formatPreview(offer, title = "📋 *تأكيد بيانات العرض*
   return `
 ${title}
 
-🔁 العملية: ${o.operation} USDT
+🔁 العملية: ${o.operation} USDT ${o.operation=="بيع"?"🔴":"🟢"}
 💰 السعر: ${o.price}
 📦 الكمية: ${o.minQuantity}  الى ${o.maxQuantity}
 💳 طريقة الدفع: ${transform_way[o.transform_way]}
 
+    ${from}
 `;
 }
