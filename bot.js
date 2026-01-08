@@ -4,8 +4,8 @@ const fs = require('fs');
 // ================== CONFIG ==================
 const BOT_TOKEN = '8451392820:AAGYDwYGIgiVUK81BK2Q3A0WppaHdMFnS-s';
 const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
-const OFFERS_CHANNEL = '@usdtB2026';      // قناة نشر العروض
-// const OFFERS_CHANNEL = '@ALkILANI P2P';      // قناة نشر العروض
+// const OFFERS_CHANNEL = '@usdtB2026';      // قناة نشر العروض
+const OFFERS_CHANNEL = '-1001509487183';      // قناة نشر العروض
 const STORAGE_FILE = './storage.json';
 
 // ================== INIT ==================
@@ -70,7 +70,7 @@ bot.onText(/\/start/, async (msg) => {
   try {
     const member = await bot.getChatMember(OFFERS_CHANNEL, userId);
     if (!['member', 'administrator', 'creator'].includes(member.status)) {
-      return bot.sendMessage(chatId, `❌ يجب الانضمام للقناة: ${OFFERS_CHANNEL}`, {
+      return bot.sendMessage(chatId, `❌ يجب الانضمام للقناة: https://t.me/WWWEXZ`, {
         parse_mode: 'HTML'
       });
     }
@@ -104,7 +104,7 @@ bot.onText(/\/start/, async (msg) => {
 
 // ================== MESSAGE FLOW ==================
 bot.on('message', (msg) => {
-
+  
   if (msg.text && msg.text.startsWith('/')) return;
 
   const chatId = msg.chat.id;
@@ -396,7 +396,6 @@ bot.on('callback_query', async (query) => {
       return bot.answerCallbackQuery(query.id, { text: 'لا توجد عروض' });
     }
     const CurrentOffers = user.offers.filter(ele => !ele.doneSellOffer)
-    console.log('c', CurrentOffers);
 
     CurrentOffers.forEach(o => {
       const message = formatPreview(o, `
@@ -547,7 +546,6 @@ function isValidNumber(value) {
 }
 
 async function sendOfferForReview(chatId, messageId) {
-  console.log(chatId);
   
   const user = userStates[chatId];
   if (!user) return;
@@ -567,7 +565,6 @@ async function sendOfferForReview(chatId, messageId) {
   user.offers.push(offer);
   user.current = {};
 
-  console.log(formatOffer(user,offer));
   
   const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer), {
     reply_markup: {
