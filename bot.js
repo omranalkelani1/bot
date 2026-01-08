@@ -587,7 +587,7 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false) {
   const text = `
 📩 العرض رقم: ${offer.id}
 
-🔁 العملية: ${offer.operation} USDT
+🔁 العملية: ${offer.operation} USDT  ${offer.operation=="بيع"?"🔴":"🟢"}
 📦 الكمية: ${offer.minQuantity} الى ${offer.maxQuantity}
 💰 السعر: ${offer.price}
 💳 طريقة الدفع: ${transform_way[offer.transform_way]}
