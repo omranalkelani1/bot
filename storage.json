@@ -1,32 +1,5 @@
 {
-  "872282181": {
-    "phone": null,
-    "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "step": "askPhone"
-    }
-  },
-  "offerSeq": 1,
-  "6193222237": {
-    "phone": "963960013368",
-    "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 1,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "1",
-        "minQuantity": "23",
-        "maxQuantity": "23",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 6193222237,
-        "doneSellOffer": false,
-        "checkMessageId": 50,
-        "publicMessageId": 4210
-      }
-    ],
-    "current": {}
-  }
+
+  "offerSeq": 13
+ 
 }
