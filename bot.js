@@ -19,9 +19,26 @@ bot.setMyCommands([
 console.log('✅ Bot is running');
 
 // ================== STORAGE ==================
-let userStates = fs.existsSync(STORAGE_FILE)
-  ? JSON.parse(fs.readFileSync(STORAGE_FILE, 'utf8'))
-  : {offerSeq: 0 };
+// let userStates = fs.existsSync(STORAGE_FILE)
+//   ? JSON.parse(fs.readFileSync(STORAGE_FILE, 'utf8'))
+//   : {offerSeq: 0 };
+let userStates = { offerSeq: 0 };
+
+(async () => {
+  // 1️⃣ خذ نسخة احتياطية وأعد البيانات
+  const localData = await backupStorageToCheckChannel();
+console.log('usersStatess',localData);
+  if (localData) {
+    userStates = localData;
+    console.log('✅ تم تحميل البيانات من التخزين المحلي');
+  }
+
+  // 2️⃣ الآن خزّنها في GitHub (إن لم تكن موجودة)
+  await saveStorage(); // هذه هي دالة GitHub التي شرحناها سابقاً
+
+  console.log('🚀 التخزين الآن يعمل عبر GitHub');
+})();
+
 
 function saveStorage() {
   fs.writeFileSync(STORAGE_FILE, JSON.stringify(userStates, null, 2));
@@ -643,4 +660,42 @@ ${title}
 💳 طريقة الدفع: ${transform_way[o.transform_way]}
 
 `;
+}
+
+async function backupStorageToCheckChannel() {
+  
+  
+  if (!fs.existsSync(STORAGE_FILE)) {
+    
+    console.log('ℹ️ لا يوجد storage.json محلي');
+    return null;
+  }
+
+  try {
+    const data = fs.readFileSync(LOCAL_FILE, 'utf8');
+    console.log('data', data);
+
+    // تقسيم النص لو كان كبير (تلغرام حد 4096)
+    const chunks = data.match(/[\s\S]{1,3500}/g);
+
+    await bot.sendMessage(
+      CHECK_CHANNEL,
+      '📦 نسخة احتياطية من storage.json (قبل الانتقال إلى GitHub)',
+      { parse_mode: 'HTML' }
+    );
+
+    for (const chunk of chunks) {
+      await bot.sendMessage(
+        CHECK_CHANNEL,
+        `<pre>${chunk}</pre>`,
+        { parse_mode: 'HTML' }
+      );
+    }
+
+    console.log('✅ تم إرسال نسخة storage.json إلى قناة التشييك');
+    return JSON.parse(data);
+  } catch (e) {
+    console.error('❌ فشل إرسال النسخة الاحتياطية:', e.message);
+    return null;
+  }
 }
