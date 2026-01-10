@@ -2,19 +2,27 @@
   "872282181": {
     "phone": "963998889607",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "118",
-      "minQuantity": "100",
-      "maxQuantity": "100",
-      "transform_way": "shamSy"
-    },
+    "offers": [
+      {
+        "id": 17,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "118",
+        "minQuantity": "100",
+        "maxQuantity": "100",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 872282181,
+        "doneSellOffer": false,
+        "checkMessageId": 97,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
   },
-  "offerSeq": 16,
+  "offerSeq": 17,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
