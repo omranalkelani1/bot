@@ -28,9 +28,10 @@
     "offers": [],
     "current": {
       "operation": "بيع",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "1",
-      "minQuantity": "50"
+      "minQuantity": "50",
+      "maxQuantity": "100"
     },
     "first_name": "Rateb",
     "last_name": "Mourad"
