@@ -5,8 +5,9 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "118"
+      "step": "askMaxQuantity",
+      "price": "118",
+      "minQuantity": "100"
     },
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
