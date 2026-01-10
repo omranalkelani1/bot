@@ -1,14 +1,34 @@
 const TelegramBot = require('node-telegram-bot-api');
-const fs = require('fs');
-
+// const fs = require('fs');
+// 
 // ================== CONFIG ==================
 const BOT_TOKEN = '8451392820:AAGYDwYGIgiVUK81BK2Q3A0WppaHdMFnS-s';
 const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
 // const OFFERS_CHANNEL = '@usdtB2026';      // قناة نشر العروض
 const OFFERS_CHANNEL = '-1001509487183';      // قناة نشر العروض
-const STORAGE_FILE = './storage.json';
+// const STORAGE_FILE = './storage.json';
 
 // ================== INIT ==================
+//#region ENV
+
+// const fetch = (...args) =>
+//   import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
+const GH = {
+  // owner: GITHUB_OWNER,
+  // repo: GITHUB_REPO,
+  // branch: GITHUB_BRANCH || 'main',
+  // token: GITHUB_TOKEN,
+  // file: GITHUB_FILE || 'storage.json'
+  owner: process.env.GITHUB_OWNER,
+  repo: process.env.GITHUB_REPO,
+  branch: process.env.GITHUB_BRANCH || 'main',
+  token: process.env.GITHUB_TOKEN,
+  file: process.env.GITHUB_FILE || 'storage.json'
+};
+
+const GH_API = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`;
+
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 bot.setMyCommands([
   {
@@ -19,30 +39,20 @@ bot.setMyCommands([
 console.log('✅ Bot is running');
 
 // ================== STORAGE ==================
-// let userStates = fs.existsSync(STORAGE_FILE)
-//   ? JSON.parse(fs.readFileSync(STORAGE_FILE, 'utf8'))
-//   : {offerSeq: 0 };
+
+
 let userStates = { offerSeq: 0 };
 
 (async () => {
-  // 1️⃣ خذ نسخة احتياطية وأعد البيانات
-  const localData = await backupStorageToCheckChannel();
-console.log('usersStatess',localData);
-  if (localData) {
-    userStates = localData;
-    console.log('✅ تم تحميل البيانات من التخزين المحلي');
-  }
-
-  // 2️⃣ الآن خزّنها في GitHub (إن لم تكن موجودة)
-  await saveStorage(); // هذه هي دالة GitHub التي شرحناها سابقاً
-
-  console.log('🚀 التخزين الآن يعمل عبر GitHub');
+  userStates = await loadStorage();
+  console.log('✅ Storage loaded from GitHub',userStates);
 })();
 
 
-function saveStorage() {
-  fs.writeFileSync(STORAGE_FILE, JSON.stringify(userStates, null, 2));
-}
+
+// function saveStorage() {
+//   fs.writeFileSync(STORAGE_FILE, JSON.stringify(userStates, null, 2));
+// }
 
 // ================== CONSTANTS ==================
 const callbackTypes = {
@@ -99,9 +109,9 @@ bot.onText(/\/start/, async (msg) => {
         offers: [],
         current: { step: 'askPhone' }
       };
-      saveStorage();
+      // saveStorage();
     }
-
+    
     if (!userStates[chatId].phone) {
       return bot.sendMessage(chatId, '📱 الرجاء مشاركة رقم هاتفك', {
         reply_markup: {
@@ -131,7 +141,11 @@ bot.on('message', (msg) => {
   if(!state) return
 
   if (state.step === 'askPhone' && msg.contact) {
+    
     userStates[chatId].phone = msg.contact.phone_number;
+    userStates[chatId].first_name = msg.contact.first_name;
+    userStates[chatId].last_name = msg.contact.last_name;
+    
     userStates[chatId].current = {};
     saveStorage();
     return sendWelcomeMessage(chatId, msg);
@@ -187,7 +201,7 @@ bot.on('callback_query', async (query) => {
 
   // ===== CONFIRM SEND =====
   if (payload.type === callbackTypes.confirm_send) {
-    return sendOfferForReview(chatId, query.message.message_id , query.from);
+    return sendOfferForReview(chatId, query.message.message_id );
   }
 
   // ===== CANCEL OFFER =====
@@ -285,7 +299,7 @@ bot.on('callback_query', async (query) => {
     saveStorage();
 
     await bot.editMessageText(
-      formatOffer(user, offer, '\n✅  تم قبول العرض'),
+      formatOffer(user, offer, '\n✅  تم قبول العرض',false,true),
       {
         chat_id: query.message.chat.id,
         message_id: query.message.message_id,
@@ -334,10 +348,9 @@ bot.on('callback_query', async (query) => {
     offer.doneSellOffer = true;
     saveStorage();
 
-    const text = formatOffer(user, offer, '', true);
-
+ 
     // قناة التشييك
-    await bot.editMessageText(text, {
+    await bot.editMessageText(formatOffer(user, offer, '', true,true), {
       chat_id: CHECK_CHANNEL,
       message_id: offer.checkMessageId,
       parse_mode: 'HTML'
@@ -345,7 +358,7 @@ bot.on('callback_query', async (query) => {
 
     // قناة العروض
     if (offer.publicMessageId) {
-      await bot.editMessageText(text, {
+      await bot.editMessageText(formatOffer(user, offer, '', true), {
         chat_id: OFFERS_CHANNEL,
         message_id: offer.publicMessageId,
         parse_mode: 'HTML'
@@ -397,7 +410,7 @@ bot.on('callback_query', async (query) => {
     saveStorage();
     // تعديل رسالة قناة التشييك
     await bot.editMessageText(
-      formatOffer(user, offer, '\n❌ تم رفض العرض'),
+      formatOffer(user, offer, '\n❌ تم رفض العرض',true,true),
       {
         chat_id: query.message.chat.id,
         message_id: query.message.message_id,
@@ -475,10 +488,9 @@ bot.on('callback_query', async (query) => {
     user.offers.splice(index, 1);
     saveStorage();
 
-    const text = formatOffer(user, offer, 'تم إلغاء العرض ❌', true);
 
     // قناة التشييك
-    await bot.editMessageText(text, {
+    await bot.editMessageText(formatOffer(user, offer, 'تم إلغاء العرض ❌', true,true), {
       chat_id: CHECK_CHANNEL,
       message_id: offer.checkMessageId,
       parse_mode: 'HTML'
@@ -486,7 +498,7 @@ bot.on('callback_query', async (query) => {
 
     // قناة العروض
     if (offer.publicMessageId) {
-      await bot.editMessageText(text, {
+      await bot.editMessageText(formatOffer(user, offer, 'تم إلغاء العرض ❌', true), {
         chat_id: OFFERS_CHANNEL,
         message_id: offer.publicMessageId,
         parse_mode: 'HTML'
@@ -564,7 +576,7 @@ function isValidNumber(value) {
   return !isNaN(value) && value !== '';
 }
 
-async function sendOfferForReview(chatId, messageId,from) {
+async function sendOfferForReview(chatId, messageId) {
   
   const user = userStates[chatId];
   if (!user) return;
@@ -585,7 +597,7 @@ async function sendOfferForReview(chatId, messageId,from) {
   user.current = {};
 
   
-  const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer,"",false,from,true), {
+  const sent = await bot.sendMessage(CHECK_CHANNEL, formatOffer(user,offer,"",false,true), {
     reply_markup: {
       inline_keyboard: [[
         { text: '✅ قبول', callback_data: JSON.stringify({ type: callbackTypes.approve, userId: chatId, offerId }) },
@@ -602,7 +614,7 @@ async function sendOfferForReview(chatId, messageId,from) {
   saveStorage();
 }
 
-function formatOffer(user, offer, statusText = '', isCenterLine = false,from,viewName=false) {
+function formatOffer(user, offer, statusText = '', isCenterLine = false,viewName=false) {
   
   const text = `
   📩 العرض رقم: ${offer.id}
@@ -618,8 +630,8 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false,from,vie
 
 كما يمكنك انشاء عروضك عن طريق البوت المميز @Usdt2026_bot
 ${statusText}
-${ viewName ?`الاسم : ${from?.first_name + " " + from?.last_name} 
-الرقم : ${user.phone}`:''}
+${ viewName ?`الاسم : ${user?.first_name + " " + user?.last_name} 
+الرقم : ${user?.phone}`:''}
 `;
 
   // إذا تم تنفيذ العرض → شطب النص
@@ -662,40 +674,41 @@ ${title}
 `;
 }
 
-async function backupStorageToCheckChannel() {
-  
-  
-  if (!fs.existsSync(STORAGE_FILE)) {
-    
-    console.log('ℹ️ لا يوجد storage.json محلي');
-    return null;
-  }
-
+async function loadStorage() {
   try {
-    const data = fs.readFileSync(LOCAL_FILE, 'utf8');
-    console.log('data', data);
+    const res = await fetch(`${GH_API}?ref=${GH.branch}`, {
+      headers: { Authorization: `token ${GH.token}` }
+    });
+    
+    if (res.status === 404) return { offerSeq: 0 };
 
-    // تقسيم النص لو كان كبير (تلغرام حد 4096)
-    const chunks = data.match(/[\s\S]{1,3500}/g);
-
-    await bot.sendMessage(
-      CHECK_CHANNEL,
-      '📦 نسخة احتياطية من storage.json (قبل الانتقال إلى GitHub)',
-      { parse_mode: 'HTML' }
-    );
-
-    for (const chunk of chunks) {
-      await bot.sendMessage(
-        CHECK_CHANNEL,
-        `<pre>${chunk}</pre>`,
-        { parse_mode: 'HTML' }
-      );
-    }
-
-    console.log('✅ تم إرسال نسخة storage.json إلى قناة التشييك');
-    return JSON.parse(data);
+    const data = await res.json();
+    return JSON.parse(Buffer.from(data.content, 'base64').toString());
   } catch (e) {
-    console.error('❌ فشل إرسال النسخة الاحتياطية:', e.message);
-    return null;
+    console.error('❌ Load storage failed:', e.message);
+    return { offerSeq: 0 };
   }
+}
+
+async function saveStorage() {
+  const res = await fetch(`${GH_API}?ref=${GH.branch}`, {
+    headers: { Authorization: `token ${GH.token}` }
+  });
+
+  const old = res.status === 200 ? await res.json() : null;
+
+  await fetch(GH_API, {
+    method: 'PUT',
+    headers: {
+      Authorization: `token ${GH.token}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      message: 'Update storage.json from Railway bot',
+      content: Buffer.from(JSON.stringify(userStates, null, 2)).toString('base64'),
+      branch: GH.branch,
+      ...(old?.sha && { sha: old.sha })
+    })
+  });
+
 }
