@@ -50,9 +50,10 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "120",
-      "minQuantity": "50"
+      "minQuantity": "50",
+      "maxQuantity": "85"
     },
     "first_name": "Ibrahim",
     "last_name": "Khalifa"
