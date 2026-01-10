@@ -130,7 +130,7 @@ bot.onText(/\/start/, async (msg) => {
 });
 
 // ================== MESSAGE FLOW ==================
-bot.on('message', (msg) => {
+bot.on('message', async (msg) => {
   
   if (msg.text && msg.text.startsWith('/')) return;
 
@@ -147,7 +147,7 @@ bot.on('message', (msg) => {
     userStates[chatId].last_name = msg.contact.last_name;
     
     userStates[chatId].current = {};
-    saveStorage();
+    await saveStorage();
     return sendWelcomeMessage(chatId, msg);
   }
 
@@ -158,7 +158,7 @@ bot.on('message', (msg) => {
 
     state.price = msg.text;
     state.step = 'askMinQuantity';
-    saveStorage();
+   await saveStorage();
     return bot.sendMessage(chatId, 'أدخل الحد الأدنى للكمية');
   }
 
@@ -169,7 +169,7 @@ bot.on('message', (msg) => {
 
     state.minQuantity = msg.text;
     state.step = 'askMaxQuantity';
-    saveStorage();
+   await saveStorage();
     return bot.sendMessage(chatId, 'أدخل الحد الأعلى للكمية');
   }
 
@@ -180,7 +180,7 @@ bot.on('message', (msg) => {
 
     state.maxQuantity = msg.text;
     state.step = 'askPayment';
-    saveStorage();
+  await  saveStorage();
 
     return bot.sendMessage(chatId, 'اختر طريقة الدفع', {
       reply_markup: {
@@ -207,7 +207,7 @@ bot.on('callback_query', async (query) => {
   // ===== CANCEL OFFER =====
   if (payload.type === callbackTypes.cancel_offer) {
     userStates[chatId].current = {};
-    saveStorage();
+    await saveStorage();
 
     return bot.editMessageText(
       '❌ تم إلغاء إنشاء العرض',
@@ -237,7 +237,7 @@ bot.on('callback_query', async (query) => {
     if (!state) return
     state.operation = payload.data === 'sell' ? 'بيع' : 'شراء';
     state.step = 'askPrice';
-    saveStorage();
+  await  saveStorage();
     return bot.sendMessage(chatId, 'أدخل السعر');
   }
 
@@ -245,7 +245,7 @@ bot.on('callback_query', async (query) => {
     const state = userStates[chatId]?.current;
     if(!state) return
     state.transform_way = payload.data;
-    saveStorage();
+   await saveStorage();
 
     return bot.sendMessage(
       chatId,
@@ -296,7 +296,7 @@ bot.on('callback_query', async (query) => {
     if (!offer || offer.status !== 'pending') return;
 
     offer.status = 'approved';
-    saveStorage();
+   await saveStorage();
 
     await bot.editMessageText(
       formatOffer(user, offer, '\n✅  تم قبول العرض',false,true),
@@ -330,7 +330,7 @@ bot.on('callback_query', async (query) => {
     );
 
     offer.publicMessageId = pubMsg.message_id;
-    saveStorage();
+  await  saveStorage();
     return bot.answerCallbackQuery(query.id);
   }
 
@@ -346,7 +346,7 @@ bot.on('callback_query', async (query) => {
     if (!offer || offer.doneSellOffer) return;
 
     offer.doneSellOffer = true;
-    saveStorage();
+  await  saveStorage();
 
  
     // قناة التشييك
@@ -357,6 +357,7 @@ bot.on('callback_query', async (query) => {
     });
 
     // قناة العروض
+
     if (offer.publicMessageId) {
       await bot.editMessageText(formatOffer(user, offer, '', true), {
         chat_id: OFFERS_CHANNEL,
@@ -392,7 +393,7 @@ bot.on('callback_query', async (query) => {
 
         return
     }
-    saveStorage()
+  await  saveStorage()
 
     return bot.answerCallbackQuery(query.id, { text: 'تم التنفيذ' });
   }
@@ -407,7 +408,7 @@ bot.on('callback_query', async (query) => {
     if (!offer || offer.status !== 'pending') return;
 
     offer.status = 'rejected';
-    saveStorage();
+  await  saveStorage();
     // تعديل رسالة قناة التشييك
     await bot.editMessageText(
       formatOffer(user, offer, '\n❌ تم رفض العرض',true,true),
@@ -486,7 +487,7 @@ bot.on('callback_query', async (query) => {
     // }
 
     user.offers.splice(index, 1);
-    saveStorage();
+  await  saveStorage();
 
 
     // قناة التشييك
@@ -611,7 +612,7 @@ async function sendOfferForReview(chatId, messageId) {
     chat_id: chatId,
     message_id: messageId
   });
-  saveStorage();
+await  saveStorage();
 }
 
 function formatOffer(user, offer, statusText = '', isCenterLine = false,viewName=false) {
