@@ -34,7 +34,7 @@
         "minQuantity": "50",
         "maxQuantity": "100",
         "transform_way": "haram",
-        "status": "pending",
+        "status": "approved",
         "userId": 1478471026,
         "doneSellOffer": false,
         "checkMessageId": 98,
