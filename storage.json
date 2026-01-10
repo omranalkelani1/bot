@@ -50,7 +50,8 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "120"
     },
     "first_name": "Ibrahim",
     "last_name": "Khalifa"
