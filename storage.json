@@ -29,9 +29,10 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "120.75",
-      "minQuantity": "400"
+      "minQuantity": "400",
+      "maxQuantity": "400"
     },
     "first_name": "Khaled"
   }
