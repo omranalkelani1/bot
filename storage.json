@@ -31,7 +31,8 @@
       "step": "askPayment",
       "price": "1",
       "minQuantity": "50",
-      "maxQuantity": "100"
+      "maxQuantity": "100",
+      "transform_way": "haram"
     },
     "first_name": "Rateb",
     "last_name": "Mourad"
