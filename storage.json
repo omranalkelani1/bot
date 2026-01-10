@@ -32,7 +32,8 @@
       "step": "askPayment",
       "price": "120.75",
       "minQuantity": "400",
-      "maxQuantity": "400"
+      "maxQuantity": "400",
+      "transform_way": "shamSy"
     },
     "first_name": "Khaled"
   }
