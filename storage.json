@@ -7,7 +7,7 @@
       "step": "askPhone"
     }
   },
-  "offerSeq": 14,
+  "offerSeq": 15,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -25,16 +25,23 @@
         "doneSellOffer": false,
         "checkMessageId": 94,
         "publicMessageId": null
+      },
+      {
+        "id": 15,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "120.75",
+        "minQuantity": "400",
+        "maxQuantity": "400",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 6279148047,
+        "doneSellOffer": false,
+        "checkMessageId": 95,
+        "publicMessageId": null
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "120.75",
-      "minQuantity": "400",
-      "maxQuantity": "400",
-      "transform_way": "shamSy"
-    },
+    "current": {},
     "first_name": "Khaled"
   }
 }
