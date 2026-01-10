@@ -20,7 +20,7 @@
         "minQuantity": "100",
         "maxQuantity": "400",
         "transform_way": "shamSy",
-        "status": "pending",
+        "status": "approved",
         "userId": 6279148047,
         "doneSellOffer": false,
         "checkMessageId": 94,
@@ -38,7 +38,7 @@
         "userId": 6279148047,
         "doneSellOffer": false,
         "checkMessageId": 95,
-        "publicMessageId": null
+        "publicMessageId": 4246
       }
     ],
     "current": {},
