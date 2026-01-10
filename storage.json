@@ -25,19 +25,27 @@
   "1478471026": {
     "phone": "4917661292298",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "1",
-      "minQuantity": "50",
-      "maxQuantity": "100",
-      "transform_way": "haram"
-    },
+    "offers": [
+      {
+        "id": 18,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "1",
+        "minQuantity": "50",
+        "maxQuantity": "100",
+        "transform_way": "haram",
+        "status": "pending",
+        "userId": 1478471026,
+        "doneSellOffer": false,
+        "checkMessageId": 98,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "Rateb",
     "last_name": "Mourad"
   },
-  "offerSeq": 17,
+  "offerSeq": 18,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
