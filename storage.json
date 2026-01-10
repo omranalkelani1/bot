@@ -53,7 +53,8 @@
       "step": "askPayment",
       "price": "120",
       "minQuantity": "50",
-      "maxQuantity": "85"
+      "maxQuantity": "85",
+      "transform_way": "syriatel"
     },
     "first_name": "Ibrahim",
     "last_name": "Khalifa"
