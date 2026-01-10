@@ -29,7 +29,8 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "120.75"
     },
     "first_name": "Khaled"
   }
