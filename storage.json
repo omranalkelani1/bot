@@ -7,7 +7,7 @@
       "step": "askPhone"
     }
   },
-  "offerSeq": 15,
+  "offerSeq": 16,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -47,15 +47,23 @@
   "5693992074": {
     "phone": "963983663625",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "120",
-      "minQuantity": "50",
-      "maxQuantity": "85",
-      "transform_way": "shamSy"
-    },
+    "offers": [
+      {
+        "id": 16,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "120",
+        "minQuantity": "50",
+        "maxQuantity": "85",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 5693992074,
+        "doneSellOffer": false,
+        "checkMessageId": 96,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "Ibrahim",
     "last_name": "Khalifa"
   }
