@@ -48,7 +48,10 @@
     "phone": "963983663625",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "Ibrahim",
     "last_name": "Khalifa"
   }
