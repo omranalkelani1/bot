@@ -104,5 +104,21 @@
     "current": {},
     "first_name": "Ibrahim",
     "last_name": "Khalifa"
+  },
+  "8365469595": {
+    "phone": null,
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    }
+  },
+  "6478406513": {
+    "phone": "963960018037",
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {},
+    "first_name": "Mohamad",
+    "last_name": "Allouz"
   }
 }
