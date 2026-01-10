@@ -26,7 +26,10 @@
     "phone": "4917661292298",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "first_name": "Rateb",
     "last_name": "Mourad"
   },
