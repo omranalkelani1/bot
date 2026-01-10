@@ -1,5 +1,18 @@
 {
-
-  "offerSeq": 13
- 
+  "872282181": {
+    "phone": null,
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    }
+  },
+  "offerSeq": 13,
+  "6279148047": {
+    "phone": "963994898467",
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {},
+    "first_name": "Khaled"
+  }
 }
