@@ -117,7 +117,10 @@
     "phone": "963960018037",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "Mohamad",
     "last_name": "Allouz"
   }
