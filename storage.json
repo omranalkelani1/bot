@@ -143,7 +143,10 @@
     "phone": "79964507429",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "first_name": "Mosab",
     "last_name": "Whats app +963949204820"
   }
