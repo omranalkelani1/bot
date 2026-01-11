@@ -45,6 +45,13 @@
     "first_name": "Rateb",
     "last_name": "Mourad"
   },
+  "1975626644": {
+    "phone": "963996916801",
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {},
+    "first_name": "ابو اسلام"
+  },
   "offerSeq": 18,
   "6279148047": {
     "phone": "963994898467",
@@ -123,5 +130,13 @@
     },
     "first_name": "Mohamad",
     "last_name": "Allouz"
+  },
+  "5134156042": {
+    "phone": null,
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    }
   }
 }
