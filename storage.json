@@ -145,7 +145,8 @@
     "offers": [],
     "current": {
       "operation": "بيع",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "100"
     },
     "first_name": "Mosab",
     "last_name": "Whats app +963949204820"
