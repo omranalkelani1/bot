@@ -48,15 +48,23 @@
   "1235476209": {
     "phone": "963935943456",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "100",
-      "minQuantity": "100",
-      "maxQuantity": "100",
-      "transform_way": "shamDolar"
-    },
+    "offers": [
+      {
+        "id": 27,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "100",
+        "minQuantity": "100",
+        "maxQuantity": "100",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 1235476209,
+        "doneSellOffer": false,
+        "checkMessageId": 108,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "يوسف",
     "last_name": "ابو فهد"
   },
@@ -105,7 +113,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 26,
+  "offerSeq": 27,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
