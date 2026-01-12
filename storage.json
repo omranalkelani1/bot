@@ -297,7 +297,8 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "34"
     },
     "first_name": "Target"
   }
