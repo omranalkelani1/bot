@@ -25,15 +25,23 @@
   "999340079": {
     "phone": "963993878458",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "1",
-      "minQuantity": "100",
-      "maxQuantity": "118",
-      "transform_way": "shamDolar"
-    },
+    "offers": [
+      {
+        "id": 21,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "1",
+        "minQuantity": "100",
+        "maxQuantity": "118",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 999340079,
+        "doneSellOffer": false,
+        "checkMessageId": 101,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "منذر",
     "last_name": "الشيخ"
   },
@@ -82,7 +90,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 20,
+  "offerSeq": 21,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
