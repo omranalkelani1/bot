@@ -28,7 +28,8 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "1"
     },
     "first_name": "منذر",
     "last_name": "الشيخ"
