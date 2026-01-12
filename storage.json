@@ -113,7 +113,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 28,
+  "offerSeq": 29,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -315,15 +315,23 @@
   "7757323175": {
     "phone": "963931425395",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "128",
-      "minQuantity": "75",
-      "maxQuantity": "300",
-      "transform_way": "syriatel"
-    },
+    "offers": [
+      {
+        "id": 29,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "128",
+        "minQuantity": "75",
+        "maxQuantity": "300",
+        "transform_way": "syriatel",
+        "status": "pending",
+        "userId": 7757323175,
+        "doneSellOffer": false,
+        "checkMessageId": 110,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "Q",
     "last_name": "M"
   }
