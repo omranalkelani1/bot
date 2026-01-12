@@ -341,9 +341,10 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "121",
-      "minQuantity": "50"
+      "minQuantity": "50",
+      "maxQuantity": "55"
     },
     "first_name": "ali"
   }
