@@ -51,9 +51,10 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "100",
-      "minQuantity": "100"
+      "minQuantity": "100",
+      "maxQuantity": "100"
     },
     "first_name": "يوسف",
     "last_name": "ابو فهد"
