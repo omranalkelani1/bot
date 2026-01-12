@@ -249,7 +249,8 @@
       "step": "askPayment",
       "price": "33",
       "minQuantity": "31",
-      "maxQuantity": "32"
+      "maxQuantity": "32",
+      "transform_way": "shamDolar"
     },
     "first_name": "Target"
   }
