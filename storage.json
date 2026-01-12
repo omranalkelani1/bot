@@ -57,7 +57,7 @@
         "minQuantity": "100",
         "maxQuantity": "100",
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "approved",
         "userId": 1235476209,
         "doneSellOffer": false,
         "checkMessageId": 108,
