@@ -49,7 +49,10 @@
     "phone": "963996916801",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "first_name": "ابو اسلام"
   },
   "offerSeq": 19,
