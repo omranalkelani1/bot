@@ -54,7 +54,8 @@
       "step": "askPayment",
       "price": "100",
       "minQuantity": "100",
-      "maxQuantity": "100"
+      "maxQuantity": "100",
+      "transform_way": "shamDolar"
     },
     "first_name": "يوسف",
     "last_name": "ابو فهد"
