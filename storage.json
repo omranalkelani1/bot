@@ -51,8 +51,9 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "121.5"
+      "step": "askMaxQuantity",
+      "price": "121.5",
+      "minQuantity": "100"
     },
     "first_name": "ابو اسلام"
   },
