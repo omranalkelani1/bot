@@ -212,7 +212,10 @@
     "phone": "201222150564",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "Target"
   }
 }
