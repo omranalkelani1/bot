@@ -251,7 +251,7 @@
         "minQuantity": "31",
         "maxQuantity": "32",
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "rejected",
         "userId": 6838762803,
         "doneSellOffer": false,
         "checkMessageId": 105,
