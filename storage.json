@@ -258,7 +258,10 @@
         "publicMessageId": null
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "Target"
   }
 }
