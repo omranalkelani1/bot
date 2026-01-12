@@ -344,7 +344,8 @@
       "step": "askPayment",
       "price": "121",
       "minQuantity": "50",
-      "maxQuantity": "55"
+      "maxQuantity": "55",
+      "transform_way": "shamSy"
     },
     "first_name": "ali"
   }
