@@ -260,9 +260,10 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "34",
-      "minQuantity": "32"
+      "minQuantity": "32",
+      "maxQuantity": "33"
     },
     "first_name": "Target"
   }
