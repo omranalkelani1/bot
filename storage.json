@@ -246,8 +246,9 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "33"
+      "step": "askMaxQuantity",
+      "price": "33",
+      "minQuantity": "31"
     },
     "first_name": "Target"
   }
