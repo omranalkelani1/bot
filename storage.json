@@ -214,7 +214,8 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "32"
     },
     "first_name": "Target"
   }
