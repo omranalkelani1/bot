@@ -156,7 +156,8 @@
       "step": "askPayment",
       "price": "121",
       "minQuantity": "50",
-      "maxQuantity": "280"
+      "maxQuantity": "280",
+      "transform_way": "shamSy"
     },
     "first_name": "Zein",
     "last_name": "Taref"
