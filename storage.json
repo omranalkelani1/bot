@@ -237,7 +237,7 @@
       {
         "id": 24,
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "rejected",
         "userId": 6838762803,
         "doneSellOffer": false,
         "checkMessageId": 104,
