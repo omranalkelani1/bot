@@ -49,7 +49,10 @@
     "phone": "963935943456",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "يوسف",
     "last_name": "ابو فهد"
   },
