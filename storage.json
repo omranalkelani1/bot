@@ -52,7 +52,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 18,
+  "offerSeq": 19,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -150,15 +150,23 @@
   "7743470877": {
     "phone": "963996545922",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "121",
-      "minQuantity": "50",
-      "maxQuantity": "280",
-      "transform_way": "shamSy"
-    },
+    "offers": [
+      {
+        "id": 19,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "121",
+        "minQuantity": "50",
+        "maxQuantity": "280",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 7743470877,
+        "doneSellOffer": false,
+        "checkMessageId": 99,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "Zein",
     "last_name": "Taref"
   }
