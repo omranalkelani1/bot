@@ -90,7 +90,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 21,
+  "offerSeq": 22,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -211,15 +211,23 @@
   "6838762803": {
     "phone": "201222150564",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "32",
-      "minQuantity": "32",
-      "maxQuantity": "31",
-      "transform_way": "shamDolar"
-    },
+    "offers": [
+      {
+        "id": 22,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "32",
+        "minQuantity": "32",
+        "maxQuantity": "31",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 6838762803,
+        "doneSellOffer": false,
+        "checkMessageId": 102,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "Target"
   }
 }
