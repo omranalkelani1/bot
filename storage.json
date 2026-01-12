@@ -90,7 +90,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 22,
+  "offerSeq": 23,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -224,6 +224,14 @@
         "userId": 6838762803,
         "doneSellOffer": false,
         "checkMessageId": 102,
+        "publicMessageId": null
+      },
+      {
+        "id": 23,
+        "status": "pending",
+        "userId": 6838762803,
+        "doneSellOffer": false,
+        "checkMessageId": 103,
         "publicMessageId": null
       }
     ],
