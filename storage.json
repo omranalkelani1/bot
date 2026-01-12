@@ -153,9 +153,10 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "121",
-      "minQuantity": "50"
+      "minQuantity": "50",
+      "maxQuantity": "280"
     },
     "first_name": "Zein",
     "last_name": "Taref"
