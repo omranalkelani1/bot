@@ -48,18 +48,26 @@
   "1975626644": {
     "phone": "963996916801",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "121.5",
-      "minQuantity": "100",
-      "maxQuantity": "3000",
-      "transform_way": "shamSy"
-    },
+    "offers": [
+      {
+        "id": 20,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "121.5",
+        "minQuantity": "100",
+        "maxQuantity": "3000",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 1975626644,
+        "doneSellOffer": false,
+        "checkMessageId": 100,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 19,
+  "offerSeq": 20,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
