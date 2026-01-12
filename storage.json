@@ -228,7 +228,7 @@
       },
       {
         "id": 23,
-        "status": "pending",
+        "status": "rejected",
         "userId": 6838762803,
         "doneSellOffer": false,
         "checkMessageId": 103,
