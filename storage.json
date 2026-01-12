@@ -316,7 +316,10 @@
     "phone": "963931425395",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "Q",
     "last_name": "M"
   }
