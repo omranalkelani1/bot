@@ -244,14 +244,7 @@
         "publicMessageId": null
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "30",
-      "minQuantity": "32",
-      "maxQuantity": "32",
-      "transform_way": "shamDolar"
-    },
+    "current": {},
     "first_name": "Target"
   }
 }
