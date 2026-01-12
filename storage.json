@@ -347,7 +347,7 @@
         "minQuantity": "50",
         "maxQuantity": "55",
         "transform_way": "shamSy",
-        "status": "pending",
+        "status": "approved",
         "userId": 5843525080,
         "doneSellOffer": false,
         "checkMessageId": 111,
