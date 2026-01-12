@@ -258,7 +258,9 @@
         "publicMessageId": null
       }
     ],
-    "current": {},
+    "current": {
+      "transform_way": "shamDolar"
+    },
     "first_name": "Target"
   }
 }
