@@ -26,7 +26,10 @@
     "phone": "963993878458",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "منذر",
     "last_name": "الشيخ"
   },
