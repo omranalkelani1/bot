@@ -316,7 +316,10 @@
         "publicMessageId": 4257
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "Target"
   },
   "7757323175": {
