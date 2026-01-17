@@ -25,7 +25,7 @@
         "minQuantity": "50",
         "maxQuantity": "50",
         "transform_way": "syriatel",
-        "status": "pending",
+        "status": "approved",
         "userId": 872282181,
         "doneSellOffer": false,
         "checkMessageId": 114,
