@@ -126,6 +126,14 @@
     "current": {},
     "first_name": "محمد"
   },
+  "1710444377": {
+    "phone": null,
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    }
+  },
   "1975626644": {
     "phone": "963996916801",
     "category": "🥉 برونزي",
@@ -405,5 +413,13 @@
     ],
     "current": {},
     "first_name": "ali"
+  },
+  "6714332897": {
+    "phone": "491796919450",
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {},
+    "first_name": "Ali",
+    "last_name": "H"
   }
 }
