@@ -51,7 +51,8 @@
       "step": "askPayment",
       "price": "121.5",
       "minQuantity": "110",
-      "maxQuantity": "110"
+      "maxQuantity": "110",
+      "transform_way": "shamSy"
     },
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
