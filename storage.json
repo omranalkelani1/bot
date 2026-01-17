@@ -34,9 +34,10 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askMaxQuantity",
+      "step": "askPayment",
       "price": "122",
-      "minQuantity": "62"
+      "minQuantity": "62",
+      "maxQuantity": "62"
     },
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
