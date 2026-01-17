@@ -16,16 +16,23 @@
         "doneSellOffer": true,
         "checkMessageId": 97,
         "publicMessageId": 4249
+      },
+      {
+        "id": 32,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "124",
+        "minQuantity": "50",
+        "maxQuantity": "50",
+        "transform_way": "syriatel",
+        "status": "pending",
+        "userId": 872282181,
+        "doneSellOffer": false,
+        "checkMessageId": 114,
+        "publicMessageId": null
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "124",
-      "minQuantity": "50",
-      "maxQuantity": "50",
-      "transform_way": "syriatel"
-    },
+    "current": {},
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
   },
@@ -127,7 +134,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 31,
+  "offerSeq": 32,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
