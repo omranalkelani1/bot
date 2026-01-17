@@ -74,14 +74,7 @@
         "publicMessageId": 4267
       }
     ],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "115",
-      "minQuantity": "115",
-      "maxQuantity": "115",
-      "transform_way": "syriatel"
-    },
+    "current": {},
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
   },
