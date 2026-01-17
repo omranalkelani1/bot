@@ -90,9 +90,9 @@
     ],
     "current": {
       "operation": "بيع",
-      "step": "askMinQuantity",
+      "step": "askMaxQuantity",
       "price": "122",
-      "minQuantity": "115",
+      "minQuantity": "100",
       "maxQuantity": "155"
     },
     "first_name": "أبو بكر",
