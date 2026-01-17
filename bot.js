@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 // const fs = require('fs');
 // 
 // ================== CONFIG ==================
-const BOT_TOKEN = process.env.BOT_TOKEN
+const BOT_TOKEN = '8499337359:AAG-gTmEKDZJFF8bRv-YqE1SzHdmDk9f7mQ';
 const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
 // const OFFERS_CHANNEL = '@usdtB2026';      // قناة نشر العروض
 const OFFERS_CHANNEL = '-1001509487183';      // قناة نشر العروض
