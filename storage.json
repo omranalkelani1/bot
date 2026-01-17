@@ -83,7 +83,7 @@
         "transform_way": "syriatel",
         "status": "approved",
         "userId": 872282181,
-        "doneSellOffer": false,
+        "doneSellOffer": true,
         "checkMessageId": 118,
         "publicMessageId": 4268
       }
