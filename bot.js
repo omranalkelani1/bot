@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 // const fs = require('fs');
 // 
 // ================== CONFIG ==================
-const BOT_TOKEN = '8451392820:AAGYDwYGIgiVUK81BK2Q3A0WppaHdMFnS-s';
+const BOT_TOKEN = '8499337359:AAG-gTmEKDZJFF8bRv-YqE1SzHdmDk9f7mQ';
 const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
 // const OFFERS_CHANNEL = '@usdtB2026';      // قناة نشر العروض
 const OFFERS_CHANNEL = '-1001509487183';      // قناة نشر العروض
@@ -13,7 +13,11 @@ const OFFERS_CHANNEL = '-1001509487183';      // قناة نشر العروض
 
 // const fetch = (...args) =>
 //   import('node-fetch').then(({ default: fetch }) => fetch(...args));
-
+// GITHUB_TOKEN="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"
+// GITHUB_OWNER="omranalkelani1"
+// GITHUB_REPO="bot"
+// GITHUB_BRANCH="main"
+// GITHUB_FILE="storage.json"
 const GH = {
   // owner: GITHUB_OWNER,
   // repo: GITHUB_REPO,
@@ -629,7 +633,7 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false,viewName
 عمولة الوسيط : 0.25$/300$
 أبد العرض مع : @ABoASlam515
 
-كما يمكنك انشاء عروضك عن طريق البوت المميز @Usdt2026_bot
+كما يمكنك انشاء عروضك عن طريق البوت المميز @UsdtB2026_bot
 ${statusText}
 ${ viewName ?`الاسم : ${user?.first_name + " " + user?.last_name} 
 الرقم : ${user?.phone}`:''}
