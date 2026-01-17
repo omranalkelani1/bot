@@ -20,7 +20,7 @@ const GH = {
   // branch: GITHUB_BRANCH || 'main',
   // token: GITHUB_TOKEN,
   // file: GITHUB_FILE || 'storage.json'
-  owner: process.env.GITHUB_OWNER,
+  owner: process.env.GITHUB_OWNER, 
   repo: process.env.GITHUB_REPO,
   branch: process.env.GITHUB_BRANCH || 'main',
   token: process.env.GITHUB_TOKEN,
@@ -97,7 +97,7 @@ bot.onText(/\/start/, async (msg) => {
   try {
     const member = await bot.getChatMember(OFFERS_CHANNEL, userId);
     if (!['member', 'administrator', 'creator'].includes(member.status)) {
-      return bot.sendMessage(chatId, `❌ يجب الانضمام للقناة: https://t.me/WWWEXZ`, {
+      return bot.sendMessage(chatId, `❌ يجب  الانضمام للقناة: https://t.me/WWWEXZ`, {
         parse_mode: 'HTML'
       });
     }
