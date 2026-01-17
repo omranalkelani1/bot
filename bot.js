@@ -13,11 +13,7 @@ const OFFERS_CHANNEL = '-1001509487183';      // قناة نشر العروض
 
 // const fetch = (...args) =>
 //   import('node-fetch').then(({ default: fetch }) => fetch(...args));
-// GITHUB_TOKEN="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"
-// GITHUB_OWNER="omranalkelani1"
-// GITHUB_REPO="bot"
-// GITHUB_BRANCH="main"
-// GITHUB_FILE="storage.json"
+
 const GH = {
   // owner: GITHUB_OWNER,
   // repo: GITHUB_REPO,
