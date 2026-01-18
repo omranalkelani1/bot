@@ -102,7 +102,10 @@
         "publicMessageId": 4269
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
   },
