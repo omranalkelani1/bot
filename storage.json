@@ -107,7 +107,8 @@
       "step": "askPayment",
       "price": "117",
       "minQuantity": "115",
-      "maxQuantity": "115"
+      "maxQuantity": "115",
+      "transform_way": "syriatel"
     },
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
