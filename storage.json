@@ -270,8 +270,9 @@
     ],
     "current": {
       "operation": "بيع",
-      "step": "askMinQuantity",
-      "price": "127"
+      "step": "askMaxQuantity",
+      "price": "127",
+      "minQuantity": "100"
     },
     "first_name": "Khaled"
   },
