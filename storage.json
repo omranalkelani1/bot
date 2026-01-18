@@ -289,7 +289,7 @@
         "minQuantity": "275",
         "maxQuantity": "283",
         "transform_way": "syriatel",
-        "status": "pending",
+        "status": "approved",
         "userId": 6279148047,
         "doneSellOffer": false,
         "checkMessageId": 123,
