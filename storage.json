@@ -268,7 +268,10 @@
         "publicMessageId": 4246
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "first_name": "Khaled"
   },
   "5693992074": {
@@ -499,5 +502,13 @@
     "current": {},
     "first_name": "Ali",
     "last_name": "H"
+  },
+  "8059250178": {
+    "phone": null,
+    "category": "🥉 برونزي",
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    }
   }
 }
