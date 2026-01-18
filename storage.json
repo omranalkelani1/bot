@@ -282,7 +282,10 @@
         "publicMessageId": null
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "first_name": "Khaled"
   },
   "5693992074": {
