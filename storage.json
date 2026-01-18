@@ -273,7 +273,8 @@
       "step": "askPayment",
       "price": "127",
       "minQuantity": "100",
-      "maxQuantity": "283"
+      "maxQuantity": "283",
+      "transform_way": "syriatel"
     },
     "first_name": "Khaled"
   },
