@@ -268,20 +268,6 @@
         "publicMessageId": 4246
       },
       {
-        "id": 40,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "117",
-        "minQuantity": "100",
-        "maxQuantity": "283",
-        "transform_way": "syriatel",
-        "status": "pending",
-        "userId": 6279148047,
-        "doneSellOffer": false,
-        "checkMessageId": 122,
-        "publicMessageId": null
-      },
-      {
         "id": 41,
         "operation": "بيع",
         "step": "askPayment",
