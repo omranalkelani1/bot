@@ -234,7 +234,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 38,
+  "offerSeq": 39,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -266,16 +266,23 @@
         "doneSellOffer": false,
         "checkMessageId": 95,
         "publicMessageId": 4246
+      },
+      {
+        "id": 39,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "127",
+        "minQuantity": "100",
+        "maxQuantity": "283",
+        "transform_way": "syriatel",
+        "status": "pending",
+        "userId": 6279148047,
+        "doneSellOffer": false,
+        "checkMessageId": 121,
+        "publicMessageId": null
       }
     ],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "127",
-      "minQuantity": "100",
-      "maxQuantity": "283",
-      "transform_way": "syriatel"
-    },
+    "current": {},
     "first_name": "Khaled"
   },
   "5693992074": {
