@@ -520,7 +520,7 @@
         "minQuantity": "10",
         "maxQuantity": "10",
         "transform_way": "haram",
-        "status": "pending",
+        "status": "approved",
         "userId": 7024256640,
         "doneSellOffer": false,
         "checkMessageId": 125,
