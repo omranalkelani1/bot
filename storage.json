@@ -125,7 +125,7 @@
         "transform_way": "shamSy",
         "status": "approved",
         "userId": 872282181,
-        "doneSellOffer": false,
+        "doneSellOffer": true,
         "checkMessageId": 126,
         "publicMessageId": 4280
       },
