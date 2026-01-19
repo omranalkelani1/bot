@@ -234,7 +234,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 42,
+  "offerSeq": 43,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
@@ -511,15 +511,23 @@
   "7024256640": {
     "phone": "963998388248",
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "117",
-      "minQuantity": "10",
-      "maxQuantity": "10",
-      "transform_way": "haram"
-    },
+    "offers": [
+      {
+        "id": 43,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "117",
+        "minQuantity": "10",
+        "maxQuantity": "10",
+        "transform_way": "haram",
+        "status": "pending",
+        "userId": 7024256640,
+        "doneSellOffer": false,
+        "checkMessageId": 125,
+        "publicMessageId": null
+      }
+    ],
+    "current": {},
     "first_name": "Aiham",
     "last_name": "."
   }
