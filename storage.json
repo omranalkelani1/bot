@@ -512,7 +512,10 @@
     "phone": "963998388248",
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "first_name": "Aiham",
     "last_name": "."
   }
