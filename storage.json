@@ -514,8 +514,9 @@
     "offers": [],
     "current": {
       "operation": "بيع",
-      "step": "askMinQuantity",
-      "price": "117"
+      "step": "askMaxQuantity",
+      "price": "117",
+      "minQuantity": "10"
     },
     "first_name": "Aiham",
     "last_name": "."
