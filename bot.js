@@ -627,7 +627,7 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false,viewName
 👤 فئة العميل: ${user.category}
 
 عمولة الوسيط : 0.25$/300$
-أبد العرض مع : @ABoASlam515
+أبد العرض مع : @Omrano2002
 
 كما يمكنك انشاء عروضك عن طريق البوت المميز @UsdtB2026_bot
 ${statusText}
