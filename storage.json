@@ -114,16 +114,23 @@
         "doneSellOffer": true,
         "checkMessageId": 120,
         "publicMessageId": 4270
+      },
+      {
+        "id": 44,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "113.5",
+        "minQuantity": "120",
+        "maxQuantity": "120",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 872282181,
+        "doneSellOffer": false,
+        "checkMessageId": 126,
+        "publicMessageId": null
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "113.5",
-      "minQuantity": "120",
-      "maxQuantity": "120",
-      "transform_way": "shamSy"
-    },
+    "current": {},
     "first_name": "أبو بكر",
     "last_name": "الكيلاني"
   },
@@ -241,7 +248,7 @@
     "current": {},
     "first_name": "ابو اسلام"
   },
-  "offerSeq": 43,
+  "offerSeq": 44,
   "6279148047": {
     "phone": "963994898467",
     "category": "🥉 برونزي",
