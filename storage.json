@@ -613,7 +613,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 122,
+  "forwardingNum": 123,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
@@ -1129,16 +1129,24 @@
         "publicMessageId": null,
         "matchedWith": null,
         "rated": false
+      },
+      {
+        "id": 123,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "119",
+        "minQuantity": "50",
+        "maxQuantity": "110",
+        "transform_way": "syriatel",
+        "status": "pending",
+        "userId": 5134156042,
+        "checkMessageId": 443,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "119",
-      "minQuantity": "50",
-      "maxQuantity": "110",
-      "transform_way": "syriatel"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
