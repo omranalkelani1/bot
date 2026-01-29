@@ -87,25 +87,14 @@
         "minQuantity": "100",
         "maxQuantity": "300",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "rejected",
         "userId": 872282181,
         "checkMessageId": 435,
         "publicMessageId": 4513,
         "matchedWith": null,
         "rated": false,
         "number": 107,
-        "locked": false,
-        "trade": {
-          "tradeId": 37,
-          "buyerId": 872282181,
-          "sellerId": 6193222237,
-          "quantity": 110,
-          "step": "owner_pending_accept",
-          "sellerProofs": [],
-          "buyerProofs": [],
-          "adminProofs": [],
-          "createdAt": 1769689795695
-        }
+        "locked": false
       }
     ],
     "current": {},
