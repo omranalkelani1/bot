@@ -420,22 +420,7 @@
     "phone": "963993491665",
     "userId": 1869794934,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 124,
-        "operation": "بيع",
-        "step": "askMaxQuantity",
-        "price": "117.5",
-        "minQuantity": "185",
-        "transform_way": "haram",
-        "status": "pending",
-        "userId": 1869794934,
-        "checkMessageId": 430,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
