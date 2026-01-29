@@ -1123,13 +1123,12 @@
         "minQuantity": "91",
         "maxQuantity": "91",
         "transform_way": "shamDolar",
-        "status": "approved",
+        "status": "pending",
         "userId": 5134156042,
         "checkMessageId": 442,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false,
-        "number": 114
+        "rated": false
       },
       {
         "id": 123,
@@ -1139,12 +1138,13 @@
         "minQuantity": "50",
         "maxQuantity": "110",
         "transform_way": "syriatel",
-        "status": "pending",
+        "status": "approved",
         "userId": 5134156042,
         "checkMessageId": 443,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false
+        "rated": false,
+        "number": 114
       }
     ],
     "current": {},
