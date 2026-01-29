@@ -1642,7 +1642,9 @@
           "sellerId": 5329698405,
           "quantity": 100,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgQAAxkBAAIa-ml7oD6Lpmy4n1GOrlUzCCAfzLu6AALhDWsbkmLZU0ZBxSbd74ZbAQADAgADeQADOAQ"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769709262455
