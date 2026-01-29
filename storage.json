@@ -1181,24 +1181,7 @@
     "phone": "963980569403",
     "userId": 7485416695,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 116,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "117",
-        "minQuantity": "57",
-        "maxQuantity": "57",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 7485416695,
-        "checkMessageId": 436,
-        "publicMessageId": 4514,
-        "matchedWith": null,
-        "rated": false,
-        "number": 108
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
