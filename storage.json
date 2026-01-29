@@ -21,7 +21,26 @@
         "number": 111
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 119,
+      "editDraft": {
+        "id": 119,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "1",
+        "minQuantity": "1",
+        "maxQuantity": "42",
+        "transform_way": "shamDolar",
+        "status": "approved",
+        "userId": 51970206,
+        "checkMessageId": 439,
+        "publicMessageId": 4517,
+        "matchedWith": null,
+        "rated": false,
+        "number": 111
+      }
+    },
     "verify": {
       "step": "waiting_photos",
       "photos": []
