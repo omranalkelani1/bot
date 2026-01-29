@@ -221,12 +221,10 @@
     "last_name": "Ahmad"
   },
   "1104605211": {
-    "phone": null,
+    "phone": "963991095620",
     "userId": 1104605211,
     "offers": [],
-    "current": {
-      "step": "askPhone"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -236,7 +234,9 @@
     "strikes": {
       "count": 0,
       "history": []
-    }
+    },
+    "first_name": "Mohamad",
+    "last_name": "Mousa"
   },
   "1193489635": {
     "phone": "963930985556",
