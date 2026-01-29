@@ -322,24 +322,8 @@
     "category": "🥉 برونزي",
     "offers": [],
     "current": {
-      "step": "editing_offer",
-      "editingOfferId": 62,
-      "editDraft": {
-        "id": 62,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "118",
-        "minQuantity": "90",
-        "maxQuantity": "97",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 1862318321,
-        "checkMessageId": 365,
-        "publicMessageId": 4434,
-        "matchedWith": null,
-        "rated": false,
-        "number": 57
-      }
+      "operation": "شراء",
+      "step": "askPrice"
     },
     "verify": {
       "step": null,
