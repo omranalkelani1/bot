@@ -6,8 +6,9 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "1"
+      "step": "askMaxQuantity",
+      "price": "1",
+      "minQuantity": "1"
     },
     "verify": {
       "step": "waiting_photos",
