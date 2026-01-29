@@ -352,29 +352,11 @@
     "phone": "963993189926",
     "userId": 1798522778,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 117,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "116.5",
-        "minQuantity": "56.86",
-        "maxQuantity": "56.86",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 1798522778,
-        "checkMessageId": 437,
-        "publicMessageId": 4515,
-        "matchedWith": null,
-        "rated": false,
-        "number": 109
-      }
-    ],
+    "offers": [],
     "current": {
-      "step": "confirm_quantity",
-      "offerId": 118,
-      "offerOwnerId": 872282181,
-      "quantity": 56.86
+      "step": "ask_quantity",
+      "offerId": 119,
+      "offerOwnerId": 51970206
     },
     "verify": {
       "step": null,
