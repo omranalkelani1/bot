@@ -617,15 +617,24 @@
   "2134053545": {
     "phone": "963953275296",
     "userId": 2134053545,
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "1.007",
-      "minQuantity": "450",
-      "maxQuantity": "450",
-      "transform_way": "shamDolar"
-    },
+    "offers": [
+      {
+        "id": 131,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "1.007",
+        "minQuantity": "450",
+        "maxQuantity": "450",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 2134053545,
+        "checkMessageId": 451,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
+      }
+    ],
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -695,7 +704,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 130,
+  "forwardingNum": 131,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
