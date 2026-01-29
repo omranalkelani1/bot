@@ -1337,7 +1337,7 @@
           "buyerId": 872282181,
           "sellerId": 5134156042,
           "quantity": 100,
-          "step": "buyer_payment_info",
+          "step": "buyer_confirm_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIasWl7l23KW-PY2Q8VEnpo6NGkRvkrAAI3E2sbsMLZS-DzKvbw1uGsAQADAgADdwADOAQ"
           ],
@@ -1346,7 +1346,8 @@
           ],
           "adminProofs": [],
           "createdAt": 1769707322515,
-          "paymentInfo": "f4c23e53ae9e13a26631234ae8f3b8fd"
+          "paymentInfo": "f4c23e53ae9e13a26631234ae8f3b8fd",
+          "buyerPaymentInfo": "ميايتيميةبمييكسوسايظي"
         },
         "locked": true,
         "lockedBy": 5134156042
