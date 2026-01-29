@@ -897,7 +897,11 @@
     "userId": 7111040655,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 122,
+      "offerOwnerId": 5134156042
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -995,7 +999,10 @@
     "userId": 7970479825,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
