@@ -370,7 +370,12 @@
         "number": 109
       }
     ],
-    "current": {},
+    "current": {
+      "step": "confirm_quantity",
+      "offerId": 118,
+      "offerOwnerId": 872282181,
+      "quantity": 56.86
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -1323,7 +1328,10 @@
     "userId": 5329698405,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
