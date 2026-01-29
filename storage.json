@@ -772,13 +772,11 @@
     "last_name": "H"
   },
   "5924567969": {
-    "phone": null,
+    "phone": "963933918566",
     "userId": 5924567969,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {
-      "step": "askPhone"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -788,7 +786,8 @@
     "strikes": {
       "count": 0,
       "history": []
-    }
+    },
+    "first_name": "أل مايسترو"
   },
   "5129178902": {
     "phone": "963934370582",
