@@ -1336,13 +1336,14 @@
           "buyerId": 872282181,
           "sellerId": 5134156042,
           "quantity": 100,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIasWl7l23KW-PY2Q8VEnpo6NGkRvkrAAI3E2sbsMLZS-DzKvbw1uGsAQADAgADdwADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769707322515
+          "createdAt": 1769707322515,
+          "paymentInfo": "f4c23e53ae9e13a26631234ae8f3b8fd"
         },
         "locked": true,
         "lockedBy": 5134156042
