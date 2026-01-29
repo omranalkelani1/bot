@@ -224,7 +224,10 @@
     "phone": "963991095620",
     "userId": 1104605211,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
