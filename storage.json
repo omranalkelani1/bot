@@ -241,7 +241,7 @@
         "minQuantity": "50",
         "maxQuantity": "1000",
         "transform_way": "shamSy",
-        "status": "rejected",
+        "status": "done",
         "userId": 872282181,
         "checkMessageId": 460,
         "publicMessageId": 4538,
@@ -274,7 +274,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 15,
+    "tradesCount": 16,
     "ratings": [
       {
         "from": 5129178902,
@@ -1626,7 +1626,7 @@
         "minQuantity": "50",
         "maxQuantity": "100",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "done",
         "userId": 5329698405,
         "checkMessageId": 461,
         "publicMessageId": 4539,
@@ -1636,35 +1636,19 @@
         },
         "rated": false,
         "number": 131,
-        "trade": {
-          "tradeId": 43,
-          "buyerId": 872282181,
-          "sellerId": 5329698405,
-          "quantity": 100,
-          "step": "admin_upload",
-          "sellerProofs": [
-            "AgACAgQAAxkBAAIa-ml7oD6Lpmy4n1GOrlUzCCAfzLu6AALhDWsbkmLZU0ZBxSbd74ZbAQADAgADeQADOAQ"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIbBGl7oVZ4XoSS7_5zCwga9X2O2jfuAAKEDmsbIcbZU5oNVUvCRZxlAQADAgADeQADOAQ"
-          ],
-          "adminProofs": [
-            "AgACAgQAAxkBAAIbBGl7oVZ4XoSS7_5zCwga9X2O2jfuAAKEDmsbIcbZU5oNVUvCRZxlAQADAgADeQADOAQ"
-          ],
-          "createdAt": 1769709262455,
-          "paymentInfo": "68eda26d5f64e5e2e6987026dfd90b65",
-          "buyerPaymentInfo": "ميةسميةيميةيني"
-        },
         "locked": true,
         "lockedBy": 5329698405
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
     },
-    "tradesCount": 0,
+    "tradesCount": 1,
     "ratings": [],
     "strikes": {
       "count": 0,
