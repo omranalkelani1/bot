@@ -22,14 +22,14 @@
       }
     ],
     "current": {
-      "step": "editQuantity",
+      "step": "editing_offer",
       "editingOfferId": 119,
       "editDraft": {
         "id": 119,
         "operation": "شراء",
         "step": "askPayment",
         "price": "1",
-        "minQuantity": "1",
+        "minQuantity": "5",
         "maxQuantity": "42",
         "transform_way": "shamDolar",
         "status": "approved",
