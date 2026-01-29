@@ -592,6 +592,23 @@
       "history": []
     }
   },
+  "2134053545": {
+    "phone": "963953275296",
+    "userId": 2134053545,
+    "offers": [],
+    "current": {},
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    },
+    "first_name": "..."
+  },
   "offerSeq": 122,
   "botEnabled": true,
   "6193222237": {
