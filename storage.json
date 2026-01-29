@@ -1437,7 +1437,10 @@
         "lockedBy": 5134156042
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
