@@ -149,7 +149,7 @@
       }
     ],
     "current": {
-      "step": "editPrice",
+      "step": "editing_offer",
       "editingOfferId": 121,
       "editDraft": {
         "id": 121,
@@ -422,8 +422,7 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "116.5"
+      "step": "askPrice"
     },
     "verify": {
       "step": null,
