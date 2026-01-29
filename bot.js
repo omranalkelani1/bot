@@ -9,7 +9,7 @@
 // /buyerCall
 
 const TelegramBot = require('node-telegram-bot-api');
-const {process}= require('./env.js');
+// const {process}= require('./env.js');
 // const fs = require('fs');
 // 
 // ================== CONFIG ==================
