@@ -1303,9 +1303,8 @@
       }
     ],
     "current": {
-      "step": "ask_quantity",
-      "offerId": 134,
-      "offerOwnerId": 872282181
+      "operation": "بيع",
+      "step": "askPrice"
     },
     "verify": {
       "step": null,
