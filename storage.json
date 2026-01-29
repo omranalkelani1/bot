@@ -651,7 +651,11 @@
     "userId": 6193222237,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 133,
+      "offerOwnerId": 872282181
+    },
     "verify": {
       "step": null,
       "photos": [
@@ -1115,38 +1119,7 @@
     "phone": "12056183703",
     "userId": 7970479825,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 124,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "117.5",
-        "minQuantity": "100",
-        "maxQuantity": "100",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 7970479825,
-        "checkMessageId": 444,
-        "publicMessageId": 4523,
-        "matchedWith": {
-          "userId": 872282181,
-          "offerId": 133
-        },
-        "rated": false,
-        "number": 116,
-        "trade": {
-          "tradeId": 39,
-          "buyerId": 872282181,
-          "sellerId": 7970479825,
-          "quantity": 100,
-          "step": "owner_pending_accept",
-          "sellerProofs": [],
-          "buyerProofs": [],
-          "adminProofs": [],
-          "createdAt": 1769704186238
-        }
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
