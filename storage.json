@@ -342,12 +342,14 @@
           "buyerId": 1862318321,
           "sellerId": 1975626644,
           "quantity": 105,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769672384905
-        }
+        },
+        "locked": true,
+        "lockedBy": 1862318321
       }
     ],
     "current": {},
