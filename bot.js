@@ -1329,7 +1329,7 @@ bot.on('callback_query', async (query) => {
       trade.buyerId,
       `🏦 الرجاء إدخال معلومات الاستلام الخاصة بك
 يرجى ارسال عنوان المحفظة على السلسلة BEP20 فقط
-📦 الكمية: ${trade.quantity}
+📦 الكمية: ${+trade.quantity - 0.25}
 المبلغ : ${getPrice(offer.price, trade.quantity)}
 `,
     );
@@ -1766,11 +1766,11 @@ bot.on('callback_query', async (query) => {
     // notify seller to upload proofs
     await safeSendMessage(trade.sellerId, `
       📤 الرجاء إرسال إثباتات التحويل (صور فقط)
-      📦 المبلغ المطلوب: ${trade.quantity} USDT
+      📦 المبلغ المطلوب: ${+trade.quantity + 0.25} USDT
       💰 ستستلم : ${getPrice(offer.price, trade.quantity)}
 
       عنوان المحظة :   
-      <code>0x4411666a53d7ec17ac4610797a0529f3bb63e8e6</code>
+      <code>0xe52424631D5688FfB46e9B9dE760a006d5BbE587</code>
       عبر السلسلة BEP20 
        بعد الإرسال اضغط 'إنهاء رفع الإثباتات'`, {
       parse_mode: 'HTML',
@@ -2629,8 +2629,7 @@ function formatOffer(user, offer, statusText = '', isCenterLine = false, viewNam
 👤 فئة العميل: ${getCategory(user.tradesCount)}
 ${user.verified ? '✅ حساب موثق' : ''}
 
-عمولة الوسيط: (00)
-ملاحظة : بمناسبة افتتاح البوت  عمولة صفر اخي قد ما كانت الكمية  عندك 🎊 🔥 🔥 🔥 🔥 🔥
+ملاحظة : العمولة 0.25$  قد ما كانت الكمية  عندك  🔥 🔥 🔥
 كما يمكنك انشاء عروضك عن طريق البوت المميز @omran2002_bot
 ${statusText}
 ${viewName ? `الاسم : ${user?.first_name + " " + user?.last_name} 
