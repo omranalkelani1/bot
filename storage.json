@@ -342,13 +342,14 @@
           "buyerId": 1862318321,
           "sellerId": 1975626644,
           "quantity": 105,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIYIWl7DvcxlXvmWfMBtPYRUs4BMlSpAAKRDGsbEErZU88_MPH3QCROAQADAgADeQADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769672384905
+          "createdAt": 1769672384905,
+          "paymentInfo": "c4164c71bab352878bf65eb6f4f293cb"
         },
         "locked": true,
         "lockedBy": 1862318321
