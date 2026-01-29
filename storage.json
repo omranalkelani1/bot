@@ -342,7 +342,7 @@
           "buyerId": 1862318321,
           "sellerId": 1975626644,
           "quantity": 105,
-          "step": "wait_admin_confirm_payment_info",
+          "step": "buyer_upload",
           "sellerProofs": [
             "AgACAgQAAxkBAAIYIWl7DvcxlXvmWfMBtPYRUs4BMlSpAAKRDGsbEErZU88_MPH3QCROAQADAgADeQADOAQ"
           ],
