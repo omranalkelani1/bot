@@ -343,7 +343,9 @@
           "sellerId": 1975626644,
           "quantity": 105,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgQAAxkBAAIYIWl7DvcxlXvmWfMBtPYRUs4BMlSpAAKRDGsbEErZU88_MPH3QCROAQADAgADeQADOAQ"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769672384905
