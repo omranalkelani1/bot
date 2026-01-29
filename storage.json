@@ -1593,33 +1593,6 @@
         "matchedWith": null,
         "rated": false,
         "number": 112
-      },
-      {
-        "id": 130,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "118",
-        "minQuantity": "50",
-        "maxQuantity": "100",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 5329698405,
-        "checkMessageId": 450,
-        "publicMessageId": 4529,
-        "matchedWith": null,
-        "rated": false,
-        "number": 122,
-        "trade": {
-          "tradeId": 40,
-          "buyerId": 872282181,
-          "sellerId": 5329698405,
-          "quantity": 100,
-          "step": "owner_pending_accept",
-          "sellerProofs": [],
-          "buyerProofs": [],
-          "adminProofs": [],
-          "createdAt": 1769706888406
-        }
       }
     ],
     "current": {
