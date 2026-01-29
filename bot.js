@@ -45,7 +45,7 @@ const GH = {
   // branch: GITHUB_BRANCH || 'main',
   // token: GITHUB_TOKEN,
   // file: GITHUB_FILE || 'storage.json'
-  owner: process.env.GITHUB_OWNER, 
+  owner: process.env.GITHUB_OWNER,
   repo: process.env.GITHUB_REPO,
   branch: process.env.GITHUB_BRANCH || 'main',
   token: process.env.GITHUB_TOKEN,
@@ -197,7 +197,7 @@ bot.onText(/\/removeOffer(\d+)/, async (msg, match) => {
   const offerNum = Number(match[1]);
 
   if (!offerNum) {
-    await safeSendMessage(msg.chat.id,'done have offer id in remove offer command');
+    await safeSendMessage(msg.chat.id, 'done have offer id in remove offer command');
     return
   }
 
@@ -467,7 +467,7 @@ bot.onText(/\/FinishAllOffers/, (msg) => {
   bot.sendMessage(chatId, "⏳ Processing...");
 
   setImmediate(() => {
-    finishAllOffersSafe(chatId);
+    finishAllOffer();
   });
 });
 
@@ -1243,45 +1243,45 @@ bot.on('callback_query', async (query) => {
   }
 
   if (payload.type === 'admin_reject_seller_payment_info') {
-  const { offerId } = payload;
+    const { offerId } = payload;
 
-  let offer;
+    let offer;
 
-  for (const u of Object.values(userStates)) {
-    const found = u?.offers?.find(o => o.id === offerId);
-    if (found) {
-      offer = found;
-      break;
-    }
-  }
-
-  if (!offer || !offer.trade) {
-    return bot.answerCallbackQuery(query.id, { text: '❌ الصفقة غير موجودة' });
-  }
-
-  const { sellerId } = offer.trade;
-
-  // إشعار البائع فقط — بدون تغيير أي حالة
-  await safeSendMessage(
-    sellerId,
-    `❌ معلومات الاستلام غير صحيحة
-الرجاء تعديل معلومات الاستلام وإعادة إرسالها بشكل صحيح ✅`
-  );
-
-  // تحديث رسالة المشرف (اختياري)
-  try {
-    await bot.editMessageText(
-      `❌ تم طلب تعديل معلومات الاستلام من البائع
-رقم العرض: ${offer.number}`,
-      {
-        chat_id: query.message.chat.id,
-        message_id: query.message.message_id
+    for (const u of Object.values(userStates)) {
+      const found = u?.offers?.find(o => o.id === offerId);
+      if (found) {
+        offer = found;
+        break;
       }
-    );
-  } catch (e) {}
+    }
 
-  return bot.answerCallbackQuery(query.id, { text: 'تم الإشعار' });
-}
+    if (!offer || !offer.trade) {
+      return bot.answerCallbackQuery(query.id, { text: '❌ الصفقة غير موجودة' });
+    }
+
+    const { sellerId } = offer.trade;
+
+    // إشعار البائع فقط — بدون تغيير أي حالة
+    await safeSendMessage(
+      sellerId,
+      `❌ معلومات الاستلام غير صحيحة
+الرجاء تعديل معلومات الاستلام وإعادة إرسالها بشكل صحيح ✅`
+    );
+
+    // تحديث رسالة المشرف (اختياري)
+    try {
+      await bot.editMessageText(
+        `❌ تم طلب تعديل معلومات الاستلام من البائع
+رقم العرض: ${offer.number}`,
+        {
+          chat_id: query.message.chat.id,
+          message_id: query.message.message_id
+        }
+      );
+    } catch (e) { }
+
+    return bot.answerCallbackQuery(query.id, { text: 'تم الإشعار' });
+  }
 
   // ===== BUYER CONFIRM PAYMENT INFO (buyer presses) =====
   if (payload.type === 'seller_confirm_buyer') {
@@ -1421,50 +1421,50 @@ bot.on('callback_query', async (query) => {
   }
 
   // ===== ADMIN APPROVES BUYER PAYMENT INFO =====
-//   if (payload.type === 'admin_confirm_buyer_payment_info') {
-//     const { offerId } = payload;
+  //   if (payload.type === 'admin_confirm_buyer_payment_info') {
+  //     const { offerId } = payload;
 
-//     let offer, ownerUser;
-//     for (const u of Object.values(userStates)) {
-//       const found = u?.offers?.find(o => o.id === offerId);
-//       if (found) { offer = found; ownerUser = u; break; }
-//     }
+  //     let offer, ownerUser;
+  //     for (const u of Object.values(userStates)) {
+  //       const found = u?.offers?.find(o => o.id === offerId);
+  //       if (found) { offer = found; ownerUser = u; break; }
+  //     }
 
-//     if (!offer || !offer.trade) return bot.answerCallbackQuery(query.id, { text: '❌ الصفقة غير موجودة' });
+  //     if (!offer || !offer.trade) return bot.answerCallbackQuery(query.id, { text: '❌ الصفقة غير موجودة' });
 
-//     const trade = offer.trade;
+  //     const trade = offer.trade;
 
-//     // move to seller upload so seller can upload proofs after buyer payment info approved
-//     trade.step = 'seller_upload';
-//     await saveStorage();
+  //     // move to seller upload so seller can upload proofs after buyer payment info approved
+  //     trade.step = 'seller_upload';
+  //     await saveStorage();
 
-//     // حذف رسالة المشرف بعد الموافقة
-//     try { await bot.deleteMessage(query.message.chat.id, query.message.message_id).catch(() => { }); } catch (e) { }
+  //     // حذف رسالة المشرف بعد الموافقة
+  //     try { await bot.deleteMessage(query.message.chat.id, query.message.message_id).catch(() => { }); } catch (e) { }
 
-//     // notify seller with buyer payment info
-//     await safeSendMessage(
-//       trade.sellerId,
-//       `📋 معلومات دفع المشتري المعتمدة:
-// رقم المعاملة: ${trade.tradeId}
-// 📦 الكمية: ${trade.quantity}
-// 💰 المبلغ المطلوب: ${trade.quantity * offer.price}
+  //     // notify seller with buyer payment info
+  //     await safeSendMessage(
+  //       trade.sellerId,
+  //       `📋 معلومات دفع المشتري المعتمدة:
+  // رقم المعاملة: ${trade.tradeId}
+  // 📦 الكمية: ${trade.quantity}
+  // 💰 المبلغ المطلوب: ${trade.quantity * offer.price}
 
-// 🏦 معلومات دفع المشتري:
-//  <code>${trade.buyerPaymentInfo}</code>
+  // 🏦 معلومات دفع المشتري:
+  //  <code>${trade.buyerPaymentInfo}</code>
 
-// 📥 الرجاء إرسال إثباتات التحويل (صور فقط)`,
-//       {
-//         parse_mode: 'HTML',
-//         reply_markup: {
-//           inline_keyboard: [[
-//             { text: '✅ إنهاء رفع الإثباتات', callback_data: JSON.stringify({ type: 'seller_done_upload', offerId: offer.id }) }
-//           ]]
-//         }
-//       }
-//     );
+  // 📥 الرجاء إرسال إثباتات التحويل (صور فقط)`,
+  //       {
+  //         parse_mode: 'HTML',
+  //         reply_markup: {
+  //           inline_keyboard: [[
+  //             { text: '✅ إنهاء رفع الإثباتات', callback_data: JSON.stringify({ type: 'seller_done_upload', offerId: offer.id }) }
+  //           ]]
+  //         }
+  //       }
+  //     );
 
-//     return bot.answerCallbackQuery(query.id, { text: 'تم الموافقة' });
-//   }
+  //     return bot.answerCallbackQuery(query.id, { text: 'تم الموافقة' });
+  //   }
 
   // ===== ADMIN REJECTS BUYER PAYMENT INFO =====
   if (payload.type === 'admin_reject_buyer') {
@@ -1947,9 +1947,8 @@ bot.on('callback_query', async (query) => {
   👤 البائع: ${userStates[trade.sellerId]?.phone}
   👤 المشتري: ${userStates[trade.buyerId]?.phone}
   📦 الكمية: ${trade.quantity}
-   المبلغ المطلوب: ${
-      getPrice(offer.price, trade.quantity)
-   }
+   المبلغ المطلوب: ${getPrice(offer.price, trade.quantity)
+      }
   `
     );
 
@@ -2194,21 +2193,22 @@ bot.on('callback_query', async (query) => {
       {
         chat_id: query.message.chat.id,
         message_id: query.message.message_id,
-        parse_mode: 'HTML',}
+        parse_mode: 'HTML',
+      }
       //   reply_markup: {
       //     inline_keyboard: [
-            // [
-            // {
-            //   text: '✅ تم التنفيذ',
-            //   callback_data: JSON.stringify({
-            //     type: callbackTypes.done,
-            //     userId,
-            //     offerId
-            //   })
-            // },
-          //  [{ text: '❌ رفض', callback_data: JSON.stringify({ type: callbackTypes.reject, userId, offerId }) }]
-          // ]
-        // }
+      // [
+      // {
+      //   text: '✅ تم التنفيذ',
+      //   callback_data: JSON.stringify({
+      //     type: callbackTypes.done,
+      //     userId,
+      //     offerId
+      //   })
+      // },
+      //  [{ text: '❌ رفض', callback_data: JSON.stringify({ type: callbackTypes.reject, userId, offerId }) }]
+      // ]
+      // }
       // }
     );
 
@@ -2329,7 +2329,7 @@ bot.on('callback_query', async (query) => {
       رقم العرض هو : ${offer.number}
       `);
 
- 
+
 
     await saveStorage()
 
@@ -2357,15 +2357,15 @@ bot.on('callback_query', async (query) => {
   //#region  MANAGE_OFFERS ========
   if (payload.type === 'manage_offers') {
     const user = userStates[query.from.id];
-    
-    if (!user || user.offers.length===0) {
-      
-      return await safeSendMessage(chatId,  'لا توجد عروض' );
+
+    if (!user || user.offers.length === 0) {
+
+      return await safeSendMessage(chatId, 'لا توجد عروض');
     }
     const CurrentOffers = user.offers.filter(ele => ele.status !== 'done' && ele.status !== 'rejected')
-if(CurrentOffers.length===0){
-  return await safeSendMessage(chatId,  'لا توجد عروض حالية' );
-}
+    if (CurrentOffers.length === 0) {
+      return await safeSendMessage(chatId, 'لا توجد عروض حالية');
+    }
     CurrentOffers.forEach(o => {
       const message = formatPreview(o, `
         📩 العرض رقم: ${o.number}
@@ -2991,29 +2991,29 @@ async function finishAllOffer() {
 
   for (const [userId, userData] of Object.entries(userStates || {})) {
     const offers = userData?.offers;
-    if (Array.isArray(offers) && offers.length >0) {
+    if (Array.isArray(offers) && offers.length > 0) {
 
 
       for (const offer of offers) {
-                 finishOffer(userData, offer);
-            }
-          }
-      
-          userStates[userId].offers = [];
-      
-          await saveStorage();
-      
-             safeSendMessage(
-              userId,
-              `✅ تم إغلاق جميع عروضك من قبل المشرف
-      لضبط حركة السوق اليومية`
-            );
-        }
-      
-      return safeSendMessage(
-        OFFERS_CHANNEL,
-        `  تم اغلاق جميع العروض القديمة لضبط حركة السوق اليومية 🎯🎯`
-      );
+        finishOffer(userData, offer);
+      }
+    }
+
+    userStates[userId].offers = [];
+
+
+    safeSendMessage(
+      userId,
+      `✅ تم إغلاق جميع عروضك من قبل المشرف
+            لضبط حركة السوق اليومية`
+    );
+  }
+  await saveStorage();
+
+  return safeSendMessage(
+    OFFERS_CHANNEL,
+    `  تم اغلاق جميع العروض القديمة لضبط حركة السوق اليومية 🎯🎯`
+  );
 
 }
 
@@ -3065,7 +3065,7 @@ async function finalizeTrade(offer, chat_id, message_id) {
     await delay(300);
   }
 
-  const {buyerId, sellerId} = trade;
+  const { buyerId, sellerId } = trade;
   // إرسال إثباتات المشتري للبائع
   for (const p of trade.buyerProofs) {
     await bot.sendPhoto(trade.sellerId, p);
@@ -3112,9 +3112,9 @@ async function finalizeTrade(offer, chat_id, message_id) {
 
   // ===== طلب التقييم =====
   try {
-    
+
     await sendRatingRequest(buyerId, sellerId, offer.id);
-    await sendRatingRequest(sellerId,buyerId, offer.id);
+    await sendRatingRequest(sellerId, buyerId, offer.id);
   } catch (e) {
     console.error('sendRatingRequest error', e);
   }
@@ -3136,7 +3136,7 @@ async function safeEditMessageText(text, options) {
 
 async function removeOfferByAdmin(offerNumber) {
   for (const [userId, userData] of Object.entries(userStates || {})) {
-    if (!Array.isArray(userData.offers)||userData.offers.length === 0) continue;
+    if (!Array.isArray(userData.offers) || userData.offers.length === 0) continue;
 
     const index = userData.offers.findIndex(o => o.number == offerNumber);
     if (index === -1) continue;
@@ -3151,7 +3151,7 @@ async function removeOfferByAdmin(offerNumber) {
     await safeSendMessage(
       userId,
       `❌ تم حذف عرضك من قبل المشرف
-رقم العرض: ${offer.number }`
+رقم العرض: ${offer.number}`
     );
 
     // إشعار المشرف
@@ -3169,12 +3169,12 @@ Offer: ${offer.number}`
 }
 
 function getCategory(tradesCount) {
-  if (tradesCount >= 30) return '👑 ملكي' ;
-  if (tradesCount >= 15) return '🥇 ذهبي' ;
-  if (tradesCount >= 5) return '🥈 فضي'  ;
-  return '🥉 برونزي' ;
+  if (tradesCount >= 30) return '👑 ملكي';
+  if (tradesCount >= 15) return '🥇 ذهبي';
+  if (tradesCount >= 5) return '🥈 فضي';
+  return '🥉 برونزي';
 }
 
-function getPrice(price,qty){
-  return (Number(price) * Number(qty)).toFixed(2) ;
+function getPrice(price, qty) {
+  return (Number(price) * Number(qty)).toFixed(2);
 }
