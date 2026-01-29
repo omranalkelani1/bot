@@ -28,12 +28,13 @@
         "minQuantity": "2",
         "maxQuantity": "42",
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "approved",
         "userId": 51970206,
         "checkMessageId": 432,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false
+        "rated": false,
+        "number": 117
       }
     ],
     "current": {},
@@ -610,7 +611,7 @@
       "history": []
     }
   },
-  "offerSeq": 116,
+  "offerSeq": 117,
   "botEnabled": true,
   "6193222237": {
     "phone": "963960013368",
@@ -910,10 +911,9 @@
     "category": "🥉 برونزي",
     "offers": [],
     "current": {
-      "step": "confirm_quantity",
-      "offerId": 69,
-      "offerOwnerId": 5129178902,
-      "quantity": 70
+      "step": "ask_quantity",
+      "offerId": 123,
+      "offerOwnerId": 1862318321
     },
     "verify": {
       "step": null,
