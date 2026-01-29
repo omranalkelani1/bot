@@ -9,7 +9,7 @@
 // /buyerCall
 
 const TelegramBot = require('node-telegram-bot-api');
-// const {process}= require('./env.js');
+const {process}= require('./env.js');
 // const fs = require('fs');
 // 
 // ================== CONFIG ==================
@@ -197,7 +197,7 @@ bot.onText(/\/removeOffer(\d+)/, async (msg, match) => {
   const offerNum = Number(match[1]);
 
   if (!offerNum) {
-    console.log('done have offer id in remove offer command');
+    await safeSendMessage(msg.chat.id,'done have offer id in remove offer command');
     return
   }
 
@@ -293,7 +293,6 @@ bot.onText(/\/start(?:\s+(.+))?/, async (msg, match) => {
     }
 
     const param = match?.[1];
-    console.log('param', param, 'match', match);
     if (param?.startsWith('offer_')) {
       const offerId = Number(param.replace('offer_', ''));
       return startOfferFlow(chatId, offerId);
@@ -301,7 +300,6 @@ bot.onText(/\/start(?:\s+(.+))?/, async (msg, match) => {
 
     sendWelcomeMessage(chatId, msg);
   } catch (e) {
-    console.log('error start :', e.message);
     safeSendMessage(chatId, '❌ تأكد أنك مشترك بالقناة والبوت مشرف');
   }
 });
@@ -310,7 +308,6 @@ bot.onText(/\/start(?:\s+(.+))?/, async (msg, match) => {
 bot.onText(/\/cancelTrade(\d+)\b/, async (msg, match) => {
   const chatId = msg.chat.id;
   const num = Number(match[1]); // interpreted as tradeId now
-  console.log('cancel Trade', num);
 
   try {
     const member = await bot.getChatMember(CHECK_CHANNEL, msg.from.id);
@@ -501,12 +498,10 @@ bot.on('message', async (msg) => {
       const trade = offer.trade;
       const fileId = msg.photo[msg.photo.length - 1].file_id;
 
-      console.log('photo -> buyer_upload handler', { chatId, offerId: offer.id, tradeStep: trade.step, sellerId: trade.sellerId, buyerId: trade.buyerId });
 
       trade.buyerProofs.push(fileId);
       await saveStorage();
 
-      console.log('pushed buyer photo', { offerId: offer.number, buyerProofsCount: trade.buyerProofs.length });
 
       return safeSendMessage(
         chatId,
@@ -530,7 +525,6 @@ bot.on('message', async (msg) => {
 
       const trade = offer.trade;
 
-      console.log('photo -> seller_upload handler', { chatId, offerId: offer.id, tradeStep: trade.step, sellerId: trade.sellerId, buyerId: trade.buyerId });
 
       // منع أي شيء غير الصور (احتياط)
       const photo = msg.photo[msg.photo.length - 1];
@@ -550,7 +544,6 @@ bot.on('message', async (msg) => {
       }
       await saveStorage();
 
-      console.log('pushed seller photo', { offerId: offer.number, sellerProofsCount: trade.sellerProofs.length });
 
       // فقط تأكيد استلام الصورة (لا نعيد عرض تعليمات الرفع كل مرة)
       return safeSendMessage(
@@ -580,7 +573,6 @@ bot.on('message', async (msg) => {
       trade.adminProofs.push(fileId);
       await saveStorage();
 
-      console.log('pushed admin photo', { offerId: offer.number, adminProofsCount: trade.adminProofs.length });
 
       return safeSendMessage(
         chatId,
@@ -693,7 +685,6 @@ bot.on('message', async (msg) => {
     if (!state) return
 
     if (state.step === 'askPhone' && msg.contact) {
-      console.log('hi');
 
       userStates[chatId].phone = msg.contact.phone_number;
       userStates[chatId].first_name = msg.contact.first_name;
@@ -1698,7 +1689,6 @@ bot.on('callback_query', async (query) => {
       createdAt: Date.now()
     };
 
-    console.log('trade ', offer.trade);
 
     // تنظيف حالة المستخدم
     buyer.current = {};
@@ -1755,7 +1745,6 @@ bot.on('callback_query', async (query) => {
     if (!offer || !offer.trade) return bot.answerCallbackQuery(query.id, { text: '❌ الصفقة غير موجودة' });
 
     const trade = offer.trade;
-    console.log('sellllr', trade.sellerId);
     const sellerUserId = offer.userId
     // only offer owner can accept (تأكيد الصفقة دائماً من صاحب العرض)
     if (query.from.id !== sellerUserId) return bot.answerCallbackQuery(query.id, { text: '❌ غير مصرح' });
@@ -2345,7 +2334,6 @@ bot.on('callback_query', async (query) => {
   //#region  REJECT =====
   if (payload.type === callbackTypes.reject) {
     const { userId, offerId } = payload;
-    console.log('rejecteee', payload);
     const user = userStates[userId];
     if (!user) return;
 
@@ -2862,7 +2850,6 @@ function startOfferFlow(chatId, offerId) {
     offerId,
     offerOwnerId: offer.userId
   };
-  console.log('offerOwnerId', offer.userId);
 
   safeSendMessage(
     chatId,
@@ -2915,7 +2902,6 @@ async function cancelTrade(offerNumber) {
   }
 
   // if (!offer || !offer.trade) return bot.answerCallbackQuery(query.id, { text: '❌ الصفقة غير  موجودة' });
-  console.log('offer trade', offer);
 
   if (!offer || !offer.trade) return;
 
