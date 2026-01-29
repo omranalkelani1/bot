@@ -461,10 +461,16 @@ bot.onText(/\/StopAcceptTrade\b/, async (msg) => {
   return bot.sendMessage(chatId, '⛔ تم إيقاف قبول الصفقات');
 });
 
-bot.onText(/\/FinishAllOffers\b/, async (msg) => {
+bot.onText(/\/FinishAllOffers/, (msg) => {
+  const chatId = msg.chat.id;
 
-  await finishAllOffer();
-})
+  bot.sendMessage(chatId, "⏳ Processing...");
+
+  setImmediate(() => {
+    finishAllOffersSafe(chatId);
+  });
+});
+
 
 // ================== MESSAGE FLOW ==================
 bot.on('message', async (msg) => {
@@ -2989,8 +2995,7 @@ async function finishAllOffer() {
 
 
       for (const offer of offers) {
-              await finishOffer(userData, offer);
-              await delay(300);
+                 finishOffer(userData, offer);
             }
           }
       
@@ -2998,7 +3003,7 @@ async function finishAllOffer() {
       
           await saveStorage();
       
-            await safeSendMessage(
+             safeSendMessage(
               userId,
               `✅ تم إغلاق جميع عروضك من قبل المشرف
       لضبط حركة السوق اليومية`
