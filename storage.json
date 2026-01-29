@@ -220,6 +220,24 @@
     "first_name": "Bshar",
     "last_name": "Ahmad"
   },
+  "1104605211": {
+    "phone": null,
+    "userId": 1104605211,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
   "1193489635": {
     "phone": "963930985556",
     "userId": 1193489635,
@@ -1119,24 +1137,7 @@
     "phone": "380944698225",
     "userId": 5134156042,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 117,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "118",
-        "minQuantity": "50",
-        "maxQuantity": "200",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 5134156042,
-        "checkMessageId": 421,
-        "publicMessageId": 4498,
-        "matchedWith": null,
-        "rated": false,
-        "number": 108
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
