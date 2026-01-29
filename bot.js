@@ -35,22 +35,22 @@ const STOP_BOT_PHOTO = 'AgACAgQAAxkBAAIIXGl0MeFscjjdJnAyfoY3oCsvutt7AAJLC2sbF3Wh
 
 // const fetch = (...args) =>
 //   import('node-fetch').then(({ default: fetch }) => fetch(...args));
-// GITHUB_TOKEN = "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"
-// GITHUB_OWNER = "omranalkelani1"
-// GITHUB_REPO = "bot"
-// GITHUB_BRANCH = "main"
-// GITHUB_FILE = "storage.json"
+GITHUB_TOKEN = "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"
+GITHUB_OWNER = "omranalkelani1"
+GITHUB_REPO = "bot"
+GITHUB_BRANCH = "main"
+GITHUB_FILE = "storage.json"
 const GH = {
-  // owner: GITHUB_OWNER,
-  // repo: GITHUB_REPO,
-  // branch: GITHUB_BRANCH || 'main',
-  // token: GITHUB_TOKEN,
-  // file: GITHUB_FILE || 'storage.json'
-  owner: process.env.GITHUB_OWNER, 
-  repo: process.env.GITHUB_REPO,
-  branch: process.env.GITHUB_BRANCH || 'main',
-  token: process.env.GITHUB_TOKEN,
-  file: process.env.GITHUB_FILE || 'storage.json'
+  owner: GITHUB_OWNER,
+  repo: GITHUB_REPO,
+  branch: GITHUB_BRANCH || 'main',
+  token: GITHUB_TOKEN,
+  file: GITHUB_FILE || 'storage.json'
+  // owner: process.env.GITHUB_OWNER, 
+  // repo: process.env.GITHUB_REPO,
+  // branch: process.env.GITHUB_BRANCH || 'main',
+  // token: process.env.GITHUB_TOKEN,
+  // file: process.env.GITHUB_FILE || 'storage.json'
 };
 
 const GH_API = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`;
