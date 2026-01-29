@@ -668,9 +668,8 @@
     "category": "🥉 برونزي",
     "offers": [],
     "current": {
-      "step": "ask_quantity",
-      "offerId": 133,
-      "offerOwnerId": 872282181
+      "operation": "شراء",
+      "step": "askPrice"
     },
     "verify": {
       "step": null,
@@ -1289,7 +1288,11 @@
         "number": 114
       }
     ],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 134,
+      "offerOwnerId": 872282181
+    },
     "verify": {
       "step": null,
       "photos": []
