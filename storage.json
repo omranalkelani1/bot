@@ -500,7 +500,7 @@
           "buyerId": 1975626644,
           "sellerId": 5134156042,
           "quantity": 200,
-          "step": "buyer_payment_info",
+          "step": "buyer_confirm_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIYLWl7EB0XIfrBDir7eoEZzmkDNA-eAALZDGsbsMLZSySTIDQLf4VEAQADAgADdwADOAQ"
           ],
@@ -509,7 +509,8 @@
           ],
           "adminProofs": [],
           "createdAt": 1769672657098,
-          "paymentInfo": "0acb9a997dbcc094fbbafc13c0be5922"
+          "paymentInfo": "0acb9a997dbcc094fbbafc13c0be5922",
+          "buyerPaymentInfo": "Ohfddddddxvbj"
         },
         "locked": true,
         "lockedBy": 1975626644
