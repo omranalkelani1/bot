@@ -475,7 +475,9 @@
           "sellerId": 5134156042,
           "quantity": 200,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgIAAxkBAAIYLWl7EB0XIfrBDir7eoEZzmkDNA-eAALZDGsbsMLZSySTIDQLf4VEAQADAgADdwADOAQ"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769672657098
