@@ -2536,7 +2536,7 @@ if(CurrentOffers.length===0){
   if (payload.type === 'profile') {
     const chatId = query.from.id;
     const user = userStates[chatId];
-
+    if (!user) return;
     const avgRating = user.ratings?.length
       ? (user.ratings.reduce((a, b) => a + Number(b.rate), 0) / user.ratings.length).toFixed(1)
       : 'لا يوجد';
