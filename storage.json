@@ -1337,7 +1337,7 @@
           "buyerId": 872282181,
           "sellerId": 5134156042,
           "quantity": 100,
-          "step": "wait_admin_buyer",
+          "step": "buyer_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIasWl7l23KW-PY2Q8VEnpo6NGkRvkrAAI3E2sbsMLZS-DzKvbw1uGsAQADAgADdwADOAQ"
           ],
