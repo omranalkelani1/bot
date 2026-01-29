@@ -474,13 +474,14 @@
           "buyerId": 1975626644,
           "sellerId": 5134156042,
           "quantity": 200,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIYLWl7EB0XIfrBDir7eoEZzmkDNA-eAALZDGsbsMLZSySTIDQLf4VEAQADAgADdwADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769672657098
+          "createdAt": 1769672657098,
+          "paymentInfo": "0acb9a997dbcc094fbbafc13c0be5922"
         },
         "locked": true,
         "lockedBy": 1975626644
