@@ -200,16 +200,24 @@
         },
         "rated": false,
         "number": 125
+      },
+      {
+        "id": 134,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "117.5",
+        "minQuantity": "50",
+        "maxQuantity": "1000",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 872282181,
+        "checkMessageId": 455,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "117.5",
-      "minQuantity": "50",
-      "maxQuantity": "1000",
-      "transform_way": "shamSy"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -712,7 +720,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 133,
+  "forwardingNum": 134,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
