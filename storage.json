@@ -133,7 +133,7 @@
           "buyerId": 872282181,
           "sellerId": 7485416695,
           "quantity": 57,
-          "step": "buyer_confirm_payment_info",
+          "step": "admin_upload",
           "sellerProofs": [
             "AgACAgQAAxkBAAIZh2l7VUWhg2M27Bzfbkc5OsjucPC1AALqDWsbqSzZU5CQN7oVMUn4AQADAgADeQADOAQ"
           ],
