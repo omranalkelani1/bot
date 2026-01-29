@@ -16,11 +16,11 @@ const TelegramBot = require('node-telegram-bot-api');
 // const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
 
 // ================= TEST CHANNELS ==============
-const BOT_TOKEN = '8463367526:AAHV71-_aMK59WD2DXYAuo42d6FQaQ5386o';
-const CHECK_CHANNEL = '-1003513182240';   // قناة المراجعة (قبول / رفض)
-const OFFERS_CHANNEL = '-1001509487183';      //   قناة نشر العروض  alkelani p2p
+const BOT_TOKEN = process.env.BOT_TOKEN;
+const CHECK_CHANNEL = process.env.CHECK_CHANNEL;   // قناة المراجعة (قبول / رفض)
+const OFFERS_CHANNEL = process.env.OFFERS_CHANNEL;      //   قناة نشر العروض  alkelani p2p
+const APPROVE_REJECT_CHANNEL = process.env.APPROVE_REJECT_CHANNEL;      // قناة نشر العروض
 // const OFFERS_CHANNEL = '-1003525097551';      // قناة نشر العروض omran offers
-const APPROVE_REJECT_CHANNEL = '-1003505235269';      // قناة نشر العروض
 
 // Photo IDs for start/stop announcements (from env)
 const START_BOT_PHOTO = 'AgACAgQAAxkBAAIIUGl0Lub3v4UR_lQ8GOK1-7wy4QsSAAJIC2sbF3WhU19jqCKwW8bzAQADAgADeQADOAQ';
@@ -35,22 +35,18 @@ const STOP_BOT_PHOTO = 'AgACAgQAAxkBAAIIXGl0MeFscjjdJnAyfoY3oCsvutt7AAJLC2sbF3Wh
 
 // const fetch = (...args) =>
 //   import('node-fetch').then(({ default: fetch }) => fetch(...args));
-GITHUB_TOKEN = "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"
-GITHUB_OWNER = "omranalkelani1"
-GITHUB_REPO = "bot"
-GITHUB_BRANCH = "main"
-GITHUB_FILE = "storage.json"
+
 const GH = {
-  owner: GITHUB_OWNER,
-  repo: GITHUB_REPO,
-  branch: GITHUB_BRANCH || 'main',
-  token: GITHUB_TOKEN,
-  file: GITHUB_FILE || 'storage.json'
-  // owner: process.env.GITHUB_OWNER, 
-  // repo: process.env.GITHUB_REPO,
-  // branch: process.env.GITHUB_BRANCH || 'main',
-  // token: process.env.GITHUB_TOKEN,
-  // file: process.env.GITHUB_FILE || 'storage.json'
+  // owner: GITHUB_OWNER,
+  // repo: GITHUB_REPO,
+  // branch: GITHUB_BRANCH || 'main',
+  // token: GITHUB_TOKEN,
+  // file: GITHUB_FILE || 'storage.json'
+  owner: process.env.GITHUB_OWNER, 
+  repo: process.env.GITHUB_REPO,
+  branch: process.env.GITHUB_BRANCH || 'main',
+  token: process.env.GITHUB_TOKEN,
+  file: process.env.GITHUB_FILE || 'storage.json'
 };
 
 const GH_API = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`;
