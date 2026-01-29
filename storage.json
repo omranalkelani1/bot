@@ -239,7 +239,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 14,
+    "tradesCount": 15,
     "ratings": [
       {
         "from": 5129178902,
@@ -1325,32 +1325,13 @@
         "minQuantity": "100",
         "maxQuantity": "100",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "done",
         "userId": 5134156042,
         "checkMessageId": 457,
         "publicMessageId": 4536,
         "matchedWith": null,
         "rated": false,
         "number": 128,
-        "trade": {
-          "tradeId": 41,
-          "buyerId": 872282181,
-          "sellerId": 5134156042,
-          "quantity": 100,
-          "step": "admin_upload",
-          "sellerProofs": [
-            "AgACAgIAAxkBAAIasWl7l23KW-PY2Q8VEnpo6NGkRvkrAAI3E2sbsMLZS-DzKvbw1uGsAQADAgADdwADOAQ"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIauGl7mMrAoo9F3WpPB1h0NMuViK9dAAJ9DmsbIcbZU7tGrVxHc3fiAQADAgADeQADOAQ"
-          ],
-          "adminProofs": [
-            "AgACAgQAAxkBAAIauGl7mMrAoo9F3WpPB1h0NMuViK9dAAJ9DmsbIcbZU7tGrVxHc3fiAQADAgADeQADOAQ"
-          ],
-          "createdAt": 1769707322515,
-          "paymentInfo": "f4c23e53ae9e13a26631234ae8f3b8fd",
-          "buyerPaymentInfo": "ميايتيميةبمييكسوسايظي"
-        },
         "locked": true,
         "lockedBy": 5134156042
       }
@@ -1360,7 +1341,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 2,
+    "tradesCount": 3,
     "ratings": [
       {
         "from": 5134156042,
