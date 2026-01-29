@@ -1,0 +1,13 @@
+export const process = {
+    env:{
+  GITHUB_TOKEN: "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",
+  GITHUB_OWNER: "omranalkelani1",
+  GITHUB_REPO: "bot",
+  GITHUB_BRANCH: "main",
+  GITHUB_FILE: "storage.json",
+  BOT_TOKEN: '8463367526:AAHV71-_aMK59WD2DXYAuo42d6FQaQ5386o',
+  CHECK_CHANNEL: '-1003513182240',
+  OFFERS_CHANNEL: '-1001509487183',
+  APPROVE_REJECT_CHANNEL: '-1003505235269'
+}}
+export default process;

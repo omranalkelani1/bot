@@ -9,6 +9,7 @@
 // /buyerCall
 
 const TelegramBot = require('node-telegram-bot-api');
+// const {process}= require('./env.js');
 // const fs = require('fs');
 // 
 // ================== CONFIG ==================
@@ -16,6 +17,7 @@ const TelegramBot = require('node-telegram-bot-api');
 // const CHECK_CHANNEL = '-1003595755056';   // قناة المراجعة (قبول / رفض)
 
 // ================= TEST CHANNELS ==============
+
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHECK_CHANNEL = process.env.CHECK_CHANNEL;   // قناة المراجعة (قبول / رفض)
 const OFFERS_CHANNEL = process.env.OFFERS_CHANNEL;      //   قناة نشر العروض  alkelani p2p
