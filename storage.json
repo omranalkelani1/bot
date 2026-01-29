@@ -133,13 +133,14 @@
           "buyerId": 872282181,
           "sellerId": 7485416695,
           "quantity": 57,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIZh2l7VUWhg2M27Bzfbkc5OsjucPC1AALqDWsbqSzZU5CQN7oVMUn4AQADAgADeQADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769690254951
+          "createdAt": 1769690254951,
+          "paymentInfo": "542f2e3d0907939e8124806eca74b030"
         },
         "locked": true,
         "lockedBy": 872282181
