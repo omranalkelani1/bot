@@ -500,7 +500,7 @@
           "buyerId": 1975626644,
           "sellerId": 5134156042,
           "quantity": 200,
-          "step": "buyer_confirm_payment_info",
+          "step": "admin_upload",
           "sellerProofs": [
             "AgACAgIAAxkBAAIYLWl7EB0XIfrBDir7eoEZzmkDNA-eAALZDGsbsMLZSySTIDQLf4VEAQADAgADdwADOAQ"
           ],
