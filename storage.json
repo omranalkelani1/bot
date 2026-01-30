@@ -383,7 +383,10 @@
     "phone": "963967274841",
     "userId": 1546813054,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
