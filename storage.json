@@ -1540,23 +1540,7 @@
   "7424622197": {
     "phone": "963959560511",
     "userId": 7424622197,
-    "offers": [
-      {
-        "id": 155,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "100",
-        "minQuantity": "50",
-        "maxQuantity": "100",
-        "transform_way": "shamDolar",
-        "status": "pending",
-        "userId": 7424622197,
-        "checkMessageId": 478,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
