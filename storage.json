@@ -493,21 +493,6 @@
         "matchedWith": null,
         "rated": false,
         "number": 165
-      },
-      {
-        "id": 179,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "117.5",
-        "minQuantity": "30",
-        "maxQuantity": "30",
-        "transform_way": "shamSy",
-        "status": "pending",
-        "userId": 1869794934,
-        "checkMessageId": 503,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false
       }
     ],
     "current": {},
