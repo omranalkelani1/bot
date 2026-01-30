@@ -323,23 +323,7 @@
     "phone": "963930985556",
     "userId": 1193489635,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 181,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "20",
-        "minQuantity": "20",
-        "maxQuantity": "20",
-        "transform_way": "shamDolar",
-        "status": "pending",
-        "userId": 1193489635,
-        "checkMessageId": 505,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
