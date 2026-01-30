@@ -382,14 +382,23 @@
   "1546813054": {
     "phone": "963967274841",
     "userId": 1546813054,
-    "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askMaxQuantity",
-      "price": "1.002",
-      "minQuantity": "100",
-      "transform_way": "shamDolar"
-    },
+    "offers": [
+      {
+        "id": 174,
+        "operation": "شراء",
+        "step": "askMaxQuantity",
+        "price": "1.002",
+        "minQuantity": "100",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 1546813054,
+        "checkMessageId": 498,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
+      }
+    ],
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -732,7 +741,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 173,
+  "forwardingNum": 174,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
