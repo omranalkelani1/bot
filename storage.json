@@ -575,8 +575,7 @@
     "offers": [],
     "current": {
       "operation": "بيع",
-      "step": "askMinQuantity",
-      "price": "20"
+      "step": "askPrice"
     },
     "verify": {
       "step": null,
