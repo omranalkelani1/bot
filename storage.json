@@ -151,7 +151,7 @@
         "minQuantity": "15",
         "maxQuantity": "15",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "done",
         "userId": 872282181,
         "checkMessageId": 493,
         "publicMessageId": 4571,
@@ -161,22 +161,6 @@
         },
         "rated": false,
         "number": 158,
-        "trade": {
-          "tradeId": 48,
-          "buyerId": 7977160463,
-          "sellerId": 872282181,
-          "quantity": 15,
-          "step": "admin_upload",
-          "sellerProofs": [],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIde2l8y0Z9cIN_tJ4GEEQa-XShWKixAAJ9DGsb8hnpUx97uAm3tNtJAQADAgADeQADOAQ"
-          ],
-          "adminProofs": [
-            "AgACAgQAAyEFAATQ7aVFAAICGGl8zLMoFJdpUOWZC3jfW2XUkn86AAKnDmsbOUDoU4AbfyFoLDOyAQADAgADeQADOAQ"
-          ],
-          "createdAt": 1769785974292,
-          "paymentInfo": "0d9062e67748ef1c968879a5cb0e34fd"
-        },
         "locked": true,
         "lockedBy": 872282181
       }
@@ -186,7 +170,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 17,
+    "tradesCount": 18,
     "ratings": [
       {
         "from": 5129178902,
@@ -1784,7 +1768,7 @@
         "minQuantity": "15",
         "maxQuantity": "15",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "done",
         "userId": 7977160463,
         "checkMessageId": 488,
         "publicMessageId": 4567,
@@ -1801,7 +1785,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 0,
+    "tradesCount": 1,
     "ratings": [],
     "strikes": {
       "count": 0,
