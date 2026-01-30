@@ -891,7 +891,7 @@
           "buyerId": 7424622197,
           "sellerId": 5129178902,
           "quantity": 100,
-          "step": "buyer_payment_info",
+          "step": "buyer_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIdEml8vtg3vT-M9dFowlnxWCCujRTlAAIkDWsbfOHoU9yCgJaP03UuAQADAgADeQADOAQ"
           ],
@@ -900,7 +900,8 @@
           ],
           "adminProofs": [],
           "createdAt": 1769782699602,
-          "paymentInfo": "b4c0c0d67e903d73467522f32630008b"
+          "paymentInfo": "b4c0c0d67e903d73467522f32630008b",
+          "buyerPaymentInfo": "0x84eb90297169d5cb55b3f03d00cd9e62d231d509"
         },
         "locked": true,
         "lockedBy": 5129178902
