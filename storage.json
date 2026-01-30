@@ -785,7 +785,7 @@
           "buyerId": 5129178902,
           "sellerId": 1936619837,
           "quantity": 28,
-          "step": "seller_upload",
+          "step": "wait_admin_seller",
           "sellerProofs": [
             "AgACAgQAAxkBAAIcIml8rDWAPKmJVmx2ErDa04aCW8Q6AAL-DGsbfDDoU31Uky51FID9AQADAgADeQADOAQ"
           ],
