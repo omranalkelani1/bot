@@ -785,12 +785,14 @@
           "buyerId": 5129178902,
           "sellerId": 1936619837,
           "quantity": 28,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769778039461
-        }
+        },
+        "locked": true,
+        "lockedBy": 5129178902
       }
     ],
     "current": {},
