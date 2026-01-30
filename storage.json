@@ -536,7 +536,10 @@
     "phone": "963953275296",
     "userId": 2134053545,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
