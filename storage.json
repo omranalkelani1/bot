@@ -785,13 +785,14 @@
           "buyerId": 5129178902,
           "sellerId": 1936619837,
           "quantity": 28,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIcIml8rDWAPKmJVmx2ErDa04aCW8Q6AAL-DGsbfDDoU31Uky51FID9AQADAgADeQADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769778039461
+          "createdAt": 1769778039461,
+          "paymentInfo": "f66924f29827ae5eec662ef9263a1199"
         },
         "locked": true,
         "lockedBy": 5129178902
