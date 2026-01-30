@@ -166,7 +166,7 @@
           "buyerId": 7977160463,
           "sellerId": 872282181,
           "quantity": 15,
-          "step": "seller_upload",
+          "step": "wait_admin_seller",
           "sellerProofs": [
             "AgACAgQAAxkBAAIdcWl8ypFX-S615keuBxn156xaHcwWAAJ_DWsbIcbhUzMPsCv1K5X-AQADAgADeQADOAQ"
           ],
