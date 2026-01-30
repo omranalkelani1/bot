@@ -1212,9 +1212,7 @@
         "rated": false
       }
     ],
-    "current": {
-      "transform_way": "shamSy"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
