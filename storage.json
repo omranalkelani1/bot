@@ -1546,7 +1546,9 @@
     "phone": "963959560511",
     "userId": 7424622197,
     "offers": [],
-    "current": {},
+    "current": {
+      "transform_way": "shamDolar"
+    },
     "verify": {
       "step": "waiting_photos",
       "photos": []
