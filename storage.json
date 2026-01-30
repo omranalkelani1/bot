@@ -892,7 +892,9 @@
           "sellerId": 5129178902,
           "quantity": 100,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgQAAxkBAAIdEml8vtg3vT-M9dFowlnxWCCujRTlAAIkDWsbfOHoU9yCgJaP03UuAQADAgADeQADOAQ"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769782699602
