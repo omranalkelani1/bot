@@ -155,7 +155,10 @@
         "userId": 872282181,
         "checkMessageId": 493,
         "publicMessageId": 4571,
-        "matchedWith": null,
+        "matchedWith": {
+          "userId": "7977160463",
+          "offerId": 165
+        },
         "rated": false,
         "number": 158
       }
@@ -1748,7 +1751,10 @@
         "userId": 7977160463,
         "checkMessageId": 488,
         "publicMessageId": 4567,
-        "matchedWith": null,
+        "matchedWith": {
+          "userId": 872282181,
+          "offerId": 169
+        },
         "rated": false,
         "number": 154
       }
