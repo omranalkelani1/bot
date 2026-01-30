@@ -891,7 +891,7 @@
           "buyerId": 7424622197,
           "sellerId": 5129178902,
           "quantity": 100,
-          "step": "seller_upload",
+          "step": "wait_admin_seller",
           "sellerProofs": [
             "AgACAgQAAxkBAAIdEml8vtg3vT-M9dFowlnxWCCujRTlAAIkDWsbfOHoU9yCgJaP03UuAQADAgADeQADOAQ"
           ],
