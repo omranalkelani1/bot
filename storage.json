@@ -1313,13 +1313,14 @@
           "buyerId": 2134053545,
           "sellerId": 5134156042,
           "quantity": 150,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIdsWl83dadoDpVYEO6DEsSj_paroh9AAJJDWsb43XpS9eeO9ENeTLXAQADAgADdwADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769790458967
+          "createdAt": 1769790458967,
+          "paymentInfo": "0acb9a997dbcc094fbbafc13c0be5922"
         },
         "locked": true,
         "lockedBy": 5134156042
