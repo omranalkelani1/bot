@@ -595,7 +595,8 @@
       "step": "askPayment",
       "price": "119",
       "minQuantity": "25",
-      "maxQuantity": "30"
+      "maxQuantity": "30",
+      "transform_way": "mtn"
     },
     "verify": {
       "step": null,
