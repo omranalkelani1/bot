@@ -1533,12 +1533,10 @@
     }
   },
   "7424622197": {
-    "phone": null,
+    "phone": "963959560511",
     "userId": 7424622197,
     "offers": [],
-    "current": {
-      "step": "askPhone"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -1548,6 +1546,7 @@
     "strikes": {
       "count": 0,
       "history": []
-    }
+    },
+    "first_name": "اا"
   }
 }
