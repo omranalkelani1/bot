@@ -432,15 +432,24 @@
     "phone": "963932210331",
     "userId": 1936619837,
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "1.015",
-      "minQuantity": "100",
-      "maxQuantity": "500",
-      "transform_way": "shamDolar"
-    },
+    "offers": [
+      {
+        "id": 167,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "1.015",
+        "minQuantity": "100",
+        "maxQuantity": "500",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 1936619837,
+        "checkMessageId": 491,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
+      }
+    ],
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -663,7 +672,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 166,
+  "forwardingNum": 167,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
