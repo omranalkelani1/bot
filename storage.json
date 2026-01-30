@@ -128,22 +128,6 @@
         "number": 142
       },
       {
-        "id": 154,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "1",
-        "minQuantity": "20",
-        "maxQuantity": "20",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 872282181,
-        "checkMessageId": 477,
-        "publicMessageId": 4558,
-        "matchedWith": null,
-        "rated": false,
-        "number": 145
-      },
-      {
         "id": 169,
         "operation": "بيع",
         "step": "askPayment",
