@@ -1559,7 +1559,8 @@
     "userId": 7424622197,
     "offers": [],
     "current": {
-      "transform_way": "shamDolar"
+      "operation": "شراء",
+      "step": "askPrice"
     },
     "verify": {
       "step": "waiting_photos",
