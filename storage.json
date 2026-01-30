@@ -385,10 +385,10 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askPayment",
+      "step": "askMaxQuantity",
       "price": "1.002",
       "minQuantity": "100",
-      "maxQuantity": "1000"
+      "transform_way": "shamDolar"
     },
     "verify": {
       "step": null,
