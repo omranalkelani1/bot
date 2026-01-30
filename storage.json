@@ -1321,7 +1321,7 @@
           "buyerId": 2134053545,
           "sellerId": 5134156042,
           "quantity": 150,
-          "step": "seller_upload",
+          "step": "wait_admin_seller",
           "sellerProofs": [
             "AgACAgIAAxkBAAIdeGl8yscLP39zVum9YMiv_Ma8xKqlAAKHDGsb43XpSwv5sX-0UQaJAQADAgADdwADOAQ"
           ],
