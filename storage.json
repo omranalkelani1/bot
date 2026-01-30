@@ -590,14 +590,7 @@
         "number": 148
       }
     ],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "118",
-      "minQuantity": "25",
-      "maxQuantity": "25",
-      "transform_way": "mtn"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": [
