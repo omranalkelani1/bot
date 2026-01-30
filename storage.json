@@ -168,7 +168,9 @@
           "quantity": 15,
           "step": "buyer_upload",
           "sellerProofs": [],
-          "buyerProofs": [],
+          "buyerProofs": [
+            "AgACAgQAAxkBAAIde2l8y0Z9cIN_tJ4GEEQa-XShWKixAAJ9DGsb8hnpUx97uAm3tNtJAQADAgADeQADOAQ"
+          ],
           "adminProofs": [],
           "createdAt": 1769785974292,
           "paymentInfo": "0d9062e67748ef1c968879a5cb0e34fd"
