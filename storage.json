@@ -583,22 +583,6 @@
     "userId": 2134053545,
     "offers": [
       {
-        "id": 163,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "1.008",
-        "minQuantity": "172.6",
-        "maxQuantity": "172.6",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 2134053545,
-        "checkMessageId": 486,
-        "publicMessageId": 4565,
-        "matchedWith": null,
-        "rated": false,
-        "number": 152
-      },
-      {
         "id": 170,
         "operation": "شراء",
         "step": "askPayment",
