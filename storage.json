@@ -1313,7 +1313,7 @@
           "buyerId": 2134053545,
           "sellerId": 5134156042,
           "quantity": 150,
-          "step": "wait_admin_buyer",
+          "step": "buyer_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIdsWl83dadoDpVYEO6DEsSj_paroh9AAJJDWsb43XpS9eeO9ENeTLXAQADAgADdwADOAQ"
           ],
