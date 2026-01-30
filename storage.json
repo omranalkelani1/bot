@@ -1396,23 +1396,7 @@
     "phone": "963941552003",
     "userId": 7892891785,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 177,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "146.12",
-        "minQuantity": "145.4",
-        "maxQuantity": "145.4",
-        "transform_way": "shamDolar",
-        "status": "pending",
-        "userId": 7892891785,
-        "checkMessageId": 501,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
