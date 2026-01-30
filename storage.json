@@ -1696,7 +1696,7 @@
         "status": "approved",
         "userId": 7977160463,
         "checkMessageId": 488,
-        "publicMessageId": null,
+        "publicMessageId": 4567,
         "matchedWith": null,
         "rated": false,
         "number": 154
