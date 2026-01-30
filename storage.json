@@ -934,7 +934,10 @@
     "userId": 7970479825,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -1409,5 +1412,23 @@
     },
     "first_name": "Mohamad",
     "last_name": "Hamza"
+  },
+  "7923924053": {
+    "phone": null,
+    "userId": 7923924053,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
   }
 }
