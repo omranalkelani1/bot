@@ -1323,7 +1323,7 @@
           "buyerId": 2134053545,
           "sellerId": 5134156042,
           "quantity": 150,
-          "step": "buyer_payment_info",
+          "step": "buyer_confirm_payment_info",
           "sellerProofs": [
             "AgACAgIAAxkBAAIdeGl8yscLP39zVum9YMiv_Ma8xKqlAAKHDGsb43XpSwv5sX-0UQaJAQADAgADdwADOAQ"
           ],
@@ -1332,7 +1332,8 @@
           ],
           "adminProofs": [],
           "createdAt": 1769785987455,
-          "paymentInfo": "0acb9a997dbcc094fbbafc13c0be5922"
+          "paymentInfo": "0acb9a997dbcc094fbbafc13c0be5922",
+          "buyerPaymentInfo": "0x2a6ae0b252a51b43f530ea50d844b50d0cd7a52c"
         },
         "locked": true,
         "lockedBy": 5134156042
