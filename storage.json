@@ -112,7 +112,26 @@
         "number": 141
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 150,
+      "editDraft": {
+        "id": 150,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "117",
+        "minQuantity": "100",
+        "maxQuantity": "300",
+        "transform_way": "shamSy",
+        "status": "approved",
+        "userId": 872282181,
+        "checkMessageId": 473,
+        "publicMessageId": 4554,
+        "matchedWith": null,
+        "rated": false,
+        "number": 141
+      }
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -1073,7 +1092,11 @@
     "userId": 8365469595,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 150,
+      "offerOwnerId": 872282181
+    },
     "verify": {
       "step": "waiting_photos",
       "photos": []
