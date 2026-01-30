@@ -536,14 +536,7 @@
     "phone": "963953275296",
     "userId": 2134053545,
     "offers": [],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "1.008",
-      "minQuantity": "124",
-      "maxQuantity": "124",
-      "transform_way": "shamDolar"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
