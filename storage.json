@@ -324,7 +324,11 @@
     "userId": 1193489635,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 159,
+      "offerOwnerId": 6193222237
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -390,12 +394,13 @@
         "price": "1.002",
         "minQuantity": "100",
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "approved",
         "userId": 1546813054,
         "checkMessageId": 498,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false
+        "rated": false,
+        "number": 163
       }
     ],
     "current": {},
@@ -651,7 +656,7 @@
     },
     "first_name": "..."
   },
-  "offerSeq": 162,
+  "offerSeq": 163,
   "botEnabled": true,
   "6193222237": {
     "phone": "963960013368",
