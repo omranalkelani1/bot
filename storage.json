@@ -891,12 +891,14 @@
           "buyerId": 7424622197,
           "sellerId": 5129178902,
           "quantity": 100,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769782699602
-        }
+        },
+        "locked": true,
+        "lockedBy": 5129178902
       }
     ],
     "current": {},
