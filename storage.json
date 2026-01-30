@@ -166,12 +166,14 @@
           "buyerId": 7977160463,
           "sellerId": 872282181,
           "quantity": 15,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769785974292
-        }
+        },
+        "locked": true,
+        "lockedBy": 872282181
       }
     ],
     "current": {},
@@ -600,7 +602,11 @@
         "number": 152
       }
     ],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 168,
+      "offerOwnerId": 5134156042
+    },
     "verify": {
       "step": null,
       "photos": []
