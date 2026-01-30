@@ -166,14 +166,15 @@
           "buyerId": 7977160463,
           "sellerId": 872282181,
           "quantity": 15,
-          "step": "buyer_payment_info",
+          "step": "buyer_confirm_payment_info",
           "sellerProofs": [],
           "buyerProofs": [
             "AgACAgQAAxkBAAIde2l8y0Z9cIN_tJ4GEEQa-XShWKixAAJ9DGsb8hnpUx97uAm3tNtJAQADAgADeQADOAQ"
           ],
           "adminProofs": [],
           "createdAt": 1769785974292,
-          "paymentInfo": "0d9062e67748ef1c968879a5cb0e34fd"
+          "paymentInfo": "0d9062e67748ef1c968879a5cb0e34fd",
+          "buyerPaymentInfo": "0x6c38d80abadbb96bd09bc5b4ead5f90b2a9fc515"
         },
         "locked": true,
         "lockedBy": 872282181
