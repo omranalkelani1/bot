@@ -1195,24 +1195,7 @@
     "phone": "380944698225",
     "userId": 5134156042,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 161,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "1.01",
-        "minQuantity": "100",
-        "maxQuantity": "100",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 5134156042,
-        "checkMessageId": 484,
-        "publicMessageId": 4563,
-        "matchedWith": null,
-        "rated": false,
-        "number": 150
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
