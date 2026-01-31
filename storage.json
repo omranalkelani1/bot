@@ -1836,24 +1836,7 @@
         "matchedWith": null,
         "rated": false,
         "number": 190,
-        "trade": {
-          "tradeId": 60,
-          "buyerId": 872282181,
-          "sellerId": 5329698405,
-          "quantity": 100,
-          "step": "wait_admin_buyer",
-          "sellerProofs": [
-            "AgACAgQAAxkBAAIhQml-ahQmbKKucbIhhP-dOf7ytmsLAAIjDmsb0ljwU4UOqSdWfLXuAQADAgADeQADOAQ"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIhX2l-bA9WKQlpAAFIAUmPw1omNjZu7gAC1g5rG89P8FPD6SJWmTFvaAEAAwIAA3kAAzgE"
-          ],
-          "adminProofs": [],
-          "createdAt": 1769892090939,
-          "paymentInfo": "68eda26d5f64e5e2e6987026dfd90b65"
-        },
-        "locked": true,
-        "lockedBy": 5329698405
+        "locked": false
       },
       {
         "id": 215,
