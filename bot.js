@@ -559,15 +559,35 @@ bot.on('message', async (msg) => {
       );
     }
 
-    // ========== ADMIN UPLOAD ==========
+    // ========= VERIFY ME UPLOAD ==========
+    if (msg.photo.length > 0 && userStates[chatId].verify?.step === 'waiting_photos') {
 
+      // نأخذ أعلى دقة للصورة
+      const fileId = msg.photo[msg.photo.length - 1].file_id;
+      // console.log('photo verify', fileId);
+
+      userStates[chatId].verify.photos.push(fileId);
+      await saveStorage();
+      return safeSendMessage(
+        chatId,
+        `📸 تم استلام الإثبات (${userStates[chatId].verify.photos.length})
+       وتمت الصفقة عند الانتهاء، اضغط زر *إنهاء الرفع*`
+      );
+    }
+    // ========== ADMIN UPLOAD ==========
+    if (!msg.caption) return;
+
+    const match = msg.caption.match(/#(\d+)/);
+    if (!match) {
+      return safeSendMessage(chatId, '❌ يرجى كتابة رقم العرض في الكابتشن مثل: #123');
+    }
+
+    const offerNumber = parseInt(match[1]);
     for (const user of Object.values(userStates)) {
       if (!user?.offers) continue;
 
       const offer = user.offers.find(
-        o => o.trade &&
-          o.trade.step === 'admin_upload'
-
+        o => o.number === offerNumber && o.trade && o.trade.step === 'admin_upload'
       );
       if (!offer) continue;
 
@@ -587,21 +607,7 @@ bot.on('message', async (msg) => {
       );
     }
 
-    // ========= VERIFY ME UPLOAD ==========
-    if (msg.photo.length > 0 && userStates[chatId].verify?.step === 'waiting_photos') {
 
-      // نأخذ أعلى دقة للصورة
-      const fileId = msg.photo[msg.photo.length - 1].file_id;
-      // console.log('photo verify', fileId);
-
-      userStates[chatId].verify.photos.push(fileId);
-      await saveStorage();
-      return safeSendMessage(
-        chatId,
-        `📸 تم استلام الإثبات (${userStates[chatId].verify.photos.length})
-       وتمت الصفقة عند الانتهاء، اضغط زر *إنهاء الرفع*`
-      );
-    }
 
   }
   else {
@@ -1701,7 +1707,7 @@ bot.on('callback_query', async (query) => {
 
     await saveStorage();
 
-      await bot.editMessageReplyMarkup(
+    await bot.editMessageReplyMarkup(
       { inline_keyboard: [] }, // إزالة الأزرار
       {
         chat_id: OFFERS_CHANNEL,
@@ -2945,17 +2951,17 @@ async function cancelTrade(offerNumber) {
 
   offer.trade = undefined
   await saveStorage();
-    await bot.editMessageReplyMarkup(
-      {
-        inline_keyboard: [[
-          StartOfferNowButton(offer.id)
-        ]]
-      },
-      {
-        chat_id: OFFERS_CHANNEL,
-        message_id: offer.publicMessageId
-      }
-    );
+  await bot.editMessageReplyMarkup(
+    {
+      inline_keyboard: [[
+        StartOfferNowButton(offer.id)
+      ]]
+    },
+    {
+      chat_id: OFFERS_CHANNEL,
+      message_id: offer.publicMessageId
+    }
+  );
 }
 
 function formatTradeStatus(offer) {
