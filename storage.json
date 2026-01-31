@@ -1401,10 +1401,10 @@
     "offers": [],
     "current": {
       "operation": "بيع",
-      "step": "askPayment",
+      "step": "askMaxQuantity",
       "price": "1.015",
       "minQuantity": "200",
-      "maxQuantity": "300"
+      "transform_way": "shamDolar"
     },
     "verify": {
       "step": null,
