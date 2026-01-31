@@ -650,7 +650,26 @@
         "number": 175
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 190,
+      "editDraft": {
+        "id": 190,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "116",
+        "minQuantity": "100",
+        "maxQuantity": "300",
+        "transform_way": "shamSy",
+        "status": "approved",
+        "userId": 6193222237,
+        "checkMessageId": 514,
+        "publicMessageId": 4594,
+        "matchedWith": null,
+        "rated": false,
+        "number": 175
+      }
+    },
     "verify": {
       "step": null,
       "photos": [
