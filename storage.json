@@ -735,13 +735,14 @@
           "buyerId": 1975626644,
           "sellerId": 1936619837,
           "quantity": 162,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIhbGl-cFkrxUwsXUyA-7qaCAy2AAG4yAACIA1rG7Rc8FOHBYPVIAABPdYBAAMCAAN5AAM4BA"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769893422595
+          "createdAt": 1769893422595,
+          "paymentInfo": "473af5560bdefc483beba2944c3d1fbd"
         },
         "locked": true,
         "lockedBy": 1975626644
