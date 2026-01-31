@@ -176,7 +176,27 @@
         "lockedBy": 872282181
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 192,
+      "editDraft": {
+        "id": 192,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "117",
+        "minQuantity": "50",
+        "maxQuantity": "100",
+        "transform_way": "shamSy",
+        "status": "rejected",
+        "userId": 872282181,
+        "checkMessageId": 516,
+        "publicMessageId": 4596,
+        "matchedWith": null,
+        "rated": false,
+        "number": 177,
+        "locked": false
+      }
+    },
     "verify": {
       "step": null,
       "photos": []
