@@ -723,12 +723,13 @@
         "minQuantity": "162",
         "maxQuantity": "162",
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "approved",
         "userId": 1975626644,
         "checkMessageId": 547,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false
+        "rated": false,
+        "number": 199
       }
     ],
     "current": {},
@@ -810,7 +811,7 @@
     },
     "first_name": "..."
   },
-  "offerSeq": 198,
+  "offerSeq": 199,
   "botEnabled": true,
   "6193222237": {
     "phone": "963960013368",
@@ -888,9 +889,10 @@
       }
     ],
     "current": {
-      "step": "ask_quantity",
+      "step": "confirm_quantity",
       "offerId": 187,
-      "offerOwnerId": 5329698405
+      "offerOwnerId": 5329698405,
+      "quantity": 100
     },
     "verify": {
       "step": null,
