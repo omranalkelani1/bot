@@ -294,21 +294,6 @@
         "matchedWith": null,
         "rated": false,
         "number": 170
-      },
-      {
-        "id": 195,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "21",
-        "minQuantity": "20",
-        "maxQuantity": "20",
-        "transform_way": "shamDolar",
-        "status": "pending",
-        "userId": 1193489635,
-        "checkMessageId": 519,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false
       }
     ],
     "current": {},
