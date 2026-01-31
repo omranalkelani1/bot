@@ -1545,13 +1545,11 @@
     "verified": true
   },
   "5136298029": {
-    "phone": null,
+    "phone": "963993399165",
     "userId": 5136298029,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {
-      "step": "askPhone"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -1561,7 +1559,8 @@
     "strikes": {
       "count": 0,
       "history": []
-    }
+    },
+    "first_name": "Mohammed"
   },
   "5329698405": {
     "phone": "46735909358",
