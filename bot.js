@@ -1370,7 +1370,7 @@ bot.on('callback_query', async (query) => {
     trade.step = 'admin_upload';
     await safeSendMessage(
       APPROVE_REJECT_CHANNEL,
-      `📋 معلومات الدفع:\nرقم المعاملة: ${trade.tradeId}\n📦 الكمية: ${trade.quantity}\n💰 المبلغ المطلوب: ${getPrice(offer.price, trade.quantity)}\n\n🏦 معلومات الدفع:\n <code>${trade.buyerPaymentInfo}</code>\n\n📥 الرجاء إرسال إثباتات التحويل (صور فقط)`,
+      `📋 معلومات الدفع:\nرقم العرض: <code>#${offer.number}</code>\n📦 الكمية: ${trade.quantity}\n💰 المبلغ المطلوب: ${getPrice(offer.price, trade.quantity)}\n\n🏦 معلومات الدفع:\n <code>${trade.buyerPaymentInfo}</code>\n\n📥 الرجاء إرسال إثباتات التحويل (صور فقط)`,
       {
         parse_mode: 'HTML',
         reply_markup: {
