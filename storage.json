@@ -1468,7 +1468,7 @@
           "buyerId": 2134053545,
           "sellerId": 5329698405,
           "quantity": 300,
-          "step": "seller_confirm_payment_info",
+          "step": "wait_admin_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIfbGl96v22pd97E3FHfEUqIIHhxLSMAAIiDWsb0ljwU4tLG5URvZhZAQADAgADeQADOAQ"
           ],
