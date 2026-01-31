@@ -1093,7 +1093,7 @@ bot.on('callback_query', async (query) => {
     // إرسال طلب التوثيق للمشرف
     await safeSendMessage(
       CHECK_CHANNEL,
-      `🔐 طلب توثيق حساب\n👤 ${user.first_name}\n📞 ${user.phone}`
+      `🔐 طلب توثيق حساب\n👤 ${user.first_name}\n📞 +${user.phone}`
     );
 
     for (const photoId of user.verify.photos) {
@@ -1606,8 +1606,8 @@ bot.on('callback_query', async (query) => {
     await safeSendMessage(
       APPROVE_REJECT_CHANNEL,
       `🧾 إثباتات البائع
-  👤 البائع: ${userStates[trade.sellerId]?.phone}
-  👤 المشتري: ${userStates[trade.buyerId]?.phone}
+  👤 البائع: +${userStates[trade.sellerId]?.phone}
+  👤 المشتري: +${userStates[trade.buyerId]?.phone}
   📦 الكمية: ${trade.quantity}
    المبلغ المطلوب: ${getPrice(offer.price, trade.quantity)}
   `
@@ -1700,6 +1700,14 @@ bot.on('callback_query', async (query) => {
     buyer.current = {};
 
     await saveStorage();
+
+      await bot.editMessageReplyMarkup(
+      { inline_keyboard: [] }, // إزالة الأزرار
+      {
+        chat_id: OFFERS_CHANNEL,
+        message_id: offer.publicMessageId
+      }
+    );
 
     // إشعار المشتري
     await safeSendMessage(
@@ -1944,8 +1952,8 @@ bot.on('callback_query', async (query) => {
     await safeSendMessage(
       APPROVE_REJECT_CHANNEL,
       `🧾 إثباتات المشتري
-  👤 البائع: ${userStates[trade.sellerId]?.phone}
-  👤 المشتري: ${userStates[trade.buyerId]?.phone}
+  👤 البائع: +${userStates[trade.sellerId]?.phone}
+  👤 المشتري: +${userStates[trade.buyerId]?.phone}
   📦 الكمية: ${trade.quantity}
    المبلغ المطلوب: ${getPrice(offer.price, trade.quantity)
       }
@@ -2083,6 +2091,7 @@ bot.on('callback_query', async (query) => {
     owner.offers.push(newOffer);
 
     // publish new offer to OFFERS_CHANNEL
+
     const pubMsg = await safeSendMessage(OFFERS_CHANNEL, formatOffer(owner, newOffer), { parse_mode: 'HTML', reply_markup: { inline_keyboard: [[StartOfferNowButton(newOffer.id)]] } });
     newOffer.publicMessageId = pubMsg.message_id;
 
@@ -2633,7 +2642,7 @@ ${user.verified ? '✅ حساب موثق' : ''}
 كما يمكنك انشاء عروضك عن طريق البوت المميز @omran2002_bot
 ${statusText}
 ${viewName ? `الاسم : ${user?.first_name + " " + user?.last_name} 
-الرقم : ${user?.phone}` : ''}
+الرقم : +${user?.phone}` : ''}
 `;
 
   // إذا تم تنفيذ العرض → شطب النص
@@ -2936,6 +2945,17 @@ async function cancelTrade(offerNumber) {
 
   offer.trade = undefined
   await saveStorage();
+    await bot.editMessageReplyMarkup(
+      {
+        inline_keyboard: [[
+          StartOfferNowButton(offer.id)
+        ]]
+      },
+      {
+        chat_id: OFFERS_CHANNEL,
+        message_id: offer.publicMessageId
+      }
+    );
 }
 
 function formatTradeStatus(offer) {
@@ -2945,8 +2965,8 @@ function formatTradeStatus(offer) {
   return `
 🧾 عرض رقم: ${offer.number}
 ━━━━━━━━━━━━
-👤 البائع: <code>${userStates[offer.trade.sellerId]?.phone}</code>
-👤 المشتري: <code>${userStates[offer.trade.buyerId]?.phone}</code>
+👤 البائع: +${userStates[offer.trade.sellerId]?.phone}
+👤 المشتري: +${userStates[offer.trade.buyerId]?.phone}
 
 📍 الحالة الحالية:
 ➡️ ${stepText}
