@@ -806,22 +806,6 @@
         "number": 183
       },
       {
-        "id": 203,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "117",
-        "minQuantity": "50",
-        "maxQuantity": "50",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 6193222237,
-        "checkMessageId": 533,
-        "publicMessageId": 4605,
-        "matchedWith": null,
-        "rated": false,
-        "number": 186
-      },
-      {
         "id": 210,
         "operation": "شراء",
         "step": "askPayment",
