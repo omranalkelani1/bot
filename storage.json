@@ -1493,7 +1493,7 @@
     "offers": [],
     "current": {},
     "verify": {
-      "step": "confirm",
+      "step": null,
       "photos": [
         "AgACAgQAAxkBAAIf42l-A2UhqB11NwvdBdnHLowVZHCHAAI8DWsbeHTxU4C6uyut-5joAQADAgADeQADOAQ"
       ]
@@ -1504,7 +1504,8 @@
       "count": 0,
       "history": []
     },
-    "first_name": "عماد"
+    "first_name": "عماد",
+    "verified": true
   },
   "5136298029": {
     "phone": null,
