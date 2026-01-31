@@ -154,7 +154,7 @@
         "minQuantity": "100",
         "maxQuantity": "100",
         "transform_way": "shamSy",
-        "locked": false,
+        "locked": true,
         "status": "approved",
         "userId": 872282181,
         "checkMessageId": 520,
@@ -167,12 +167,13 @@
           "buyerId": 872282181,
           "sellerId": 1869794934,
           "quantity": 100,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769865485895
-        }
+        },
+        "lockedBy": 872282181
       }
     ],
     "current": {},
