@@ -154,26 +154,14 @@
         "minQuantity": "100",
         "maxQuantity": "100",
         "transform_way": "shamSy",
-        "locked": true,
+        "locked": false,
         "status": "approved",
         "userId": 872282181,
         "checkMessageId": 520,
         "publicMessageId": 4599,
         "matchedWith": null,
         "rated": false,
-        "number": 180,
-        "trade": {
-          "tradeId": 55,
-          "buyerId": 872282181,
-          "sellerId": 1869794934,
-          "quantity": 100,
-          "step": "seller_upload",
-          "sellerProofs": [],
-          "buyerProofs": [],
-          "adminProofs": [],
-          "createdAt": 1769865485895
-        },
-        "lockedBy": 872282181
+        "number": 180
       },
       {
         "id": 199,
@@ -507,7 +495,11 @@
     "userId": 1869794934,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 198,
+      "offerOwnerId": 6193222237
+    },
     "verify": {
       "step": null,
       "photos": []
