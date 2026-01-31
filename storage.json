@@ -718,8 +718,7 @@
     ],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "162"
+      "step": "askPrice"
     },
     "verify": {
       "step": null,
