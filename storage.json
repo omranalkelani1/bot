@@ -74,6 +74,24 @@
     },
     "first_name": "𝐴𝑙𝑖 || ャ"
   },
+  "758263137": {
+    "phone": null,
+    "userId": 758263137,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
   "872282181": {
     "phone": "+963998889607",
     "userId": 872282181,
@@ -231,7 +249,7 @@
     "offers": [],
     "current": {},
     "verify": {
-      "step": null,
+      "step": "waiting_photos",
       "photos": []
     },
     "tradesCount": 0,
