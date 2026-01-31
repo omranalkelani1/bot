@@ -1513,7 +1513,10 @@
     "phone": "963992624503",
     "userId": 7031197911,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
