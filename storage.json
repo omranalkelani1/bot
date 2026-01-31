@@ -174,11 +174,19 @@
           "createdAt": 1769865485895
         },
         "lockedBy": 872282181
+      },
+      {
+        "id": 199,
+        "price": "116.3",
+        "status": "pending",
+        "userId": 872282181,
+        "checkMessageId": 529,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
       }
     ],
-    "current": {
-      "price": "116.3"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -786,7 +794,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 198,
+  "forwardingNum": 199,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
