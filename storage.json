@@ -736,7 +736,9 @@
           "sellerId": 1936619837,
           "quantity": 162,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgQAAxkBAAIhbGl-cFkrxUwsXUyA-7qaCAy2AAG4yAACIA1rG7Rc8FOHBYPVIAABPdYBAAMCAAN5AAM4BA"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769893422595
