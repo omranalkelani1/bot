@@ -164,17 +164,6 @@
         "number": 180
       },
       {
-        "id": 199,
-        "price": "116.3",
-        "status": "approved",
-        "userId": 872282181,
-        "checkMessageId": 529,
-        "publicMessageId": 4601,
-        "matchedWith": null,
-        "rated": false,
-        "number": 182
-      },
-      {
         "id": 201,
         "operation": "شراء",
         "step": "askPayment",
