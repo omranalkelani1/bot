@@ -1468,13 +1468,14 @@
           "buyerId": 2134053545,
           "sellerId": 5329698405,
           "quantity": 300,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIfbGl96v22pd97E3FHfEUqIIHhxLSMAAIiDWsb0ljwU4tLG5URvZhZAQADAgADeQADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769859273496
+          "createdAt": 1769859273496,
+          "paymentInfo": "68eda26d5f64e5e2e6987026dfd90b65"
         },
         "locked": true,
         "lockedBy": 5329698405
