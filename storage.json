@@ -204,7 +204,10 @@
         "lockedBy": 872282181
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -1853,6 +1856,24 @@
   "5749267576": {
     "phone": null,
     "userId": 5749267576,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
+  "5667153005": {
+    "phone": null,
+    "userId": 5667153005,
     "offers": [],
     "current": {
       "step": "askPhone"
