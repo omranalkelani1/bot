@@ -1484,13 +1484,11 @@
     }
   },
   "7435722172": {
-    "phone": null,
+    "phone": "971544904677",
     "userId": 7435722172,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {
-      "step": "askPhone"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -1500,7 +1498,8 @@
     "strikes": {
       "count": 0,
       "history": []
-    }
+    },
+    "first_name": "عماد"
   },
   "5136298029": {
     "phone": null,
