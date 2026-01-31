@@ -1654,18 +1654,7 @@
         "publicMessageId": 4591,
         "matchedWith": null,
         "rated": false,
-        "number": 172,
-        "trade": {
-          "tradeId": 58,
-          "buyerId": 872282181,
-          "sellerId": 5329698405,
-          "quantity": 100,
-          "step": "owner_pending_accept",
-          "sellerProofs": [],
-          "buyerProofs": [],
-          "adminProofs": [],
-          "createdAt": 1769873676924
-        }
+        "number": 172
       },
       {
         "id": 188,
