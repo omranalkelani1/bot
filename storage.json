@@ -177,11 +177,7 @@
       }
     ],
     "current": {
-      "step": "editing_offer",
-      "editingOfferId": 192,
-      "editDraft": {
-        "price": "116.3"
-      }
+      "price": "116.3"
     },
     "verify": {
       "step": null,
