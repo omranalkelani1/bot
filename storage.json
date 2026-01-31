@@ -1804,13 +1804,14 @@
           "buyerId": 872282181,
           "sellerId": 5329698405,
           "quantity": 100,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIhQml-ahQmbKKucbIhhP-dOf7ytmsLAAIjDmsb0ljwU4UOqSdWfLXuAQADAgADeQADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1769892090939
+          "createdAt": 1769892090939,
+          "paymentInfo": "68eda26d5f64e5e2e6987026dfd90b65"
         },
         "locked": true,
         "lockedBy": 5329698405
