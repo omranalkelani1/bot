@@ -716,7 +716,10 @@
         "number": 194
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -872,7 +875,11 @@
         "number": 193
       }
     ],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 187,
+      "offerOwnerId": 5329698405
+    },
     "verify": {
       "step": null,
       "photos": [
