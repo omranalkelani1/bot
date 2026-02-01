@@ -625,7 +625,7 @@
           "buyerId": 1975626644,
           "sellerId": 6768982037,
           "quantity": 1500,
-          "step": "buyer_upload",
+          "step": "wait_admin_buyer",
           "sellerProofs": [
             "AgACAgIAAxkBAAIjHWl_p0cSNNGroX-WRFhoMTDQiWyuAALRD2sbfLUBSGWP9FKaZw76AQADAgADeQADOAQ"
           ],
