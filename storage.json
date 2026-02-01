@@ -607,12 +607,14 @@
           "buyerId": 1975626644,
           "sellerId": 6768982037,
           "quantity": 1500,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769972239994
-        }
+        },
+        "locked": true,
+        "lockedBy": 1975626644
       }
     ],
     "current": {},
