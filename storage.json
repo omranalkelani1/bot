@@ -96,24 +96,7 @@
     "phone": "+963998889607",
     "userId": 872282181,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 218,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "118",
-        "minQuantity": "25",
-        "maxQuantity": "25",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 872282181,
-        "checkMessageId": 548,
-        "publicMessageId": 4623,
-        "matchedWith": null,
-        "rated": false,
-        "number": 200
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
@@ -1637,6 +1620,24 @@
   "8164543240": {
     "phone": null,
     "userId": 8164543240,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
+  "6000863417": {
+    "phone": null,
+    "userId": 6000863417,
     "offers": [],
     "current": {
       "step": "askPhone"
