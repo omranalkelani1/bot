@@ -487,12 +487,13 @@
         "minQuantity": "227",
         "maxQuantity": "227",
         "transform_way": "shamDolar",
-        "status": "pending",
+        "status": "approved",
         "userId": 1975626644,
         "checkMessageId": 550,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false
+        "rated": false,
+        "number": 202
       }
     ],
     "current": {},
@@ -579,7 +580,7 @@
     },
     "first_name": "..."
   },
-  "offerSeq": 201,
+  "offerSeq": 202,
   "botEnabled": true,
   "6193222237": {
     "phone": "963960013368",
