@@ -17,6 +17,24 @@
     },
     "first_name": "⫷☬⫸ 𝑶𝑴𝑨𝑹 𝟎𝟖™"
   },
+  "428137624": {
+    "phone": "963936357144",
+    "userId": 428137624,
+    "offers": [],
+    "current": {},
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    },
+    "first_name": "Malek omer",
+    "last_name": "Al issa"
+  },
   "453328157": {
     "phone": "963991045572",
     "userId": 453328157,
@@ -1034,7 +1052,11 @@
     "userId": 6768982037,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 230,
+      "offerOwnerId": 1975626644
+    },
     "verify": {
       "step": "waiting_photos",
       "photos": []
