@@ -546,7 +546,10 @@
         "number": 212
       }
     ],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
