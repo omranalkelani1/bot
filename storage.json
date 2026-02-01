@@ -544,16 +544,24 @@
         },
         "locked": true,
         "lockedBy": 1975626644
+      },
+      {
+        "id": 230,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "117",
+        "minQuantity": "100",
+        "maxQuantity": "1500",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 1975626644,
+        "checkMessageId": 560,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askPayment",
-      "price": "117",
-      "minQuantity": "100",
-      "maxQuantity": "1500",
-      "transform_way": "shamSy"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -748,7 +756,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 229,
+  "forwardingNum": 230,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
