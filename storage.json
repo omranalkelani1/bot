@@ -1769,7 +1769,8 @@
     "offers": [],
     "current": {
       "operation": "بيع",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "1"
     },
     "verify": {
       "step": "waiting_photos",
