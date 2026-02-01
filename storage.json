@@ -604,7 +604,26 @@
         "number": 205
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 223,
+      "editDraft": {
+        "id": 223,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "117.5",
+        "minQuantity": "25",
+        "maxQuantity": "25",
+        "transform_way": "shamSy",
+        "status": "approved",
+        "userId": 6193222237,
+        "checkMessageId": 553,
+        "publicMessageId": 4629,
+        "matchedWith": null,
+        "rated": false,
+        "number": 205
+      }
+    },
     "verify": {
       "step": null,
       "photos": [
