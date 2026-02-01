@@ -1767,7 +1767,10 @@
     "phone": "963959560511",
     "userId": 7424622197,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "بيع",
+      "step": "askPrice"
+    },
     "verify": {
       "step": "waiting_photos",
       "photos": []
