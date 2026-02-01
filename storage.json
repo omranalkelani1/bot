@@ -21,7 +21,10 @@
     "phone": "963936357144",
     "userId": 428137624,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
