@@ -613,32 +613,13 @@
         "minQuantity": "100",
         "maxQuantity": "1500",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "done",
         "userId": 1975626644,
         "checkMessageId": 560,
         "publicMessageId": 4637,
         "matchedWith": null,
         "rated": false,
         "number": 212,
-        "trade": {
-          "tradeId": 67,
-          "buyerId": 1975626644,
-          "sellerId": 6768982037,
-          "quantity": 1500,
-          "step": "admin_upload",
-          "sellerProofs": [
-            "AgACAgIAAxkBAAIjHWl_p0cSNNGroX-WRFhoMTDQiWyuAALRD2sbfLUBSGWP9FKaZw76AQADAgADeQADOAQ"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIjP2l_uofgOmGwSZnMNX8SHdiMVVU_AAIDDWsbb7wBUPdmMA4dIHraAQADAgADeQADOAQ"
-          ],
-          "adminProofs": [
-            "AgACAgQAAyEFAATQ7aVFAAICoWl_uq3eBOibgV9hml8AAdVcs39gxgACCQ9rG8WNAVBsFp7vDtfEIgEAAwIAA3gAAzgE"
-          ],
-          "createdAt": 1769972239994,
-          "paymentInfo": "a1437c34d46838fe5a997884efd858d0",
-          "buyerPaymentInfo": "Lllllllllgfcx"
-        },
         "locked": true,
         "lockedBy": 1975626644
       }
@@ -648,7 +629,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 6,
+    "tradesCount": 8,
     "ratings": [
       {
         "from": 7751710380,
