@@ -531,7 +531,7 @@
           "buyerId": 1975626644,
           "sellerId": 5129178902,
           "quantity": 162,
-          "step": "buyer_payment_info",
+          "step": "buyer_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIiaml_VBH0RgR9O9ZKW2JKTRfHe3iDAALSDGsbws74U07h2sAxpDOeAQADAgADeQADOAQ"
           ],
@@ -540,7 +540,8 @@
           ],
           "adminProofs": [],
           "createdAt": 1769951447434,
-          "paymentInfo": "b4c0c0d67e903d73467522f32630008b"
+          "paymentInfo": "b4c0c0d67e903d73467522f32630008b",
+          "buyerPaymentInfo": "Kjkjxzzzz"
         },
         "locked": true,
         "lockedBy": 1975626644
