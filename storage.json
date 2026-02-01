@@ -1517,7 +1517,8 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "1.00"
     },
     "verify": {
       "step": null,
