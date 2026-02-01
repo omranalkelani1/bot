@@ -246,6 +246,24 @@
     "first_name": "Bshar",
     "last_name": "Ahmad"
   },
+  "1189524195": {
+    "phone": null,
+    "userId": 1189524195,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
   "1193489635": {
     "phone": "963930985556",
     "userId": 1193489635,
@@ -461,7 +479,10 @@
     "userId": 1975626644,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
