@@ -532,7 +532,9 @@
           "sellerId": 5129178902,
           "quantity": 162,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgQAAxkBAAIiaml_VBH0RgR9O9ZKW2JKTRfHe3iDAALSDGsbws74U07h2sAxpDOeAQADAgADeQADOAQ"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1769951447434
@@ -917,7 +919,11 @@
     "userId": 5129178902,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 228,
+      "offerOwnerId": 1975626644
+    },
     "verify": {
       "step": null,
       "photos": [
