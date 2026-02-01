@@ -1783,7 +1783,7 @@
           "buyerId": 1975626644,
           "sellerId": 7424622197,
           "quantity": 50,
-          "step": "seller_upload",
+          "step": "wait_admin_seller",
           "sellerProofs": [
             "AgACAgQAAxkBAAIiuGl_a4ms_hKVxWguSTLnyMVzZ-wlAAJdDmsb3sz5U6vn8U2invHIAQADAgADeQADOAQ"
           ],
