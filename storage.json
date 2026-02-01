@@ -546,11 +546,7 @@
         "number": 212
       }
     ],
-    "current": {
-      "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "1.02"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -813,7 +809,7 @@
     "first_name": "@",
     "last_name": "A"
   },
-  "tradeId": 64,
+  "tradeId": 65,
   "6956215809": {
     "phone": "963995077664",
     "userId": 6956215809,
@@ -1781,7 +1777,18 @@
         "publicMessageId": 4639,
         "matchedWith": null,
         "rated": false,
-        "number": 214
+        "number": 214,
+        "trade": {
+          "tradeId": 65,
+          "buyerId": 1975626644,
+          "sellerId": 7424622197,
+          "quantity": 50,
+          "step": "owner_pending_accept",
+          "sellerProofs": [],
+          "buyerProofs": [],
+          "adminProofs": [],
+          "createdAt": 1769958153210
+        }
       }
     ],
     "current": {},
