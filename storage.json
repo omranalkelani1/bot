@@ -99,7 +99,8 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askPrice"
+      "step": "askMinQuantity",
+      "price": "118"
     },
     "verify": {
       "step": null,
@@ -1605,6 +1606,24 @@
   "5667153005": {
     "phone": null,
     "userId": 5667153005,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
+  "8164543240": {
+    "phone": null,
+    "userId": 8164543240,
     "offers": [],
     "current": {
       "step": "askPhone"
