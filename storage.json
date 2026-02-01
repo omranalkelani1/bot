@@ -1778,22 +1778,7 @@
         "matchedWith": null,
         "rated": false,
         "number": 214,
-        "trade": {
-          "tradeId": 65,
-          "buyerId": 1975626644,
-          "sellerId": 7424622197,
-          "quantity": 50,
-          "step": "buyer_upload",
-          "sellerProofs": [
-            "AgACAgQAAxkBAAIiuGl_a4ms_hKVxWguSTLnyMVzZ-wlAAJdDmsb3sz5U6vn8U2invHIAQADAgADeQADOAQ"
-          ],
-          "buyerProofs": [],
-          "adminProofs": [],
-          "createdAt": 1769958153210,
-          "paymentInfo": "23a5b59e0f3215d857c9ac460657e90e"
-        },
-        "locked": true,
-        "lockedBy": 7424622197
+        "locked": false
       }
     ],
     "current": {},
