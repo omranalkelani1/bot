@@ -616,7 +616,10 @@
     "phone": "963953275296",
     "userId": 2134053545,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -1898,6 +1901,24 @@
   "6000863417": {
     "phone": null,
     "userId": 6000863417,
+    "offers": [],
+    "current": {
+      "step": "askPhone"
+    },
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    }
+  },
+  "7372474763": {
+    "phone": null,
+    "userId": 7372474763,
     "offers": [],
     "current": {
       "step": "askPhone"
