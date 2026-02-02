@@ -718,7 +718,7 @@
           "buyerId": 2134053545,
           "sellerId": 872282181,
           "quantity": 122.5,
-          "step": "buyer_upload",
+          "step": "wait_admin_buyer",
           "sellerProofs": [
             "AgACAgQAAxkBAAIkfWmAiEhNTooSD3ge9hWTf8ZkQEteAAJcDWsbaDoBUGzAnAn8mrE0AQADAgADeAADOAQ"
           ],
