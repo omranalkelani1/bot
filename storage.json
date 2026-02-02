@@ -1414,7 +1414,7 @@
         "price": "1.005",
         "minQuantity": "100",
         "maxQuantity": "644.18",
-        "status": "approved",
+        "status": "rejected",
         "userId": 7892891785,
         "checkMessageId": 572,
         "publicMessageId": 4655,
