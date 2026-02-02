@@ -267,16 +267,24 @@
         "number": 238,
         "locked": true,
         "lockedBy": 872282181
+      },
+      {
+        "id": 258,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "1.005",
+        "minQuantity": "28.6",
+        "maxQuantity": "28.6",
+        "transform_way": "shamDolar",
+        "status": "pending",
+        "userId": 872282181,
+        "checkMessageId": 589,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
       }
     ],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "1.005",
-      "minQuantity": "28.6",
-      "maxQuantity": "28.6",
-      "transform_way": "shamDolar"
-    },
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -890,7 +898,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 257,
+  "forwardingNum": 258,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
