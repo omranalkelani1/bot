@@ -184,7 +184,26 @@
         "number": 228
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 246,
+      "editDraft": {
+        "id": 246,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "117",
+        "minQuantity": "100",
+        "maxQuantity": "200",
+        "transform_way": "shamSy",
+        "status": "approved",
+        "userId": 872282181,
+        "checkMessageId": 577,
+        "publicMessageId": 4660,
+        "matchedWith": null,
+        "rated": false,
+        "number": 228
+      }
+    },
     "verify": {
       "step": null,
       "photos": []
