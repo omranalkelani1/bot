@@ -1423,7 +1423,25 @@
         "number": 224
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 242,
+      "editDraft": {
+        "id": 242,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "1.005",
+        "minQuantity": "100",
+        "maxQuantity": "644.18",
+        "status": "approved",
+        "userId": 7892891785,
+        "checkMessageId": 572,
+        "publicMessageId": 4655,
+        "matchedWith": null,
+        "rated": false,
+        "number": 224
+      }
+    },
     "verify": {
       "step": null,
       "photos": []
