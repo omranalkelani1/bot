@@ -157,7 +157,9 @@
           "sellerProofs": [
             "AgACAgQAAxkBAAIj5mmAZGfdW-O4Cs1PnSvEdriGsaahAAJzDGsbbuwIUB7NyU7nZwI1AQADAgADeQADOAQ"
           ],
-          "buyerProofs": [],
+          "buyerProofs": [
+            "AgACAgQAAxkBAAIj92mAaDLSt2HB_ISNhCPkV91Y-ZE0AAINDWsbaDoBUP2weigusNwOAQADAgADeQADOAQ"
+          ],
           "adminProofs": [],
           "createdAt": 1770018664610,
           "paymentInfo": "ad74be317a92f7d1e0fb3be4b00216a7"
@@ -1007,7 +1009,11 @@
     "userId": 6768982037,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 239,
+      "offerOwnerId": 1862318321
+    },
     "verify": {
       "step": "waiting_photos",
       "photos": []
