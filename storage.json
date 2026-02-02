@@ -544,12 +544,13 @@
         "price": "1.015",
         "minQuantity": "228",
         "maxQuantity": "228",
-        "status": "pending",
+        "status": "approved",
         "userId": 1975626644,
         "checkMessageId": 570,
         "publicMessageId": null,
         "matchedWith": null,
-        "rated": false
+        "rated": false,
+        "number": 222
       }
     ],
     "current": {},
@@ -646,7 +647,7 @@
     },
     "first_name": "..."
   },
-  "offerSeq": 221,
+  "offerSeq": 222,
   "botEnabled": true,
   "6193222237": {
     "phone": "963960013368",
