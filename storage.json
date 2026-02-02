@@ -700,8 +700,9 @@
     "offers": [],
     "current": {
       "operation": "شراء",
-      "step": "askMinQuantity",
-      "price": "1.02"
+      "step": "askMaxQuantity",
+      "price": "1.02",
+      "minQuantity": "122.5"
     },
     "verify": {
       "step": null,
