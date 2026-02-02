@@ -807,7 +807,7 @@
         "minQuantity": "200",
         "maxQuantity": "360.5",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "rejected",
         "userId": 2134053545,
         "checkMessageId": 590,
         "publicMessageId": 4672,
@@ -851,24 +851,12 @@
       }
     ],
     "current": {
-      "step": "editing_offer",
-      "editingOfferId": 259,
-      "editDraft": {
-        "id": 259,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "116.5",
-        "minQuantity": "100",
-        "maxQuantity": "1500",
-        "transform_way": "shamSy",
-        "status": "approved",
-        "userId": 2134053545,
-        "checkMessageId": 590,
-        "publicMessageId": 4672,
-        "matchedWith": null,
-        "rated": false,
-        "number": 240
-      }
+      "operation": "شراء",
+      "step": "askPayment",
+      "price": "116.5",
+      "minQuantity": "100",
+      "maxQuantity": "1500",
+      "transform_way": "shamSy"
     },
     "verify": {
       "step": null,
@@ -1937,7 +1925,7 @@
         "status": "approved",
         "userId": 5329698405,
         "checkMessageId": 599,
-        "publicMessageId": null,
+        "publicMessageId": 4681,
         "matchedWith": null,
         "rated": false,
         "number": 249
