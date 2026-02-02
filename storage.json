@@ -845,7 +845,7 @@
           "buyerId": 2134053545,
           "sellerId": 428137624,
           "quantity": 41,
-          "step": "wait_admin_buyer",
+          "step": "buyer_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIlUWmAv2mpt9Ubwvqtn7_Lf3x3lfCwAAJxDmsbzo8JUHonL2gPhFc7AQADAgADeQADOAQ"
           ],
