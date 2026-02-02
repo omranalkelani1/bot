@@ -153,13 +153,14 @@
           "buyerId": 872282181,
           "sellerId": 7751710380,
           "quantity": 130,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIj5mmAZGfdW-O4Cs1PnSvEdriGsaahAAJzDGsbbuwIUB7NyU7nZwI1AQADAgADeQADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1770018664610
+          "createdAt": 1770018664610,
+          "paymentInfo": "ad74be317a92f7d1e0fb3be4b00216a7"
         },
         "locked": true,
         "lockedBy": 872282181
