@@ -267,22 +267,6 @@
         "number": 238,
         "locked": true,
         "lockedBy": 872282181
-      },
-      {
-        "id": 258,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "1.005",
-        "minQuantity": "28.6",
-        "maxQuantity": "28.6",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 872282181,
-        "checkMessageId": 589,
-        "publicMessageId": 4670,
-        "matchedWith": null,
-        "rated": false,
-        "number": 239
       }
     ],
     "current": {},
