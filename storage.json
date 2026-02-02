@@ -718,13 +718,14 @@
           "buyerId": 2134053545,
           "sellerId": 872282181,
           "quantity": 122.5,
-          "step": "seller_payment_info",
+          "step": "seller_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAIkfWmAiEhNTooSD3ge9hWTf8ZkQEteAAJcDWsbaDoBUGzAnAn8mrE0AQADAgADeAADOAQ"
           ],
           "buyerProofs": [],
           "adminProofs": [],
-          "createdAt": 1770031139658
+          "createdAt": 1770031139658,
+          "paymentInfo": "ba6f75d5e401619b4578b654faf41a60"
         },
         "locked": true,
         "lockedBy": 2134053545
