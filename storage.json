@@ -214,22 +214,6 @@
         "matchedWith": null,
         "rated": false,
         "number": 230
-      },
-      {
-        "id": 253,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "1.02",
-        "minQuantity": "156",
-        "maxQuantity": "156",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 872282181,
-        "checkMessageId": 584,
-        "publicMessageId": null,
-        "matchedWith": null,
-        "rated": false,
-        "number": 234
       }
     ],
     "current": {},
