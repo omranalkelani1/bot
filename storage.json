@@ -184,7 +184,10 @@
         "number": 228
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editPrice",
+      "editingOfferId": 244
+    },
     "verify": {
       "step": null,
       "photos": []
