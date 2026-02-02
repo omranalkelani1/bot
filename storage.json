@@ -414,10 +414,9 @@
     "category": "🥉 برونزي",
     "offers": [],
     "current": {
-      "step": "confirm_quantity",
-      "offerId": 118,
-      "offerOwnerId": 872282181,
-      "quantity": 56.86
+      "step": "ask_quantity",
+      "offerId": 239,
+      "offerOwnerId": 1862318321
     },
     "verify": {
       "step": null,
@@ -435,24 +434,7 @@
     "phone": "963934811267",
     "userId": 1862318321,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 239,
-        "operation": "شراء",
-        "step": "askPayment",
-        "price": "1.004",
-        "minQuantity": "700",
-        "maxQuantity": "700",
-        "transform_way": "shamDolar",
-        "status": "approved",
-        "userId": 1862318321,
-        "checkMessageId": 569,
-        "publicMessageId": 4651,
-        "matchedWith": null,
-        "rated": false,
-        "number": 221
-      }
-    ],
+    "offers": [],
     "current": {},
     "verify": {
       "step": null,
