@@ -255,7 +255,7 @@
         "minQuantity": "120",
         "maxQuantity": "156",
         "transform_way": "shamDolar",
-        "status": "approved",
+        "status": "done",
         "userId": 872282181,
         "checkMessageId": 588,
         "publicMessageId": 4669,
@@ -265,25 +265,6 @@
         },
         "rated": false,
         "number": 238,
-        "trade": {
-          "tradeId": 70,
-          "buyerId": 2134053545,
-          "sellerId": 872282181,
-          "quantity": 128.4,
-          "step": "admin_upload",
-          "sellerProofs": [
-            "AgACAgQAAx0CWfjyTwACEi5pgGNS-3KLU2QsltTYP-vcR9FwkAACdgxrG4n8AAFQMBM8mcUdIN8BAAMCAAN4AAM4BA"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIk02mAlWSWVWg7zBraLoCuPf-22kTcAAITDWsblZYIUB5j65UrhoidAQADAgADeQADOAQ"
-          ],
-          "adminProofs": [
-            "AgACAgQAAyEFAATQ7aVFAAICwWmAlmDdf3bzjkOwns21Zhu3dDO2AAIKDmsbxY0JUBga93KrgptJAQADAgADeQADOAQ"
-          ],
-          "createdAt": 1770034365845,
-          "paymentInfo": "ba6f75d5e401619b4578b654faf41a60",
-          "buyerPaymentInfo": "0x2a6ae0b252a51b43f530ea50d844b50d0cd7a52c"
-        },
         "locked": true,
         "lockedBy": 872282181
       }
@@ -293,7 +274,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 26,
+    "tradesCount": 27,
     "ratings": [
       {
         "from": 5129178902,
@@ -778,7 +759,7 @@
         "minQuantity": "122.5",
         "maxQuantity": "122.5",
         "transform_way": "shamDolar",
-        "status": "approved",
+        "status": "done",
         "userId": 2134053545,
         "checkMessageId": 583,
         "publicMessageId": 4665,
@@ -788,22 +769,6 @@
         },
         "rated": false,
         "number": 233,
-        "trade": {
-          "tradeId": 69,
-          "buyerId": 2134053545,
-          "sellerId": 872282181,
-          "quantity": 122.5,
-          "step": "wait_admin_buyer",
-          "sellerProofs": [
-            "AgACAgQAAxkBAAIkfWmAiEhNTooSD3ge9hWTf8ZkQEteAAJcDWsbaDoBUGzAnAn8mrE0AQADAgADeAADOAQ"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAIkhWmAiNe4cOLh-XriR_1WjWtnC32DAAL_DGsblZYIUGqtNTaDmrn1AQADAgADeQADOAQ"
-          ],
-          "adminProofs": [],
-          "createdAt": 1770031139658,
-          "paymentInfo": "ba6f75d5e401619b4578b654faf41a60"
-        },
         "locked": true,
         "lockedBy": 2134053545
       }
@@ -813,7 +778,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 3,
+    "tradesCount": 4,
     "ratings": [
       {
         "from": 5329698405,
