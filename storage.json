@@ -845,12 +845,14 @@
           "buyerId": 2134053545,
           "sellerId": 428137624,
           "quantity": 41,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1770045063659
-        }
+        },
+        "locked": true,
+        "lockedBy": 2134053545
       }
     ],
     "current": {},
