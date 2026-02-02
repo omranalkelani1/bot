@@ -691,24 +691,7 @@
     "phone": "963960013368",
     "userId": 6193222237,
     "category": "🥉 برونزي",
-    "offers": [
-      {
-        "id": 245,
-        "operation": "بيع",
-        "step": "askPayment",
-        "price": "120",
-        "minQuantity": "45",
-        "maxQuantity": "45",
-        "transform_way": "syriatel",
-        "status": "approved",
-        "userId": 6193222237,
-        "checkMessageId": 576,
-        "publicMessageId": 4659,
-        "matchedWith": null,
-        "rated": false,
-        "number": 227
-      }
-    ],
+    "offers": [],
     "current": {
       "step": "editing_offer",
       "editingOfferId": 245,
