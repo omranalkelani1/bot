@@ -348,7 +348,26 @@
         "number": 258
       }
     ],
-    "current": {},
+    "current": {
+      "step": "editing_offer",
+      "editingOfferId": 277,
+      "editDraft": {
+        "id": 277,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "1",
+        "minQuantity": "250",
+        "maxQuantity": "287",
+        "transform_way": "shamDolar",
+        "status": "approved",
+        "userId": 999340079,
+        "checkMessageId": 608,
+        "publicMessageId": 4699,
+        "matchedWith": null,
+        "rated": false,
+        "number": 258
+      }
+    },
     "verify": {
       "step": null,
       "photos": []
