@@ -60,7 +60,9 @@
           "sellerId": 428137624,
           "quantity": 105,
           "step": "seller_upload",
-          "sellerProofs": [],
+          "sellerProofs": [
+            "AgACAgQAAxkBAAIm9WmCQoq4P4IkLwhCBezoMN17-NnxAAKODmsbrBEQUBM38rLGHNWqAQADAgADeQADOAQ"
+          ],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1770138393470
