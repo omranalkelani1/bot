@@ -29,32 +29,13 @@
         "minQuantity": "50",
         "maxQuantity": "50",
         "transform_way": "shamSy",
-        "status": "approved",
+        "status": "done",
         "userId": 428137624,
         "checkMessageId": 605,
         "publicMessageId": 4693,
         "matchedWith": null,
         "rated": false,
         "number": 256,
-        "trade": {
-          "tradeId": 72,
-          "buyerId": 872282181,
-          "sellerId": 428137624,
-          "quantity": 50,
-          "step": "admin_upload",
-          "sellerProofs": [
-            "AgACAgQAAxkBAAImPGmBruZx4Lxg_3w4gay6KAuRTvMDAALrDWsbrBEQUNgEkEGUPZx5AQADAgADeQADOAQ"
-          ],
-          "buyerProofs": [
-            "AgACAgQAAxkBAAImRGmBsI49LDbtt6itqqtHHjykIX-cAAJGDWsbg5wQUCNG108riUUUAQADAgADeQADOAQ"
-          ],
-          "adminProofs": [
-            "AgACAgQAAxkBAAImRGmBsI49LDbtt6itqqtHHjykIX-cAAJGDWsbg5wQUCNG108riUUUAQADAgADeQADOAQ"
-          ],
-          "createdAt": 1770105751651,
-          "paymentInfo": "529fb290f41bcfbe5c96ca4f65e32b49",
-          "buyerPaymentInfo": "Jsvajaksvsjsks"
-        },
         "locked": true,
         "lockedBy": 428137624
       }
@@ -64,7 +45,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 0,
+    "tradesCount": 1,
     "ratings": [
       {
         "from": 2134053545,
@@ -232,7 +213,7 @@
       "step": null,
       "photos": []
     },
-    "tradesCount": 27,
+    "tradesCount": 28,
     "ratings": [
       {
         "from": 5129178902,
