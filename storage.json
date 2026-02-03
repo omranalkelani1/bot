@@ -232,9 +232,26 @@
       }
     ],
     "current": {
-      "step": "ask_quantity",
+      "step": "editing_offer",
       "offerId": 278,
-      "offerOwnerId": 999340079
+      "offerOwnerId": 999340079,
+      "editingOfferId": 282,
+      "editDraft": {
+        "id": 282,
+        "operation": "شراء",
+        "step": "askPayment",
+        "price": "116.5",
+        "minQuantity": "25",
+        "maxQuantity": "100",
+        "transform_way": "shamSy",
+        "status": "approved",
+        "userId": 872282181,
+        "checkMessageId": 613,
+        "publicMessageId": 4704,
+        "matchedWith": null,
+        "rated": false,
+        "number": 263
+      }
     },
     "verify": {
       "step": null,
