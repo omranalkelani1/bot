@@ -59,7 +59,7 @@
           "buyerId": 872282181,
           "sellerId": 428137624,
           "quantity": 105,
-          "step": "seller_upload",
+          "step": "wait_admin_seller",
           "sellerProofs": [
             "AgACAgQAAxkBAAIm9WmCQoq4P4IkLwhCBezoMN17-NnxAAKODmsbrBEQUBM38rLGHNWqAQADAgADeQADOAQ"
           ],
