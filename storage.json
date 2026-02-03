@@ -231,7 +231,11 @@
         "number": 263
       }
     ],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 278,
+      "offerOwnerId": 999340079
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -671,7 +675,11 @@
     "userId": 1975626644,
     "category": "🥉 برونزي",
     "offers": [],
-    "current": {},
+    "current": {
+      "step": "ask_quantity",
+      "offerId": 281,
+      "offerOwnerId": 5329698405
+    },
     "verify": {
       "step": null,
       "photos": []
@@ -2030,5 +2038,22 @@
     },
     "first_name": "GfssN",
     "last_name": "Ii"
+  },
+  "5656362998": {
+    "phone": "963981094421",
+    "userId": 5656362998,
+    "offers": [],
+    "current": {},
+    "verify": {
+      "step": null,
+      "photos": []
+    },
+    "tradesCount": 0,
+    "ratings": [],
+    "strikes": {
+      "count": 0,
+      "history": []
+    },
+    "first_name": "Yacoub.."
   }
 }
