@@ -2165,7 +2165,10 @@
     "phone": "963994898467",
     "userId": 6279148047,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
