@@ -20,15 +20,24 @@
   "428137624": {
     "phone": "963936357144",
     "userId": 428137624,
-    "offers": [],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "11700",
-      "minQuantity": "50",
-      "maxQuantity": "50",
-      "transform_way": "shamSy"
-    },
+    "offers": [
+      {
+        "id": 274,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "11700",
+        "minQuantity": "50",
+        "maxQuantity": "50",
+        "transform_way": "shamSy",
+        "status": "pending",
+        "userId": 428137624,
+        "checkMessageId": 605,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
+      }
+    ],
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -708,7 +717,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 273,
+  "forwardingNum": 274,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
