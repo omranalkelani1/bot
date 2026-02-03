@@ -862,7 +862,7 @@
         "status": "approved",
         "userId": 6193222237,
         "checkMessageId": 621,
-        "publicMessageId": null,
+        "publicMessageId": 4711,
         "matchedWith": null,
         "rated": false,
         "number": 268
