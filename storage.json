@@ -331,7 +331,10 @@
     "phone": "963993878458",
     "userId": 999340079,
     "offers": [],
-    "current": {},
+    "current": {
+      "operation": "شراء",
+      "step": "askPrice"
+    },
     "verify": {
       "step": null,
       "photos": []
