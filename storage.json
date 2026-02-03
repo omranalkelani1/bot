@@ -200,7 +200,7 @@
           "buyerId": 872282181,
           "sellerId": 7751710380,
           "quantity": 200,
-          "step": "seller_confirm_payment_info",
+          "step": "wait_admin_confirm_payment_info",
           "sellerProofs": [
             "AgACAgQAAxkBAAImk2mCBDgAAelnAUMBAU1cp-6T8UCb2QACeA9rG0WREFCd5PiPQu--DwEAAwIAA3kAAzgE"
           ],
