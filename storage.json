@@ -669,15 +669,24 @@
     "phone": "963932210331",
     "userId": 1936619837,
     "category": "🥉 برونزي",
-    "offers": [],
-    "current": {
-      "operation": "بيع",
-      "step": "askPayment",
-      "price": "120",
-      "minQuantity": "100",
-      "maxQuantity": "175",
-      "transform_way": "syriatel"
-    },
+    "offers": [
+      {
+        "id": 286,
+        "operation": "بيع",
+        "step": "askPayment",
+        "price": "120",
+        "minQuantity": "100",
+        "maxQuantity": "175",
+        "transform_way": "syriatel",
+        "status": "pending",
+        "userId": 1936619837,
+        "checkMessageId": 620,
+        "publicMessageId": null,
+        "matchedWith": null,
+        "rated": false
+      }
+    ],
+    "current": {},
     "verify": {
       "step": null,
       "photos": []
@@ -895,7 +904,7 @@
     "verified": true
   },
   "botAcceptingTrades": true,
-  "forwardingNum": 285,
+  "forwardingNum": 286,
   "7616078779": {
     "phone": null,
     "userId": 7616078779,
