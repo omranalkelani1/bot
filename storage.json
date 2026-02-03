@@ -232,7 +232,7 @@
       }
     ],
     "current": {
-      "step": "editing_offer",
+      "step": "editPrice",
       "offerId": 278,
       "offerOwnerId": 999340079,
       "editingOfferId": 282,
