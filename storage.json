@@ -59,12 +59,14 @@
           "buyerId": 872282181,
           "sellerId": 428137624,
           "quantity": 105,
-          "step": "owner_pending_accept",
+          "step": "seller_upload",
           "sellerProofs": [],
           "buyerProofs": [],
           "adminProofs": [],
           "createdAt": 1770138393470
-        }
+        },
+        "locked": true,
+        "lockedBy": 428137624
       }
     ],
     "current": {},
