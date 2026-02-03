@@ -2045,7 +2045,7 @@
     "offers": [],
     "current": {},
     "verify": {
-      "step": "confirm",
+      "step": null,
       "photos": [
         "AgACAgQAAxkBAAImxWmCDDd286RzT_QU1_np477SrX0CAAKwDWsbIC8QUF9kexTNvyrdAQADAgADeQADOAQ"
       ]
@@ -2056,6 +2056,7 @@
       "count": 0,
       "history": []
     },
-    "first_name": "Yacoub.."
+    "first_name": "Yacoub..",
+    "verified": true
   }
 }
