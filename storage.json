@@ -232,7 +232,7 @@
       }
     ],
     "current": {
-      "step": "editPrice",
+      "step": "editing_offer",
       "offerId": 278,
       "offerOwnerId": 999340079,
       "editingOfferId": 282,
@@ -240,7 +240,7 @@
         "id": 282,
         "operation": "شراء",
         "step": "askPayment",
-        "price": "116.5",
+        "price": "117",
         "minQuantity": "25",
         "maxQuantity": "100",
         "transform_way": "shamSy",
