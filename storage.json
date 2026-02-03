@@ -48,7 +48,9 @@
           "buyerProofs": [
             "AgACAgQAAxkBAAImRGmBsI49LDbtt6itqqtHHjykIX-cAAJGDWsbg5wQUCNG108riUUUAQADAgADeQADOAQ"
           ],
-          "adminProofs": [],
+          "adminProofs": [
+            "AgACAgQAAxkBAAImRGmBsI49LDbtt6itqqtHHjykIX-cAAJGDWsbg5wQUCNG108riUUUAQADAgADeQADOAQ"
+          ],
           "createdAt": 1770105751651,
           "paymentInfo": "529fb290f41bcfbe5c96ca4f65e32b49",
           "buyerPaymentInfo": "Jsvajaksvsjsks"
