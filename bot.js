@@ -2962,7 +2962,7 @@ async function cancelOffer(offerNumber) {
     const userId = sellerUser.offers[0].userId;
     offer = sellerUser.offers[offerIndex];
     // إشعار الطرفين
-    await safeSendMessage(userId, `❌ تم إلغاء العرض رقم ${offer.number}`);
+    await safeSendMessage(userId, `❌ تم إلغاء العرض رقم  ${offer.number}`);
     await safeSendMessage(APPROVE_REJECT_CHANNEL, `❌ تم إلغاء العرض رقم ${offer.number}`);
     await finishOffer(sellerUser, sellerUser.offers[offerIndex])
     sellerUser.offers.splice(offerIndex, 1)
