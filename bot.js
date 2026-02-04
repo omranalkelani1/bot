@@ -21,9 +21,9 @@ const TelegramBot = require('node-telegram-bot-api');
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHECK_CHANNEL = process.env.CHECK_CHANNEL;   // قناة المراجعة (قبول / رفض)
-const OFFERS_CHANNEL = process.env.OFFERS_CHANNEL;      //   قناة نشر العروض  alkelani p2p
+// const OFFERS_CHANNEL = process.env.OFFERS_CHANNEL;      //   قناة نشر العروض  alkelani p2p
 const APPROVE_REJECT_CHANNEL = process.env.APPROVE_REJECT_CHANNEL;      // قناة نشر العروض
-// const OFFERS_CHANNEL = '-1003525097551';      // قناة نشر العروض omran offers
+const OFFERS_CHANNEL = '-1003525097551';      // قناة نشر العروض omran offers
 
 // Photo IDs for start/stop announcements (from env)
 const START_BOT_PHOTO = 'AgACAgQAAxkBAAIIUGl0Lub3v4UR_lQ8GOK1-7wy4QsSAAJIC2sbF3WhU19jqCKwW8bzAQADAgADeQADOAQ';
@@ -319,28 +319,21 @@ bot.onText(/\/cancelTrade(\d+)\b/, async (msg, match) => {
     return bot.sendMessage(chatId, '❌ فشل التحقق');
   }
   await cancelTrade(num);
-  // find offer by trade.tradeId
-  // let targetOffer, owner;
-  // for (const [uid, u] of Object.entries(userStates)) {
-  //   if (!u?.offers) continue;
-  //   const found = u.offers.find(o => o.trade && Number(o.trade.tradeId) === num);
-  //   if (found) { targetOffer = found; owner = u; break; }
-  // }
+});
+bot.onText(/\/cancelOffer(\d+)\b/, async (msg, match) => {
+  const chatId = msg.chat.id;
+  const num = Number(match[1]); // interpreted as tradeId now
 
-  // if (!targetOffer) return bot.sendMessage(chatId, `❌ لم يتم العثور على صفقة بالمعاملة رقم ${num}`);
-  // if (!targetOffer.trade) return bot.sendMessage(chatId, `❌ الصفقة برقم ${num} غير موجودة حالياً`);
-
-  // const trade = targetOffer.trade;
-
-  // // perform cancellation similar to cancel_trade
-  // delete targetOffer.trade;
-  // if (targetOffer.locked) { targetOffer.locked = false; delete targetOffer.lockedBy; }
-  // await saveStorage();
-
-  // try { await safeSendMessage(trade.buyerId, `❌ تم إلغاء الصفقة رقم ${targetOffer.number}`); } catch (e) { }
-  // try { await safeSendMessage(trade.sellerId, `❌ تم إلغاء الصفقة رقم ${targetOffer.number}`); } catch (e) { }
-
-  // return bot.sendMessage(chatId, `✅ تم إلغاء الصفقة رقم ${num}`);
+  try {
+    const member = await bot.getChatMember(CHECK_CHANNEL, msg.from.id);
+    if (!member || !['administrator', 'creator'].includes(member.status)) {
+      return bot.sendMessage(chatId, '❌ غير مصرح');
+    }
+  } catch (e) {
+    console.error('getChatMember failed', e && e.message);
+    return bot.sendMessage(chatId, '❌ فشل التحقق');
+  }
+  await cancelOffer(num);
 });
 
 // Admin command to show trades related to a phone number: /ShowTrade(0998889607)
@@ -1266,7 +1259,8 @@ bot.on('callback_query', async (query) => {
     }
 
     const { sellerId } = offer.trade;
-
+    offer.trade.step = "seller_payment_info"
+    await saveStorage()
     // إشعار البائع فقط — بدون تغيير أي حالة
     await safeSendMessage(
       sellerId,
@@ -1784,7 +1778,7 @@ bot.on('callback_query', async (query) => {
       💰 ستستلم : ${getPrice(offer.price, trade.quantity)}
 
       عنوان المحظة :   
-      <code>0xe52424631D5688FfB46e9B9dE760a006d5BbE587</code>
+      <code>${env.process.PAYMENT}</code>
       عبر السلسلة BEP20 
        بعد الإرسال اضغط 'إنهاء رفع الإثباتات'`, {
       parse_mode: 'HTML',
@@ -2778,9 +2772,9 @@ function findMatchingOffers(newOffer, ownerUserId) {
         o.status !== 'approved' ||
         o.status === 'done' ||
         o.transform_way !== newOffer.transform_way ||
-        o.operation === newOffer.operation
+        o.operation === newOffer.operation ||
+        o.locked
       ) return;
-
       // الكمية
       const qtyOk =
         Number(newOffer.minQuantity) <= Number(o.maxQuantity) &&
@@ -2909,9 +2903,6 @@ function StartOfferNowButton(offerId) {
 }
 
 
-function isOperatoinSell(offer) {
-  return offer.operation === 'بيع';
-}
 
 async function cancelTrade(offerNumber) {
   if (!offerNumber) return;
@@ -2962,6 +2953,25 @@ async function cancelTrade(offerNumber) {
       message_id: offer.publicMessageId
     }
   );
+}
+async function cancelOffer(offerNumber) {
+  if (!offerNumber) return;
+  let offerIndex, sellerUser;
+  for (const u of Object.values(userStates)) {
+    const found = u?.offers?.findIndex(o => o.number === offerNumber);
+    if (found >= 0) { offerIndex = found; sellerUser = u; break; }
+  }
+
+  if (!offerIndex < 0) return bot.answerCallbackQuery(query.id, { text: '❌ العرض غير  موجود' });
+
+  const userId = sellerUser.offers[0].userId;
+
+  // إشعار الطرفين
+  try { await safeSendMessage(userId, `❌ تم إلغاء العرض رقم ${offer.number}`); } catch (e) { }
+  try { await safeSendMessage(APPROVE_REJECT_CHANNEL, `❌ تم إلغاء العرض رقم ${offer.number}`); } catch (e) { }
+  await finishOffer(sellerUser, sellerUser.offers[offerIndex])
+  sellerUser.offers.splice(offerIndex, 1)
+  await saveStorage()
 }
 
 function formatTradeStatus(offer) {
@@ -3016,13 +3026,13 @@ async function finishAllOffer() {
 
   for (const [userId, userData] of Object.entries(userStates || {})) {
     const offers = userData?.offers;
-    if (Array.isArray(offers) && offers.length > 0) {
+    if (!offers || offers.length === 0) continue;
 
 
-      for (const offer of offers) {
-        finishOffer(userData, offer);
-      }
+    for (const offer of offers) {
+      finishOffer(userData, offer);
     }
+
 
     userStates[userId].offers = [];
 
@@ -3195,6 +3205,7 @@ Offer: ${offer.number}`
 
 function getCategory(tradesCount) {
   if (tradesCount >= 30) return '👑 ملكي';
+  if (tradesCount >= 50) return '🔥 اسطوري';
   if (tradesCount >= 15) return '🥇 ذهبي';
   if (tradesCount >= 5) return '🥈 فضي';
   return '🥉 برونزي';
