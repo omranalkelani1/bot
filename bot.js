@@ -21,9 +21,9 @@ const TelegramBot = require('node-telegram-bot-api');
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHECK_CHANNEL = process.env.CHECK_CHANNEL;   // قناة المراجعة (قبول / رفض)
-// const OFFERS_CHANNEL = process.env.OFFERS_CHANNEL;      //   قناة نشر العروض  alkelani p2p
+const OFFERS_CHANNEL = process.env.OFFERS_CHANNEL;      //   قناة نشر العروض  alkelani p2p
 const APPROVE_REJECT_CHANNEL = process.env.APPROVE_REJECT_CHANNEL;      // قناة نشر العروض
-const OFFERS_CHANNEL = '-1003525097551';      // قناة نشر العروض omran offers
+// const OFFERS_CHANNEL = '-1003525097551';      // قناة نشر العروض omran offers
 
 // Photo IDs for start/stop announcements (from env)
 const START_BOT_PHOTO = 'AgACAgQAAxkBAAIIUGl0Lub3v4UR_lQ8GOK1-7wy4QsSAAJIC2sbF3WhU19jqCKwW8bzAQADAgADeQADOAQ';
@@ -1771,7 +1771,7 @@ bot.on('callback_query', async (query) => {
       💰 ستستلم : ${getPrice(offer.price, trade.quantity)}
 
       عنوان المحظة :   
-      <code>${env.process.PAYMENT}</code>
+      <code>${process.env.PAYMENT}</code>
       عبر السلسلة BEP20 
        بعد الإرسال اضغط 'إنهاء رفع الإثباتات'`, {
       parse_mode: 'HTML',
