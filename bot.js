@@ -9,7 +9,7 @@
 // /buyerCall
 
 const TelegramBot = require('node-telegram-bot-api');
-// const {process}= require('./env.js');
+const {process}= require('./env.js');
 // const fs = require('fs');
 // 
 // ================== CONFIG ==================
@@ -2948,23 +2948,29 @@ async function cancelTrade(offerNumber) {
   );
 }
 async function cancelOffer(offerNumber) {
-  if (!offerNumber) return;
-  let offerIndex, sellerUser,offer;
-  for (const u of Object.values(userStates)) {
-    const found = u?.offers?.findIndex(o => o.number === offerNumber);
-    if (found >= 0) { offerIndex = found; sellerUser = u; break; }
+  try {
+    
+    if (!offerNumber) return;
+    let offerIndex, sellerUser,offer;
+    for (const u of Object.values(userStates)) {
+      const found = u?.offers?.findIndex(o => o.number === offerNumber);
+      if (found >= 0) { offerIndex = found; sellerUser = u; break; }
+    }
+    
+    // if (offerIndex < 0 || !sellerUser?.offers) return bot.answerCallbackQuery(query.id, { text: '❌ العرض غير  موجود' });
+    if( offerIndex < 0 || !sellerUser?.offers) return;
+    const userId = sellerUser.offers[0].userId;
+    offer = sellerUser.offers[offerIndex];
+    // إشعار الطرفين
+    await safeSendMessage(userId, `❌ تم إلغاء العرض رقم ${offer.number}`);
+    await safeSendMessage(APPROVE_REJECT_CHANNEL, `❌ تم إلغاء العرض رقم ${offer.number}`);
+    await finishOffer(sellerUser, sellerUser.offers[offerIndex])
+    sellerUser.offers.splice(offerIndex, 1)
+    await saveStorage()
+  } 
+  catch (error) {
+    logger.error('cancelOffer error:', error);
   }
-
-  // if (offerIndex < 0 || !sellerUser?.offers) return bot.answerCallbackQuery(query.id, { text: '❌ العرض غير  موجود' });
-
-  const userId = sellerUser.offers[0].userId;
-  offer = sellerUser.offers[offerIndex];
-  // إشعار الطرفين
-  await safeSendMessage(userId, `❌ تم إلغاء العرض رقم ${offer.number}`);
-  await safeSendMessage(APPROVE_REJECT_CHANNEL, `❌ تم إلغاء العرض رقم ${offer.number}`);
-  await finishOffer(sellerUser, sellerUser.offers[offerIndex])
-  sellerUser.offers.splice(offerIndex, 1)
-  await saveStorage()
 }
  
 function formatTradeStatus(offer) {
