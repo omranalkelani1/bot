@@ -62,14 +62,7 @@ bot.setMyCommands([
   }
 ]);
 
-// expose admin commands to start/stop the bot
-bot.setMyCommands([
-  { command: 'start', description: 'بدء استخدام البوت' },
-  // { command: 'StartNow', description: 'تشغيل البوت (مشرفين القناة)' },
-  // { command: 'StopNow', description: 'إيقاف البوت (مشرفين القناة)' },
-  // { command: 'cancelTrade', description: 'إلغاء صفقة بواسطة رقم المعاملة (مثال: /cancelTrade22)' }
-]);
-console.log('✅ Bot is running');
+console.log('✅ Bot is running.....');
 
 // Wrap editMessageText globally to avoid crashing when message was already deleted
 // (Telegram returns 400: message to edit not found). This will log and ignore that case.
@@ -2956,16 +2949,16 @@ async function cancelTrade(offerNumber) {
 }
 async function cancelOffer(offerNumber) {
   if (!offerNumber) return;
-  let offerIndex, sellerUser;
+  let offerIndex, sellerUser,offer;
   for (const u of Object.values(userStates)) {
     const found = u?.offers?.findIndex(o => o.number === offerNumber);
     if (found >= 0) { offerIndex = found; sellerUser = u; break; }
   }
 
-  if (!offerIndex < 0) return bot.answerCallbackQuery(query.id, { text: '❌ العرض غير  موجود' });
+  // if (offerIndex < 0 || !sellerUser?.offers) return bot.answerCallbackQuery(query.id, { text: '❌ العرض غير  موجود' });
 
   const userId = sellerUser.offers[0].userId;
-
+  offer = sellerUser.offers[offerIndex];
   // إشعار الطرفين
   await safeSendMessage(userId, `❌ تم إلغاء العرض رقم ${offer.number}`);
   await safeSendMessage(APPROVE_REJECT_CHANNEL, `❌ تم إلغاء العرض رقم ${offer.number}`);
@@ -2973,7 +2966,7 @@ async function cancelOffer(offerNumber) {
   sellerUser.offers.splice(offerIndex, 1)
   await saveStorage()
 }
-
+ 
 function formatTradeStatus(offer) {
   if (!offer.trade) return '';
   const stepText = TradeStepsAR[offer.trade.step] || 'غير معروف';
