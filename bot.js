@@ -3085,7 +3085,7 @@ async function finalizeTrade(offer, chat_id, message_id) {
   if (matchedOffer) {
     matchedOffer.status = 'done';
   }
-  console.log('offer', offer, 'matechdd', matchedOffer);
+  // console.log('offer', offer, 'matechdd', matchedOffer);
   const trade = offer.trade;
   if (!trade.adminProofs || !trade.buyerProofs) return
   for (const p of trade.adminProofs) {
