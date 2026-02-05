@@ -62,7 +62,7 @@ bot.setMyCommands([
   }
 ]);
 
-console.log('✅ Bot is running.....');
+console.log('✅ Bot is running.......');
 
 // Wrap editMessageText globally to avoid crashing when message was already deleted
 // (Telegram returns 400: message to edit not found). This will log and ignore that case.
