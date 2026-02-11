@@ -498,7 +498,8 @@ bot.on('message', async (msg) => {
       return safeSendMessage(
         chatId,
         `📸 تم استلام الإثبات (${trade.buyerProofs.length})
-        عند الانتهاء، اضغط زر *إنهاء الرفع*`
+        عند الانتهاء، اضغط زر *إنهاء الرفع*
+        👆👆👆`
       );
     }
 
@@ -541,7 +542,8 @@ bot.on('message', async (msg) => {
       return safeSendMessage(
         trade.sellerId,
         `📸 تم استلام الإثبات (${trade.sellerProofs.length})
-        عند الانتهاء، اضغط زر *إنهاء الرفع*`
+        عند الانتهاء، اضغط زر *إنهاء الرفع*
+        👆👆👆`
       );
     }
 
@@ -1541,8 +1543,9 @@ bot.on('callback_query', async (query) => {
     };
 
     await saveStorage();
-    return safeSendMessage(chatId, 'أدخل السعر');
-  }
+return safeSendMessage(chatId, `أدخل السعر لكل واحد usdt
+      اذا الدفع بالدولار أدخل رقم بين (1 و 1.2)
+      اذا الدفع بالسوري ادخل رقم بين (100 و 130 )`);  }
   if (payload.type === 'seller_done_upload') {
     const { offerId } = payload;
 
@@ -3203,11 +3206,11 @@ Offer: ${offer.number}`
 }
 
 function getCategory(tradesCount) {
-  if (tradesCount >= 30) return '👑 ملكي';
-  if (tradesCount >= 50) return '🔥 اسطوري';
-  if (tradesCount >= 15) return '🥇 ذهبي';
-  if (tradesCount >= 5) return '🥈 فضي';
-  return '🥉 برونزي';
+  if (tradesCount >= 50) return 'اسطوري🔥 ';
+  if (tradesCount >= 30) return ' ملكي 👑 ';
+  if (tradesCount >= 15) return 'ذهبي 🥇  ';
+  if (tradesCount >= 5) return 'فضي 🥈 ';
+  return 'برونزي 🥉 ';
 }
 
 function getPrice(price, qty) {
